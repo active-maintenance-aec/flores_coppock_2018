@@ -1,0 +1,9 @@
+block,survey_language,english_ad,spanish_ad
+experiment_1_bush_bilingual,english_survey,462,488
+experiment_1_bush_bilingual,spanish_survey,452,460
+experiment_2_vela_bilingual,english_survey,437,442
+experiment_2_vela_bilingual,spanish_survey,420,382
+experiment_2_vela_monolingual,english_survey,675,669
+experiment_3_coffman_bilingual,english_survey,455,424
+experiment_3_coffman_bilingual,spanish_survey,421,381
+experiment_3_coffman_monolingual,english_survey,711,633

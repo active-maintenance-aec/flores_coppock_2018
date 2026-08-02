@@ -1,0 +1,15 @@
+file,dataverse_file_id,file_persistent_id,bytes,md5_served,md5_published,unf,served_as
+replication_archive/FC_bilinguals_figure_1.R,3301984,doi:10.7910/DVN/XGQ2ZA/DFHJOY,4731,96f673849eb0b7307df7ec9969184585,96f673849eb0b7307df7ec9969184585,,FC_bilinguals_figure_1.R
+replication_archive/FC_bilinguals_figure_2.R,3301994,doi:10.7910/DVN/XGQ2ZA/UOEIFC,7302,3fb46c7ce623e4824d67660e4bee3204,3fb46c7ce623e4824d67660e4bee3204,,FC_bilinguals_figure_2.R
+replication_archive/FC_bilinguals_in_text_stats.R,3301987,doi:10.7910/DVN/XGQ2ZA/IQOZ0V,1146,8edde950d2eaa8ca7e1e81fbbc00b738,8edde950d2eaa8ca7e1e81fbbc00b738,,FC_bilinguals_in_text_stats.R
+replication_archive/FC_bilinguals_interaction_analysis.R,3301995,doi:10.7910/DVN/XGQ2ZA/ARB9TD,5357,4f284fd13609ea19e1bf5f9b8057fac4,4f284fd13609ea19e1bf5f9b8057fac4,,FC_bilinguals_interaction_analysis.R
+replication_archive/FC_bilinguals_logit_analysis.R,3301996,doi:10.7910/DVN/XGQ2ZA/QBPANB,3512,8a630589a049d6f7e4bde5e360cfac93,8a630589a049d6f7e4bde5e360cfac93,,FC_bilinguals_logit_analysis.R
+replication_archive/FC_bilinguals_main_analysis.R,3301991,doi:10.7910/DVN/XGQ2ZA/VGPXKU,7452,ba2f4ee877f5fcb1544d68061a51559d,ba2f4ee877f5fcb1544d68061a51559d,,FC_bilinguals_main_analysis.R
+replication_archive/FC_bilinguals_pid_analysis.R,3301988,doi:10.7910/DVN/XGQ2ZA/BHFILC,8745,d10469fca136f8972c42c1902e05d2bb,d10469fca136f8972c42c1902e05d2bb,,FC_bilinguals_pid_analysis.R
+replication_archive/FC_bilinguals_simulation.R,3301986,doi:10.7910/DVN/XGQ2ZA/UEVE8S,1605,97a55131e5835110b93aa6e58ce333e3,97a55131e5835110b93aa6e58ce333e3,,FC_bilinguals_simulation.R
+replication_archive/README.txt,3301992,doi:10.7910/DVN/XGQ2ZA/MLK4LG,796,93b4b213795a5fb9f8f1f4b1e1d2080e,93b4b213795a5fb9f8f1f4b1e1d2080e,,README.txt
+replication_archive/flores_coppock_figure_1.pdf,3301983,doi:10.7910/DVN/XGQ2ZA/3WISUU,6125,f382d6ec39e490d6bf47f9259781ea37,f382d6ec39e490d6bf47f9259781ea37,,flores_coppock_figure_1.pdf
+replication_archive/flores_coppock_figure_2.pdf,3301993,doi:10.7910/DVN/XGQ2ZA/GEH5OE,6985,a4de3cc99fbe1147ef702f18e21024fe,a4de3cc99fbe1147ef702f18e21024fe,,flores_coppock_figure_2.pdf
+replication_archive/study_1.csv,3301985,doi:10.7910/DVN/XGQ2ZA/YTBKNC,1674661,e9864e397d22cec7a05a697dd2d3a896,e9864e397d22cec7a05a697dd2d3a896,UNF:6:0mPv+RAEOsmmz1hKp8N4jw==,study_1.tab
+replication_archive/study_2.csv,3301990,doi:10.7910/DVN/XGQ2ZA/9UJSIX,1165067,5c84199704e06841a48eaef924a772bd,5c84199704e06841a48eaef924a772bd,UNF:6:QPltjG8+1xQWdC1z1MY8YQ==,study_2.tab
+replication_archive/study_3.csv,3301989,doi:10.7910/DVN/XGQ2ZA/4UJ4PP,799147,d90ea7fc7aee9c9928f34c16c827b437,d90ea7fc7aee9c9928f34c16c827b437,UNF:6:ut3U+0R+q0iIjoipJ0X4Nw==,study_3.tab

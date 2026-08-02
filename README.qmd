@@ -1,0 +1,432 @@
+---
+title: "Reproducibility Report: Flores and Coppock (2018)"
+subtitle: "Do Bilinguals Respond More Favorably to Candidate Advertisements in English or in Spanish?"
+format:
+  gfm:
+    output-file: README.md
+    toc: true
+  pdf:
+    output-file: flores_coppock_2018_report.pdf
+    toc: true
+    toc-depth: 2
+    number-sections: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(here)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+here::i_am("README.qmd")
+
+# kableExtra styling is LaTeX-only; the GitHub README build takes plain pipe tables.
+latex_out <- knitr::is_latex_output()
+
+# kableExtra's styling verbs emit LaTeX and have no meaning under gfm, where the same
+# table renders as a pipe table. Each call site says what LaTeX alone gets.
+latex_only <- function(k, f) if (latex_out) f(k) else k
+
+gt <- read_csv(here::here("ground_truth", "flores_coppock_2018_ground_truth.csv"),
+               show_col_types = FALSE)
+```
+
+*Drafted by Claude Opus 5 under the supervision of Alex Coppock.*
+
+This repository holds the actively maintained replication code for Flores and Coppock (2018), together with the reproducibility report that documents what the original archive did and did not do. It is part of a program applying the maintenance proposal in Peer, Orr and Coppock (2021, *PS: Political Science & Politics*, doi [10.1017/S1049096521000366](https://doi.org/10.1017/S1049096521000366)) to a set of published archives.
+
+| | |
+|---|---|
+| Article | [10.1080/10584609.2018.1426663](https://doi.org/10.1080/10584609.2018.1426663) |
+| Replication archive | [10.7910/DVN/XGQ2ZA](https://doi.org/10.7910/DVN/XGQ2ZA) |
+| Pre-analysis plans | [osf.io/e6zjk](https://osf.io/e6zjk) |
+
+**The data are not redistributed here.** The deposit is 3.7 MB across 14 files and lives at Harvard Dataverse, which is the only copy this repository points at. `download_original.R` fetches it and verifies every file; `original_manifest.csv` pins the file identifiers, sizes and checksums, so the exact bytes this code was written against are recorded in version control even though the bytes themselves are not.
+
+**Repository layout.** `maintained/` is the maintained rewrite: one script per published table or figure, writing to `output/`, which is committed so a reader can compare a fresh run against it without downloading anything. `ground_truth/` ties every published number to the code that produces it. `original/` is created by the download script and is deliberately absent from the repository. This file is the reproducibility report, also available as a PDF in `report/`.
+
+**License.** CC0 1.0 Universal, matching the terms of the deposit this repository maintains. See `LICENSE`.
+
+**To reproduce.** Clone or download the repository, open `flores_coppock_2018.Rproj`, and run:
+
+``` r
+source("run_all.R")
+```
+
+That fetches the deposit, verifies its 14 files, produces every table and figure into `maintained/output/`, and rebuilds the ground truth from what it wrote. Required packages: tidyverse, estimatr, marginaleffects, knitr, kableExtra, here. Paths resolve through `here`, so nothing depends on the working directory. The full run takes about ten seconds once the deposit is on disk. A successful run overwrites `maintained/output/`, which is committed: **`git diff` on that folder is the reproduction check.**
+
+## Summary
+
+```{r summary_setup, include=FALSE}
+n_claims <- nrow(gt)
+n_archive_verifiable <- sum(!is.na(gt$match))
+n_archive_match <- sum(gt$match == 1, na.rm = TRUE)
+n_archive_fail <- sum(gt$match == 0, na.rm = TRUE)
+n_rewrite_verifiable <- sum(!is.na(gt$match_rewrite))
+n_rewrite_match <- sum(gt$match_rewrite == 1, na.rm = TRUE)
+n_rewrite_fail <- sum(gt$match_rewrite == 0, na.rm = TRUE)
+n_table_2 <- sum(gt$table_figure == "table_2")
+n_no_script <- sum(is.na(gt$match) & !is.na(gt$value_paper))
+```
+
+Two questions, answered before the detail.
+
+### Does the deposited archive run?
+
+Yes. All eight R scripts execute without error on R 4.6.0, with no hardcoded paths beyond a commented instruction to set the working directory and no calls that have since been removed. Every package they name still installs from CRAN, and all of them are alive: `margins` 0.3.28 was released in July 2024, `ggstance` 0.3.7 in April 2024, `coefplot` 1.2.9 in September 2025. The archive's own README omits `margins` from its list of dependencies, which is the only thing standing between a fresh session and a clean run, and it installs in one line.
+
+Running is also reproducing. The ground truth holds `r n_claims` rows, `r n_archive_verifiable` of which pair a published value with a value a deposited script prints. Every one of those `r n_archive_verifiable` matches the article to the precision it reports. There are no exceptions: not one coefficient, standard error, sample size, log likelihood or AIC in the article or its appendix disagrees with what the deposited code produces eight years later.
+
+Two things are nonetheless wrong with the deposit, and neither shows up as an error.
+
+**Running the archive in place destroys part of it.** Both figure scripts end in `ggsave(filename = "flores_coppock_figure_1.pdf", ...)` with a bare relative path, and both of those PDFs are themselves deposited files. A reader who does what the scripts instruct, setting the working directory to the archive folder and sourcing them, overwrites two of the fourteen deposited files and adds a stray `Rplots.pdf`. Nothing about the result changes, since the re-rendered figures carry the same estimates; what changes is that the deposit no longer verifies against its own published checksums.
+
+**The README undercounts the archive.** It lists seven scripts and describes the archive as containing them. There are eight. `FC_bilinguals_simulation.R`, which draws Figure 3, appears nowhere in it.
+
+### Does the maintained rewrite reproduce the paper?
+
+Yes, without exception. All `r n_rewrite_verifiable` claims with a published value to compare against match it to the precision the article reports, and none fails. That includes the `r n_table_2` values of Table 2 that no deposited script computes, which the rewrite recovers from the deposited `study_1.csv`.
+
+The rewrite contains exactly two numbers not computed from data, `0.05` and `-0.15` in `figure_3_simulation.R`. They are not estimates. They are the supposition the article states on page 18 in order to draw Figure 3: "Suppose for the moment that the positive effect among bilinguals is 5 percentage points but the effect among English-only monolinguals is negative 15 percentage points." Every other value in `maintained/output/` traces to the deposited data.
+
+## Paper overview
+
+**Citation**: Flores, A. and Coppock, A. (2018). "Do bilinguals respond more favorably to candidate advertisements in English or in Spanish?" *Political Communication*, 35(4), 612-633. DOI: 10.1080/10584609.2018.1426663
+
+**Summary**: Three survey experiments ask whether a candidate gains by speaking Spanish to bilingual voters, and what it costs when the same appeal reaches people who do not speak Spanish. Each uses a real advertisement produced by the campaign in matched English and Spanish versions, so the language of the appeal varies while its content does not: Jeb Bush in the 2016 Republican presidential primary, Filemon Vela running for Congress in Texas, and Mike Coffman running for Congress in Colorado. Experiments 1 and 2 add a second randomized factor, the language of the survey itself, giving a 2 by 2 design among bilinguals; Experiment 3 fields the Vela and Coffman ads to English-speaking monolinguals, where only the ad language varies. Among bilinguals the Spanish ad raises general election support for Bush and for Vela by about 5 percentage points and does nothing for Coffman. Among monolinguals the sign flips and the magnitude grows: support for Coffman falls 18.7 points. Taking the survey in Spanish raises bilinguals' reported sense of linked fate with other Latinos.
+
+## Original archive reproducibility
+
+```{r repro_table}
+tibble(
+  Script = c(
+    "FC_bilinguals_main_analysis.R",
+    "FC_bilinguals_in_text_stats.R",
+    "FC_bilinguals_interaction_analysis.R",
+    "FC_bilinguals_pid_analysis.R",
+    "FC_bilinguals_logit_analysis.R",
+    "FC_bilinguals_figure_1.R",
+    "FC_bilinguals_figure_2.R",
+    "FC_bilinguals_simulation.R"
+  ),
+  Output = c(
+    "Tables 5 to 9", "Table 3", "Tables A.1 to A.4", "Tables B.5 to B.8",
+    "Tables C.9 and C.10", "Figure 1", "Figure 2", "Figure 3"
+  ),
+  Status = c(
+    "Clean",
+    "Clean",
+    "Clean",
+    "Clean",
+    "Clean once margins is installed; the README does not name it",
+    "Clean; geom_errorbarh() warns that it is deprecated; overwrites a deposited file",
+    "Clean; same deprecation warning; overwrites a deposited file",
+    "Clean; absent from the README"
+  )
+) |>
+  kable(
+    booktabs = TRUE,
+    col.names = c("Script", "Produces", "Status on current R"),
+    caption = "Original archive reproducibility, checked against R 4.6.0 on 1 August 2026."
+  ) |>
+  latex_only(\(k) k |>
+    kable_styling(latex_options = c("hold_position", "scale_down"), font_size = 7) |>
+    column_spec(1, width = "4.5cm") |>
+    column_spec(2, width = "2.5cm") |>
+    column_spec(3, width = "5cm"))
+```
+
+Every package the archive names installs from CRAN and every one of them has been updated within the last two years: `stargazer` 5.2.3, `estimatr` 1.0.6, `coefplot` 1.2.9, `ggstance` 0.3.7, `margins` 0.3.28, `tidyverse`, `scales`. The only calls that draw a warning are `geom_errorbarh()` in the two figure scripts, deprecated in ggplot2 4.0.0 in favour of `geom_errorbar(orientation = "y")`, and `ggstance::position_dodgev()`, which warns about overlapping intervals as it always has. Both still draw the figure correctly.
+
+### The archive overwrites itself
+
+The two figure scripts finish with
+
+``` r
+ggsave(filename = "flores_coppock_figure_1.pdf", g, width = 7, height = 5)
+```
+
+and `flores_coppock_figure_1.pdf` is one of the fourteen files in the deposit. Running the archive as its own comments instruct therefore replaces two deposited files with fresh renderings and leaves a `Rplots.pdf` behind. Verifying the four affected checksums is the only way to notice, since the output is correct and no error is raised.
+
+```{r overwrite_table}
+manifest <- read_csv(here::here("original_manifest.csv"), show_col_types = FALSE)
+
+deposited_md5 <- function(f) {
+  manifest$md5_published[manifest$file == paste0("replication_archive/", f)]
+}
+
+tibble(
+  file = c("flores_coppock_figure_1.pdf", "flores_coppock_figure_2.pdf", "Rplots.pdf"),
+  deposited = c(deposited_md5("flores_coppock_figure_1.pdf"),
+                deposited_md5("flores_coppock_figure_2.pdf"),
+                "not in the deposit"),
+  after = c("differs, and differs again on every run",
+            "differs, and differs again on every run",
+            "created")
+) |>
+  kable(
+    booktabs = TRUE,
+    col.names = c("File", "MD5 as deposited", "After one run in place"),
+    caption = "What a single in-place run of the archive changes."
+  ) |>
+  latex_only(\(k) k |> kable_styling(latex_options = c("hold_position", "scale_down"), font_size = 7))
+```
+
+No fixed checksum can be quoted for the overwritten files, because a PDF records the time it was written and so hashes differently on every run. What can be quoted is how far the new rendering is from the old one. The re-rendered figures are not pixel-identical either, since ggplot2's text metrics have moved since 2017; rasterized at 100 dpi, mean absolute pixel intensity differs by 0.9 percent for Figure 1 and 2.4 percent for Figure 2. The difference is confined to glyph rendering and the small shift in panel geometry that follows from it. The plotted estimates are the same. This is damage to the archive's verifiability, not to its result.
+
+`download_original.R` restores the deposit from Dataverse and checks all fourteen files, so the damage is recoverable for anyone who notices it. The lesson generalizes past this archive: run a deposit's scripts in a copy, never in the deposit.
+
+## Number-by-number comparison
+
+```{r gt_summary}
+gt |>
+  summarize(
+    claims = n(),
+    printed_by_a_script = sum(!is.na(match)),
+    archive_matches = sum(match == 1, na.rm = TRUE),
+    archive_fails = sum(match == 0, na.rm = TRUE),
+    rewrite_matches = sum(match_rewrite == 1, na.rm = TRUE),
+    rewrite_fails = sum(match_rewrite == 0, na.rm = TRUE),
+    .by = table_figure
+  ) |>
+  kable(
+    booktabs = TRUE,
+    col.names = c("Location", "Claims", "In archive output", "Archive matches",
+                  "Archive fails", "Rewrite matches", "Rewrite fails"),
+    caption = "Published values by table, against the deposited scripts and against the maintained rewrite."
+  ) |>
+  latex_only(\(k) k |>
+    kable_styling(latex_options = c("hold_position"), font_size = 8))
+```
+
+The ground truth records `r n_claims` rows: every coefficient, standard error, sample size, log likelihood and AIC in Tables 2, 3 and 5 through 9 and in appendix Tables A.1 through C.10, the sixteen cell counts and the balance test of Table 3, the numbers the article states in prose on pages 13 through 17, and one row for each published float that carries no comparable number, so that a float's absence can never be mistaken for a float that was checked and passed. Published values were extracted from the article and appendix PDFs by parsing the typeset tables rather than by transcription, so the comparison is exhaustive rather than selective; the extraction scripts are in `ground_truth/`.
+
+`r n_no_script` published quantities are not printed by any deposited script: the `r n_table_2` values of the Lucid column of Table 2, discussed below, and the `r n_no_script - n_table_2` numbers the article states in prose, which the deposited scripts produce only as unlabelled cells inside larger tables.
+
+`ground_truth/build_ground_truth.R` rebuilds the table at the end of every run. Its only hardcoded inputs are the published values, which serve as comparison targets; `value_rewrite` is read back out of `maintained/output/`, so the table cannot drift from the code it grades. Where a rewrite value disagreed with the article, `defect_locus` would record whether the fault lay with the article, the deposited code, the environment or this repository. No row needs it.
+
+Five published floats carry no number that can be compared against the article, and each has a row saying why.
+
+```{r coverage_table}
+gt |>
+  filter(is.na(value_paper), is.na(value_rewrite), !is.na(notes)) |>
+  select(table_figure, notes) |>
+  kable(
+    booktabs = TRUE,
+    col.names = c("Float", "Why there is nothing in it to compare"),
+    caption = "Published floats with no comparable number."
+  ) |>
+  latex_only(\(k) k |>
+    kable_styling(latex_options = c("hold_position"), font_size = 7) |>
+    column_spec(2, width = "13cm"))
+```
+
+```{r gt_table}
+gt |>
+  mutate(across(c(value_script, value_paper, value_rewrite),
+                \(x) if_else(is.na(x), "", sprintf("%.4g", x)))) |>
+  mutate(across(c(match, match_rewrite), \(x) replace_na(as.character(x), ""))) |>
+  select(table_figure, claim, value_paper, value_script, match,
+         value_rewrite, match_rewrite) |>
+  kable(
+    booktabs = TRUE,
+    col.names = c("Location", "Claim", "Paper", "Archive", "Match",
+                  "Rewrite", "Match"),
+    caption = "Ground truth: the published value against the value the deposited scripts print and the value the maintained rewrite computes. A blank Archive column means no deposited script prints the quantity."
+  ) |>
+  latex_only(\(k) k |>
+    kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 5) |>
+    column_spec(2, width = "6cm"))
+```
+
+## Table 2 has no code
+
+Table 2 compares the bilingual Lucid sample in the Bush experiment against bilingual respondents in the 2006 Latino National Survey and the 2012 Pew National Survey of Latinos. Its Lucid column is nine numbers computed from `study_1.csv`, and no script in the deposit computes them. The archive's `FC_bilinguals_in_text_stats.R` ends with a summary of five covariates from `study_3.csv`, which is a different sample and a different set of variables; nothing produces Table 2.
+
+The rewrite adds `table_2_sample_comparison.R`, and all `r n_table_2` values reproduce. Doing so requires one undocumented recode: `educ_5` stores "Not Found" as 99 for 96 of the 1,862 respondents, and leaving those in returns a mean of 7.95 against the article's 3.01. The LNS and Pew columns come from surveys that are not part of the deposit and cannot be checked here.
+
+```{r table_2}
+read_csv(here::here("maintained", "output", "table_2_sample_comparison.csv"),
+         show_col_types = FALSE) |>
+  left_join(
+    gt |>
+      filter(table_figure == "table_2", !str_detect(claim, "_se$")) |>
+      mutate(quantity = str_remove(claim, "^lucid, ")) |>
+      select(quantity, paper_mean = value_paper),
+    by = "quantity"
+  ) |>
+  mutate(across(c(mean, se), \(x) sprintf("%.2f", x))) |>
+  select(quantity, paper_mean, mean, se, n_nonmissing) |>
+  kable(
+    booktabs = TRUE,
+    col.names = c("Quantity", "Paper", "Rewrite mean", "Rewrite SE", "Non-missing"),
+    caption = "Table 2, Lucid column: the article's value against the rewrite, which is the only code that computes it."
+  ) |>
+  latex_only(\(k) k |> kable_styling(latex_options = "hold_position", font_size = 8))
+```
+
+## Maintained rewrite
+
+The rewrite lives in `maintained/`: a shared `helpers.R` and fourteen scripts covering the seven main-text tables, the ten appendix tables, the three figures and the numbers stated in prose. It is a translation, not a reanalysis: every estimator, specification and sample restriction is the one the paper used.
+
+### Architecture
+
+`helpers.R` loads the three deposited CSVs and builds the three analysis subsamples, which is the one piece of data preparation the archive repeats inside each of its eight scripts. Each table script then declares its models as a list of specifications and fits them in one pass, so the outcome, the treatment indicator and the sample of every column are visible in a single block.
+
+Standard errors are the main substitution. The archive fits with `lm()` and passes `estimatr::starprep()` into `stargazer` to get HC2 standard errors, which means the coefficients and the standard errors printed beside them come from two different objects. The rewrite fits with `lm_robust(se_type = "HC2")`, which is the same estimator and the same standard errors in one call, and writes a tidy CSV rather than a LaTeX table, so the table and any downstream check cannot disagree.
+
+`text_in_text_claims.R` reads the committed table output and reports the numbers the article states in prose. It reads no data of its own, so an in-text claim and the table it is drawn from cannot disagree.
+
+### Deprecated patterns replaced
+
+```{r replacements_table}
+tibble(
+  Original = c(
+    "`rm(list = ls())`",
+    "commented `setwd()` instruction",
+    "`lm()` + `starprep()` into `stargazer`",
+    "`stargazer` LaTeX to the console",
+    "`geom_errorbarh()`",
+    "`ggstance::position_dodgev()`",
+    "`margins::margins()`",
+    "`ggsave()` to a bare relative path",
+    "`expand.grid()` + `for` loop over rows",
+    "`within()` blocks over base indexing",
+    "magrittr pipe"
+  ),
+  Replacement = c(
+    "(omitted)",
+    "`here::here()`",
+    "`estimatr::lm_robust(se_type = \"HC2\")`",
+    "`write_csv()` to `output/`",
+    "`geom_linerange()`",
+    "`position_dodge()`",
+    "`marginaleffects::avg_slopes()`",
+    "`ggsave(here::here(\"maintained\", \"output\", ...))`",
+    "`expand_grid()` + `mutate()`",
+    "`mutate()` paragraphs",
+    "native pipe"
+  ),
+  Forced = c(
+    "no", "no", "no", "no",
+    "yes, deprecated in ggplot2 4.0.0",
+    "no, ggstance still installs",
+    "no, margins 0.3.28 released July 2024",
+    "yes, it overwrites the deposit",
+    "no", "no", "no"
+  )
+) |>
+  kable(
+    booktabs = TRUE,
+    col.names = c("Original pattern", "Replacement", "Required?"),
+    caption = "Patterns replaced in the maintained rewrite, and whether the replacement was forced or chosen."
+  ) |>
+  latex_only(\(k) k |>
+    kable_styling(latex_options = c("hold_position", "scale_down"), font_size = 7) |>
+    column_spec(1, width = "4.5cm") |>
+    column_spec(2, width = "4.5cm") |>
+    column_spec(3, width = "3.5cm"))
+```
+
+Only two of the eleven substitutions were forced. `geom_errorbarh()` is deprecated and the horizontal intervals now come from `geom_linerange()`, which the project's style guide prefers in any case. The `ggsave()` paths had to move because the originals write into the deposit. Everything else is a choice, and the table says so rather than implying a package failure that did not occur. `margins` in particular is alive, and running it beside `avg_slopes()` on the same fitted models returns the same average marginal effects to within 1e-4, the gap being numerical differentiation in one and not the other.
+
+## Figures
+
+Figure 1 and Figure 2 are the two the deposit pre-renders, and the rewrite reproduces both. The estimates behind every point are written to `figure_1_main_effects.csv` and `figure_2_het_fx_party.csv`, so the figures are diffable rather than only viewable. Neither deposited figure script prints or saves a single number, so those two CSVs are the only form in which the plotted estimates exist anywhere; `build_ground_truth.R` compares all `r nrow(read_csv(here::here("ground_truth", "archive_figure_estimates.csv"), show_col_types = FALSE))` of them, on estimate, standard error and both confidence limits, against the models the deposited scripts specify.
+
+```{r fig1_image, out.width="100%", fig.cap="Figure 1 as reproduced by the maintained rewrite."}
+knitr::include_graphics(
+  if (latex_out) {
+    here::here("maintained", "output", "figure_1_main_effects.pdf")
+  } else {
+    "maintained/output/figure_1_main_effects.png"
+  }
+)
+```
+
+```{r fig2_image, out.width="100%", fig.cap="Figure 2 as reproduced by the maintained rewrite."}
+knitr::include_graphics(
+  if (latex_out) {
+    here::here("maintained", "output", "figure_2_het_fx_party.pdf")
+  } else {
+    "maintained/output/figure_2_het_fx_party.png"
+  }
+)
+```
+
+Figure 3 is the exception to the rule that every number in `output/` comes from data, and it is worth being precise about why. The figure is not an estimate but a calibration exercise: it maps the net electoral payoff of a Spanish-language strategy over two quantities the experiments do not measure, the share of bilinguals in the electorate and the probability that a monolingual sees the ad anyway. The two effect sizes it holds fixed, positive 5 points among bilinguals and negative 15 among monolinguals, are stated in the article's own prose as a supposition. Substituting the estimated effects would draw a different figure than the paper drew, which is a reanalysis rather than a maintenance fix, so the assumption stays and `text_in_text_claims.R` reports the estimates it approximates alongside it. `figure_3_simulation.csv` records the surface on a coarse grid and the break-even mistargeting risk at each bilingual share, which is what the figure is read for.
+
+```{r fig3_image, out.width="80%", fig.cap="Figure 3 as reproduced by the maintained rewrite."}
+knitr::include_graphics(
+  if (latex_out) {
+    here::here("maintained", "output", "figure_3_simulation.pdf")
+  } else {
+    "maintained/output/figure_3_simulation.png"
+  }
+)
+```
+
+## In-text claims
+
+```{r text_setup, include=FALSE}
+n_text_stated <- sum(gt$table_figure == "text" & !is.na(gt$value_paper)) - 1
+n_text_unstated <- sum(gt$table_figure == "text" & is.na(gt$value_paper))
+```
+
+The article states `r n_text_stated` numbers in prose rather than in a table, plus one claim about how closely two estimators agree. All of them reproduce. A further `r n_text_unstated` quantities the rewrite computes are the treatment effects the article discusses without printing, so they carry no comparison target and are recorded with a blank paper value rather than dropped.
+
+```{r text_table}
+gt |>
+  filter(table_figure == "text") |>
+  mutate(
+    across(c(value_paper, value_rewrite), \(x) if_else(is.na(x), "", sprintf("%.4g", x))),
+    match_rewrite = replace_na(as.character(match_rewrite), "")
+  ) |>
+  select(claim, value_paper, value_rewrite, match_rewrite) |>
+  kable(
+    booktabs = TRUE,
+    col.names = c("Claim", "Paper", "Rewrite", "Match"),
+    caption = "Numbers the article states in prose, against the maintained rewrite."
+  ) |>
+  latex_only(\(k) k |>
+    kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 7) |>
+    column_spec(1, width = "8cm"))
+```
+
+The first row is the appendix's claim that the average marginal effects from the logit models "match the OLS models to the second decimal place or better". Across the ten models the largest gap is `r sprintf("%.1e", gt$value_rewrite[gt$claim == "appendixC_ame_vs_ols, max_abs_difference"])`, three orders of magnitude tighter than the claim.
+
+## Maintained rewrite verification
+
+Every one of the `r n_rewrite_verifiable` claims with a published value to compare against matches it, so no row carries a `defect_locus`. Two full runs of `run_all.R` produce byte-identical CSV and PNG output and an identical ground truth. Only the PDF figures differ between runs, because a PDF records the time it was written. Nothing in the pipeline draws a random number, so there is no seed to pin and no sampler change to inherit.
+
+## R environment
+
+```{r env}
+si <- sessionInfo()
+tibble(
+  Item = c("R version", "Platform", "Date run"),
+  Value = c(
+    paste(si$R.version$major, si$R.version$minor, sep = "."),
+    si$platform,
+    format(Sys.Date())
+  )
+) |>
+  kable(booktabs = TRUE) |>
+  latex_only(\(k) k |>
+    kable_styling(latex_options = "hold_position"))
+```
+
+```{r env_pkgs}
+pkgs <- c("estimatr", "marginaleffects", "dplyr", "ggplot2", "tidyr", "purrr", "readr", "here")
+tibble(
+  Package = pkgs,
+  Version = map_chr(pkgs, \(p) as.character(packageVersion(p)))
+) |>
+  kable(booktabs = TRUE, caption = "Package versions used for the run behind this report.") |>
+  latex_only(\(k) k |>
+    kable_styling(latex_options = "hold_position"))
+```
