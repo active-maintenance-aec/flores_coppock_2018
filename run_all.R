@@ -38,3 +38,10 @@ source(here::here("maintained", "text_in_text_claims.R"))
 # Joins what the article prints to what the deposit produces and to everything written
 # above, so it runs last of all.
 source(here::here("ground_truth", "build_ground_truth.R"))
+
+# Deposited archive, again ----
+# The check at the top of this file is a precondition: it says original/ was intact
+# before anything ran. Nothing above writes to original/, and this second pass is what
+# demonstrates it rather than assuming it. Nothing is downloaded; the files are already
+# present and are re-checked against the manifest on checksum, byte size and membership.
+source(here::here("download_original.R"))
