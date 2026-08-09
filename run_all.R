@@ -34,6 +34,11 @@ source(here::here("maintained", "figure_3_simulation.R"))
 # Reads the table output written above, so it runs after the table scripts.
 source(here::here("maintained", "text_in_text_claims.R"))
 
+# Design quantities the article states in prose ----
+# Recruitment, quiz passing and the outcome scales, which live in the deposited data
+# rather than in any table.
+source(here::here("maintained", "text_design_facts.R"))
+
 # Figure timestamps ----
 # R's pdf() device stamps a wall-clock /CreationDate and /ModDate into every figure it
 # writes, and those two fields are the only reason two runs of this pipeline produce
@@ -47,8 +52,16 @@ walk(
 
 # Ground truth ----
 # Joins what the article prints to what the deposit produces and to everything written
-# above, so it runs last of all.
+# above, so it runs last of all. Its final step is the coverage gate, which runs
+# in_text_claims.R as a program and checks that the two instruments print the same
+# claims and agree about every one of them.
 source(here::here("ground_truth", "build_ground_truth.R"))
+
+# In-text claims, for a reader ----
+# The gate above already ran this file under capture.output. This second run is the
+# human-readable log: every sentence in the article that states a number, beside the
+# number the pipeline produces for it.
+source(here::here("maintained", "in_text_claims.R"))
 
 # Deposited archive, again ----
 # The check at the top of this file is a precondition: it says original/ was intact

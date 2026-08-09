@@ -31,8 +31,15 @@ latex_out <- knitr::is_latex_output()
 # table renders as a pipe table. Each call site says what LaTeX alone gets.
 latex_only <- function(k, f) if (latex_out) f(k) else k
 
+# value_paper is the string the article prints, so the column type is forced: guessed
+# as a double it would turn a published 0.020 into 0.02 and print it back that way.
 gt <- read_csv(here::here("ground_truth", "flores_coppock_2018_ground_truth.csv"),
-               show_col_types = FALSE)
+               col_types = cols(value_paper = col_character(), .default = col_guess()))
+published_claims <- read_csv(
+  here::here("ground_truth", "published_claims.csv"),
+  col_types = cols(value_paper = col_character(), .default = col_guess()))
+float_coverage <- read_csv(here::here("ground_truth", "float_coverage.csv"),
+                           show_col_types = FALSE)
 ```
 
 *Drafted by Claude Opus 5 under the supervision of Alex Coppock.*
@@ -71,6 +78,13 @@ n_rewrite_match <- sum(gt$match_rewrite == 1, na.rm = TRUE)
 n_rewrite_fail <- sum(gt$match_rewrite == 0, na.rm = TRUE)
 n_table_2 <- sum(gt$table_figure == "table_2")
 n_no_script <- sum(is.na(gt$match) & !is.na(gt$value_paper))
+n_holds <- sum(gt$holds, na.rm = TRUE)
+n_holds_fail <- sum(!gt$holds, na.rm = TRUE)
+n_paper_internal <- sum(gt$defect_locus == "paper_internal", na.rm = TRUE)
+n_extraction <- nrow(published_claims)
+n_needs_block <- sum(published_claims$needs_block)
+n_float_published <- sum(float_coverage$published_numbers)
+n_float_covered <- sum(float_coverage$covered)
 ```
 
 Two questions, answered before the detail.
@@ -89,7 +103,9 @@ Two things are nonetheless wrong with the deposit, and neither shows up as an er
 
 ### Does the maintained rewrite reproduce the paper?
 
-Yes, without exception. All `r n_rewrite_verifiable` claims with a published value to compare against match it to the precision the article reports, and none fails. That includes the `r n_table_2` values of Table 2 that no deposited script computes, which the rewrite recovers from the deposited `study_1.csv`.
+Every number the article prints reproduces. Of the `r n_rewrite_verifiable` claims carrying a published value, `r n_rewrite_match` match it to the precision the article reports. That includes the `r n_table_2` values of Table 2 that no deposited script computes, which the rewrite recovers from the deposited `study_1.csv`.
+
+The `r n_rewrite_fail` that do not match are not estimates. They are the endpoints the article gives for two of its five outcome scales, which it describes as running from 1 to 4 where the analysed variables run from 0 to 3. Three further claims are prose that the data contradict: each of three references to a lettered appendix section names the wrong section. All `r n_paper_internal` are errors in the article rather than in the code, they move no estimate and no conclusion, and they are corrected in `flores_coppock_2018_errata.pdf` at the root of this repository.
 
 The rewrite contains exactly two numbers not computed from data, `0.05` and `-0.15` in `figure_3_simulation.R`. They are not estimates. They are the supposition the article states on page 18 in order to draw Figure 3: "Suppose for the moment that the positive effect among bilinguals is 5 percentage points but the effect among English-only monolinguals is negative 15 percentage points." Every other value in `maintained/output/` traces to the deposited data.
 
@@ -203,17 +219,20 @@ gt |>
     kable_styling(latex_options = c("hold_position"), font_size = 8))
 ```
 
-The ground truth records `r n_claims` rows: every coefficient, standard error, sample size, log likelihood and AIC in Tables 2, 3 and 5 through 9 and in appendix Tables A.1 through C.10, the sixteen cell counts and the balance test of Table 3, the numbers the article states in prose on pages 13 through 17, and one row for each published float that carries no comparable number, so that a float's absence can never be mistaken for a float that was checked and passed. Published values were extracted from the article and appendix PDFs by parsing the typeset tables rather than by transcription, so the comparison is exhaustive rather than selective; the extraction scripts are in `ground_truth/`.
+The ground truth records `r n_claims` rows: every coefficient, standard error, sample size, log likelihood and AIC in Tables 2, 3 and 5 through 9 and in appendix Tables A.1 through C.10, the sixteen cell counts of Table 3, every quantity the article states in a sentence rather than in a table, and one row for each published float that carries no comparable number, so that a float's absence can never be mistaken for a float that was checked and passed. The typeset tables were extracted from the article and appendix PDFs by parsing rather than by transcription, so that side of the comparison is exhaustive rather than selective; the extraction scripts are in `ground_truth/`.
 
-`r n_no_script` published quantities are not printed by any deposited script: the `r n_table_2` values of the Lucid column of Table 2, discussed below, and the `r n_no_script - n_table_2` numbers the article states in prose, which the deposited scripts produce only as unlabelled cells inside larger tables.
+`value_paper` is carried as the string the page prints, and a value agrees when the pipeline's number, printed to that page's own precision, gives the same digits. The distinction is not cosmetic: `r sum(str_detect(gt$value_paper, "\\.\\d*0$"), na.rm = TRUE)` of the published values end in a decimal zero that a numeric column silently drops, turning Table 5's standard error of 0.020 into 0.02 and comparing it at a tenth of the intended tolerance.
 
-`ground_truth/build_ground_truth.R` rebuilds the table at the end of every run. Its only hardcoded inputs are the published values, which serve as comparison targets; `value_rewrite` is read back out of `maintained/output/`, so the table cannot drift from the code it grades. Where a rewrite value disagreed with the article, `defect_locus` would record whether the fault lay with the article, the deposited code, the environment or this repository. No row needs it.
+`r n_no_script` published quantities are not printed by any deposited script: the `r n_table_2` values of the Lucid column of Table 2, discussed below, and `r n_no_script - n_table_2` quantities the article states in prose, mostly recruitment and quiz-passing counts that the deposit records in its data but never reports.
+
+`ground_truth/build_ground_truth.R` rebuilds the table at the end of every run. Its only hardcoded inputs are the published values, which serve as comparison targets; `value_rewrite` is read back out of `maintained/output/`, so the table cannot drift from the code it grades. `defect_locus` records, for every row that is not a clean match, whether the fault lies with the article, the deposited code, the environment or this repository. `r sum(!is.na(gt$defect_locus))` rows carry one: `r n_paper_internal` are the article, and the remaining `r sum(!is.na(gt$defect_locus)) - n_paper_internal` is a claim the deposit never computed.
 
 Five published floats carry no number that can be compared against the article, and each has a row saying why.
 
 ```{r coverage_table}
 gt |>
-  filter(is.na(value_paper), is.na(value_rewrite), !is.na(notes)) |>
+  filter(is.na(value_paper), is.na(value_rewrite), !is.na(notes),
+         table_figure != "text") |>
   select(table_figure, notes) |>
   kable(
     booktabs = TRUE,
@@ -227,9 +246,10 @@ gt |>
 
 ```{r gt_table}
 gt |>
-  mutate(across(c(value_script, value_paper, value_rewrite),
-                \(x) if_else(is.na(x), "", sprintf("%.4g", x)))) |>
-  mutate(across(c(match, match_rewrite), \(x) replace_na(as.character(x), ""))) |>
+  mutate(across(c(value_script, value_rewrite),
+                \(x) if_else(is.na(x), "", sprintf("%.4g", x))),
+         value_paper = replace_na(value_paper, ""),
+         across(c(match, match_rewrite), \(x) replace_na(as.character(x), ""))) |>
   select(table_figure, claim, value_paper, value_script, match,
          value_rewrite, match_rewrite) |>
   kable(
@@ -271,7 +291,7 @@ read_csv(here::here("maintained", "output", "table_2_sample_comparison.csv"),
 
 ## Maintained rewrite
 
-The rewrite lives in `maintained/`: a shared `helpers.R` and fourteen scripts covering the seven main-text tables, the ten appendix tables, the three figures and the numbers stated in prose. It is a translation, not a reanalysis: every estimator, specification and sample restriction is the one the paper used.
+The rewrite lives in `maintained/`: a shared `helpers.R` and sixteen scripts covering the seven main-text tables, the ten appendix tables, the three figures, the numbers stated in prose, the design quantities the article states without tabling them, and the second instrument. It is a translation, not a reanalysis: every estimator, specification and sample restriction is the one the paper used.
 
 ### Architecture
 
@@ -358,7 +378,7 @@ knitr::include_graphics(
 )
 ```
 
-Figure 3 is the exception to the rule that every number in `output/` comes from data, and it is worth being precise about why. The figure is not an estimate but a calibration exercise: it maps the net electoral payoff of a Spanish-language strategy over two quantities the experiments do not measure, the share of bilinguals in the electorate and the probability that a monolingual sees the ad anyway. The two effect sizes it holds fixed, positive 5 points among bilinguals and negative 15 among monolinguals, are stated in the article's own prose as a supposition. Substituting the estimated effects would draw a different figure than the paper drew, which is a reanalysis rather than a maintenance fix, so the assumption stays and `text_in_text_claims.R` reports the estimates it approximates alongside it. `figure_3_simulation.csv` records the surface on a coarse grid and the break-even mistargeting risk at each bilingual share, which is what the figure is read for.
+Figure 3 is the exception to the rule that every number in `output/` comes from data, and it is worth being precise about why. The figure is not an estimate but a calibration exercise: it maps the net electoral payoff of a Spanish-language strategy over two quantities the experiments do not measure, the share of bilinguals in the electorate and the probability that a monolingual sees the ad anyway. The two effect sizes it holds fixed, positive 5 points among bilinguals and negative 15 among monolinguals, are stated in the article's own prose as a supposition. Substituting the estimated effects would draw a different figure than the paper drew, which is a reanalysis rather than a maintenance fix, so the assumption stays and `text_in_text_claims.R` reports the estimates it approximates alongside it. `figure_3_simulation.csv` records the surface on an eleven-by-eleven grid and the break-even mistargeting risk at each bilingual share, which is what the figure is read for. The coarse grid is computed on its own rather than filtered out of the fine one the figure draws: `seq(0, 1, by = 0.01)` and `seq(0, 1, by = 0.1)` do not agree on 0.3 or 0.6 in floating point, so a membership filter silently drops two of the eleven lines on each axis.
 
 ```{r fig3_image, out.width="80%", fig.cap="Figure 3 as reproduced by the maintained rewrite."}
 knitr::include_graphics(
@@ -370,38 +390,102 @@ knitr::include_graphics(
 )
 ```
 
+## The extraction and the two instruments
+
+```{r extraction_setup, include=FALSE}
+type_counts <- published_claims |> count(claim_type)
+n_type <- function(x) type_counts$n[type_counts$claim_type == x]
+```
+
+The comparison above is float-shaped: it asks whether the numbers in the article's tables reproduce. Most of what a reader would quote is not in a table, so the repository carries a second, sentence-shaped instrument beside it.
+
+**`ground_truth/published_claims.csv` is the extraction.** The article and the appendix were read line by line and every numeric token recorded with its location, its type and, where it has one, the string the page prints. It holds `r n_extraction` rows: `r n_type("pipeline")` `pipeline` claims (a quantity the analysis produces), `r n_type("descriptive")` `descriptive` claims (a statement about shape, sign or count with a truth value rather than a number), `r n_type("definitional")` `definitional` (scale endpoints, field dates, category counts), `r n_type("structural")` `structural` (counts of the paper's own sections, floats and cross-references) and `r n_type("transcribed")` `transcribed` (values quoted from other papers, which cannot drift). The coverage boundary is stated plainly: the extraction covers every numeric token in the article's prose, notes, captions, table titles and row labels, and in the appendix's prose and its contents page, together with one row per published float recording how many numbers that float carries. It does **not** repeat the cells of the typeset tables, which are transcribed one by one in `published_values.csv` and compared in the ground truth. Excluded, and named here so the exclusions are auditable: the journal's own front matter and correspondence address, citation years and page or footnote locators inside citations, the reference list, running heads and page numbers, the ORCID, footnote markers, and the digits inside YouTube identifiers.
+
+**`maintained/in_text_claims.R` is the second instrument.** It recomputes every quantity a sentence states, from `maintained/output/`, by a path of its own, and prints it beside the sentence. It never reads the ground truth, because agreeing with the comparison would prove nothing, and no published number is typed into it. Each line reads `CLAIM <id> = <value> || <label>`.
+
+**The coverage gate is the last step of `build_ground_truth.R`.** It runs `in_text_claims.R` as a program in its own environment, captures what it prints, and requires that the `r n_needs_block` extraction rows needing a block are exactly the claims printed, in both directions; that the value each instrument reaches agrees with the other at the article's own precision; that every stored published value survives a round trip through its own recorded precision, checked before anything consumes it; and that the extraction and the ground truth, which are two hand transcriptions of the same pages, say the same thing. A block that errors, or prints nothing, fails the gate where a search for comment markers would pass it.
+
+`r n_type("descriptive")` of the claims are descriptive and carry a computed truth value rather than a number: `r n_holds` hold, `r n_holds_fail` do not, and `r n_type("descriptive") - n_holds - n_holds_fail` carry no verdict by design, one because the sentence hedges its magnitude and one because the deposit never computed the quantity. The `r n_holds_fail` that do not hold are the appendix cross-references.
+
+```{r float_coverage_table}
+float_coverage |>
+  mutate(across(c(published_numbers, covered), as.integer)) |>
+  select(float, published_numbers, covered, reproduced_by_rewrite, basis) |>
+  kable(
+    booktabs = TRUE,
+    col.names = c("Float", "Numbers it carries", "Covered", "Reproduce", "Basis"),
+    caption = "Coverage per published float."
+  ) |>
+  latex_only(\(k) k |>
+    kable_styling(latex_options = c("hold_position"), font_size = 7) |>
+    column_spec(5, width = "6cm"))
+```
+
+`r n_float_covered` of the `r n_float_published` numbers the article's floats carry are covered. The `r n_float_published - n_float_covered` that are not fall into three groups: Table 1's eight language indicators, which are notation; the thirty Latino National Survey and Pew columns of Table 2, which come from two surveys the deposit does not contain; and Table 4's nine advertisement running times and election years, which the deposit does not record. Figures 1 and 2 print no estimate on their faces, so what each asserts is the number of estimates it plots, counted off the published page and recomputed from the figure's own CSV.
+
+## Errata
+
+Two errors in the article are corrected in `flores_coppock_2018_errata.pdf`, rendered from `errata.qmd` at the root of this repository with every corrected value computed at render time rather than typed. Neither changes an estimate or a conclusion.
+
+The first is that the Outcome Measures section gives the wrong endpoints for two of its five scales. Confidence in Candidate and Linked Fate are described as running from 1 to 4; the variables the article analyses run from 0 to 3, which is the scale the control means in Tables 8 and 9 are on. A shift of a scale leaves every treatment effect unchanged, so what the correction changes is how a reader should read the constants.
+
+The second is that three of the article's five references to a lettered appendix section name the wrong section: the language quiz is said to be in Appendix D and is in Appendix E, the Spanish-language survey is said to be in Appendix C and is in Appendix D, and the logistic regression tables are said to be in Appendix A and are in Appendix C.
+
+One descriptive claim sits close to the line and is recorded as holding. The article says that "among monolinguals, the pattern of treatment effects does not differ by respondent partisanship", glossing that in the next sentence as "Monolingual Republicans and Democrats alike respond negatively to the Spanish-language advertisement". All sixteen monolingual estimates are indeed negative. Two of the eight Democrat-Republican differences do separate from zero at conventional levels, so the sentence holds as the article itself defines it and not on a stricter reading.
+
 ## In-text claims
 
 ```{r text_setup, include=FALSE}
-n_text_stated <- sum(gt$table_figure == "text" & !is.na(gt$value_paper)) - 1
-n_text_unstated <- sum(gt$table_figure == "text" & is.na(gt$value_paper))
+prose <- gt |> filter(table_figure == "text")
+n_text_stated <- sum(!is.na(prose$value_paper))
+n_text_descriptive <- sum(is.na(prose$value_paper))
+
+treatment_terms <- c("Z_ad", "Z_vela", "Z_coffman")
+out_csv <- function(f) read_csv(here::here("maintained", "output", f),
+                                show_col_types = FALSE)
+ols_estimates <- bind_rows(
+  out_csv("table_5_general_election.csv") |> mutate(table = "c9"),
+  out_csv("table_7_candidate_cares.csv") |> mutate(table = "c10")
+) |>
+  filter(term %in% treatment_terms) |>
+  select(table, candidate, sample, ols = estimate)
+worst_ame_gap <- out_csv("tables_c9_c10_ames.csv") |>
+  filter(term %in% treatment_terms) |>
+  inner_join(ols_estimates, by = c("table", "candidate", "sample")) |>
+  summarize(worst = max(abs(estimate - ols))) |>
+  pull(worst)
 ```
 
-The article states `r n_text_stated` numbers in prose rather than in a table, plus one claim about how closely two estimators agree. All of them reproduce. A further `r n_text_unstated` quantities the rewrite computes are the treatment effects the article discusses without printing, so they carry no comparison target and are recorded with a blank paper value rather than dropped.
+The article states `r n_text_stated` numbers in a sentence rather than in a table, and makes a further `r n_text_descriptive` claims about shape, sign or count that carry a truth value instead of a number. The table below is the ground truth's own view of them; `in_text_claims.R` prints the same set independently, with a label naming the derivation behind each.
 
 ```{r text_table}
-gt |>
-  filter(table_figure == "text") |>
+prose |>
   mutate(
-    across(c(value_paper, value_rewrite), \(x) if_else(is.na(x), "", sprintf("%.4g", x))),
-    match_rewrite = replace_na(as.character(match_rewrite), "")
+    value_rewrite = if_else(is.na(value_rewrite), "", sprintf("%.4g", value_rewrite)),
+    value_paper = replace_na(value_paper, ""),
+    verdict = case_when(
+      !is.na(match_rewrite) ~ as.character(match_rewrite),
+      !is.na(holds) ~ as.character(holds),
+      .default = ""
+    ),
+    defect_locus = replace_na(defect_locus, "")
   ) |>
-  select(claim, value_paper, value_rewrite, match_rewrite) |>
+  select(claim, value_paper, value_rewrite, verdict, defect_locus) |>
   kable(
     booktabs = TRUE,
-    col.names = c("Claim", "Paper", "Rewrite", "Match"),
-    caption = "Numbers the article states in prose, against the maintained rewrite."
+    col.names = c("Claim", "Paper", "Rewrite", "Holds", "Locus"),
+    caption = "Quantities the article states in a sentence, against the maintained rewrite."
   ) |>
   latex_only(\(k) k |>
     kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 7) |>
-    column_spec(1, width = "8cm"))
+    column_spec(1, width = "7cm"))
 ```
 
-The first row is the appendix's claim that the average marginal effects from the logit models "match the OLS models to the second decimal place or better". Across the ten models the largest gap is `r sprintf("%.1e", gt$value_rewrite[gt$claim == "appendixC_ame_vs_ols, max_abs_difference"])`, three orders of magnitude tighter than the claim.
+Two of these deserve their own note. The appendix claims that the average marginal effects from the logit models "match the OLS models to the second decimal place or better"; across the ten models the largest gap is `r sprintf("%.1e", worst_ame_gap)`, three orders of magnitude tighter than the claim. And the Results section says that "formal tests indicate that item non-response is unlikely to be related to treatment assignment"; none of the deposit's eight scripts runs such a test, and adding one would estimate something the deposit never did, so the claim has no counterpart and its row carries a locus of `archive`. What is checkable is the size of the non-response, which moves the analysed sample by less than one per cent within any candidate-by-sample cell.
 
 ## Maintained rewrite verification
 
-Every one of the `r n_rewrite_verifiable` claims with a published value to compare against matches it, so no row carries a `defect_locus`. Two full runs of `run_all.R` produce byte-identical CSV and PNG output and an identical ground truth. Only the PDF figures differ between runs, because a PDF records the time it was written. Nothing in the pipeline draws a random number, so there is no seed to pin and no sampler change to inherit.
+Two full runs of `run_all.R` from clean sessions both exit 0 and produce a byte-identical `maintained/output/`, the three figure PDFs included: `blank_pdf_timestamps()` in `helpers.R` overwrites the `/CreationDate` and `/ModDate` a PDF records when it is written, so the reproduction diff covers every file the pipeline writes rather than all but the figures. Nothing in the pipeline draws a random number, so there is no seed to pin and no sampler change to inherit.
 
 ## R environment
 

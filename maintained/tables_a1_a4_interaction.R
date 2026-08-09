@@ -5,6 +5,11 @@
 #   survey-language interaction to the four bilingual-sample models. One script rather
 #   than four because the twelve models differ only in the outcome and share a single
 #   output file.
+#
+#   The p-value is written out because the article counts the interactions that clear
+#   two thresholds ("none of the interaction terms are significant at the 5% level. Two
+#   of the 12 are significant at the 10% level"), and a 95 per cent interval answers
+#   only the first of those.
 
 source(here::here("maintained", "helpers.R"))
 
@@ -33,6 +38,7 @@ out <- specs |>
     tidy(fit) |> mutate(table = s$table, candidate = s$candidate, n = fit$nobs)
   }) |>
   list_rbind() |>
-  select(table, candidate, outcome, term, estimate, std.error, conf.low, conf.high, n)
+  select(table, candidate, outcome, term, estimate, std.error, p.value,
+         conf.low, conf.high, n)
 
 write_csv(out, here::here("maintained", "output", "tables_a1_a4_interaction.csv"))

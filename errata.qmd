@@ -1,0 +1,111 @@
+---
+title: "Errata for Flores and Coppock (2018)"
+subtitle: "Do Bilinguals Respond More Favorably to Candidate Advertisements in English or in Spanish?"
+format:
+  pdf:
+    output-file: flores_coppock_2018_errata.pdf
+    geometry: margin=1.2in
+    fontsize: 11pt
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(here)
+library(tidyverse)
+
+here::i_am("errata.qmd")
+
+# Every corrected value below is computed here rather than typed. The outcome scales
+# come from the pipeline's own reading of the deposited data; the appendix section
+# letters come from the extraction of the appendix's contents page.
+facts <- read_csv(here::here("maintained", "output", "text_design_facts.csv"),
+                  show_col_types = FALSE)
+published_claims <- read_csv(
+  here::here("ground_truth", "published_claims.csv"),
+  col_types = cols(value_paper = col_character(), .default = col_guess())
+)
+
+fact <- function(name) {
+  value <- facts$value[facts$quantity == name]
+  stopifnot(length(value) == 1)
+  value
+}
+
+appendix_sections <- published_claims |>
+  filter(str_starts(claim_id, "appendix_section_")) |>
+  transmute(letter = str_to_upper(str_remove(claim_id, "^appendix_section_")),
+            title = str_remove(str_remove(claim, ",.*"), "^[A-E] "))
+
+# The two control means the first entry cites are published values, so they come from
+# the transcription of the article's tables rather than from this document.
+published_values <- read_csv(here::here("ground_truth", "published_values.csv"),
+                             col_types = cols(.default = col_character()))
+
+published_cell <- function(tab, col, stat) {
+  value <- published_values$value_paper[published_values$table_figure == tab &
+                                          published_values$column == col &
+                                          published_values$stat == stat]
+  stopifnot(length(value) == 1)
+  value
+}
+
+section_letter <- function(title) {
+  hit <- appendix_sections |> filter(str_detect(title, fixed(.env$title)))
+  stopifnot(nrow(hit) == 1)
+  hit$letter
+}
+
+section_title <- function(letter) {
+  hit <- appendix_sections |> filter(.data$letter == .env$letter)
+  stopifnot(nrow(hit) == 1)
+  hit$title
+}
+
+confidence_low <- fact("conf_in_bush_min")
+confidence_high <- fact("conf_in_bush_max")
+linked_fate_low <- fact("linked_fate_min")
+linked_fate_high <- fact("linked_fate_max")
+
+quiz_letter <- section_letter("Language Quiz")
+survey_letter <- section_letter("Spanish-Language Survey")
+logit_letter <- section_letter("Binary Choice Models")
+```
+
+`r glue::glue("This note corrects two errors in Flores, A. and Coppock, A. (2018), \"Do bilinguals respond more favorably to candidate advertisements in English or in Spanish?\", *Political Communication* 35(4), 612-633, doi [10.1080/10584609.2018.1426663](https://doi.org/10.1080/10584609.2018.1426663). Neither changes any estimate, any table or figure, or any conclusion of the article. Every corrected value is computed at render time from the maintained replication code at [github.com/active-maintenance-aec/flores_coppock_2018](https://github.com/active-maintenance-aec/flores_coppock_2018), which reproduces all {nrow(published_values)} numbers printed in the article's and the appendix's tables.")`
+
+Changed text is shown in bold on both sides of each correction.
+
+## 1. Two outcome scales are described as running from 1 to 4 and are analysed as running from 0 to 3
+
+The Outcome Measures section describes the coding of each dependent variable. Two of the five brackets state the wrong endpoints.
+
+> Confidence in Candidate: "How confident are you in [Candidate]'s ability to make the right decisions about illegal immigration? Are you very confident, somewhat confident, not too confident, or not at all confident?" [Scale from **1 to 4**, where **4** indicates greater confidence]
+
+`r glue::glue("**Corrected:** Confidence in Candidate: \"How confident are you in [Candidate]'s ability to make the right decisions about illegal immigration? Are you very confident, somewhat confident, not too confident, or not at all confident?\" [Scale from **{confidence_low} to {confidence_high}**, where **{confidence_high}** indicates greater confidence]")`
+
+> Linked Fate: "Do you think that what happens generally to Hispanics and Latinos in this country will have something to do with what happens in your life? Will it affect you a lot, some, a little or not at all?" [Scale from **1 to 4**, where **4** indicates "a lot"]
+
+`r glue::glue("**Corrected:** Linked Fate: \"Do you think that what happens generally to Hispanics and Latinos in this country will have something to do with what happens in your life? Will it affect you a lot, some, a little or not at all?\" [Scale from **{linked_fate_low} to {linked_fate_high}**, where **{linked_fate_high}** indicates \"a lot\"]")`
+
+`r glue::glue("The confidence and linked fate variables in the replication data take the values {str_flatten_comma(seq(confidence_low, confidence_high))} and are analysed on that scale, so the control means the article reports for them are on a {confidence_low}-to-{confidence_high} scale as well: {published_cell('table_8', 'bush_bilingual', 'constant')} for confidence in Bush in Table 8 and {published_cell('table_9', 'bush_bilingual', 'constant')} for linked fate in Table 9. The three other outcome measures are described correctly. A shift of the scale leaves every treatment effect unchanged, so no estimate in Tables 8 or 9, in appendix Tables A.3 or B.8, or in Figures 1 or 2 is affected; what the correction changes is how a reader should read the constants. Appendix D restates both brackets in the Spanish version of the questionnaire and takes the same correction.")`
+
+## 2. Three references to a lettered appendix section name the wrong section
+
+`r glue::glue("The appendix's contents page lists {str_flatten_comma(paste0(appendix_sections$letter, ' ', appendix_sections$title))}. Three of the article's five references to a lettered section point elsewhere.")`
+
+> In our first experiment (Bush), we collected responses from 2,866 self-identified Latinos, of which 1,862 passed a language quiz in both Spanish and English, the full text of which is presented in the supplemental Appendix **D**.
+
+`r glue::glue("**Corrected:** In our first experiment (Bush), we collected responses from 2,866 self-identified Latinos, of which 1,862 passed a language quiz in both Spanish and English, the full text of which is presented in the supplemental Appendix **{quiz_letter}**.")`
+
+> We present the English-language versions here; subjects assigned to the Spanish-language survey saw these questions in Spanish, the full text of which is available in the supplemental Appendix **C**.
+
+`r glue::glue("**Corrected:** We present the English-language versions here; subjects assigned to the Spanish-language survey saw these questions in Spanish, the full text of which is available in the supplemental Appendix **{survey_letter}**.")`
+
+> Our substantive results do not depend on this choice (see supplemental Appendix **A** for logistic regression tables equivalent to Tables 5 and 7).
+
+`r glue::glue("**Corrected:** Our substantive results do not depend on this choice (see supplemental Appendix **{logit_letter}** for logistic regression tables equivalent to Tables 5 and 7).")`
+
+`r glue::glue("Each of the three sends the reader to a section holding different material: Appendix D is {section_title('D')}, Appendix C is {section_title('C')}, and Appendix A is {section_title('A')}. The article's two other references, to Appendix A for the interaction specifications and to Appendix B for the partisanship tables, resolve correctly, as does the cross-reference from appendix section C to Tables 5 and 7.")`

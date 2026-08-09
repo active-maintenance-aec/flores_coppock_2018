@@ -36,11 +36,31 @@ appendix <- pdf_lines(appendix_pdf)
 # A typeset table row is a label followed by one number per column. Standard errors sit
 # on the line below the estimates. Both en dashes and minus signs appear as the negative
 # sign, and the thousands separator has to come out before the token is a number.
+#
+# Every value is kept as the STRING the page prints, because a double does not record
+# how many decimals were typeset: 0.020 and 0.02 are the same number and not the same
+# published value. Only the typography is normalised away, never the precision. The
+# thousands separator goes, the Unicode minus and the en dash become a hyphen, and a
+# missing leading zero is supplied, which is the house convention and not a change to
+# the printed digits.
+#
+# Two extraction artifacts are specific to these two PDFs and are worth recording. In
+# the article's text layer "=" arrives as a thorn-like glyph and the decimal point of an
+# inline math expression arrives as a colon, so the balance test reads
+# "(chi 2 = 7:3 , df = 7 , p = 0:40)"; that line is transcribed from a rendered page
+# rather than parsed. In the appendix the significance daggers attach to the coefficient
+# token, which is why "[$^]" comes out below.
+normalise_printed <- function(x) {
+  x |>
+    str_remove_all(",") |>
+    str_replace("^(-?)\\.", "\\10")
+}
+
 toks <- function(line) {
   line <- str_replace_all(line, "[–−—]", "-")
   line <- str_remove_all(line, "[$^]")
   hits <- str_extract_all(line, "\\(?-?[0-9][0-9,]*\\.?[0-9]*\\)?")[[1]]
-  as.numeric(str_remove_all(str_remove_all(hits, "[()]"), ","))
+  normalise_printed(str_remove_all(hits, "[()]"))
 }
 
 # Lines from the first one containing the anchor, which is always a table caption.
@@ -57,7 +77,7 @@ row_line <- function(lines, label) {
 }
 
 published <- tibble(table_figure = character(), column = character(),
-                    stat = character(), value_paper = numeric())
+                    stat = character(), value_paper = character())
 
 add <- function(tab, column, stat, value) {
   published <<- add_row(published, table_figure = tab, column = column,
@@ -194,7 +214,7 @@ for (tab in names(c_anchors)) {
   n <- toks(block[row_line(block, "N ")])
   # The typeset log likelihood carries a minus sign the layout text sometimes drops, so
   # the sign is imposed rather than parsed. A log likelihood is negative by construction.
-  ll <- -abs(toks(block[row_line(block, "Log Likelihood")]))
+  ll <- paste0("-", str_remove(toks(block[row_line(block, "Log Likelihood")]), "^-"))
   aic <- toks(block[row_line(block, "AIC")])
   stopifnot(length(ad) == 5, length(sv) == 3, length(const) == 5, length(n) == 5,
             length(ll) == 5, length(aic) == 5)
@@ -246,42 +266,11 @@ for (j in seq_along(t3_blocks)) {
   add("table_3", t3_blocks[j], "spanish_ad", vals[2])
 }
 
-# The balance test is stated in prose beneath the table rather than inside it:
-# "The number of subjects in each cell is consistent with random assignment
-# (chi-squared = 7.3, df = 7, p = 0.40)."
-add("table_3", "balance", "chi_sq", 7.3)
-add("table_3", "balance", "df", 7)
-add("table_3", "balance", "p_value", 0.40)
-
-# Numbers stated in prose ----
-# Each of these is the sentence's own value, in the units the sentence uses:
-# percentage points for the treatment effects, scale points for linked fate.
-prose <- tribble(
-  ~column, ~stat, ~value_paper,
-  "p13_general_bush_bilingual", "estimate", 4.9,
-  "p13_general_bush_bilingual", "std_error", 2.3,
-  "p13_general_vela_bilingual", "estimate", 4.9,
-  "p13_general_vela_bilingual", "std_error", 2.4,
-  "p13_general_coffman_monolingual", "estimate", -18.7,
-  "p13_general_coffman_monolingual", "std_error", 2.6,
-  "p13_survey_language_vela_bilingual", "estimate", 7.3,
-  "p13_survey_language_vela_bilingual", "std_error", 2.4,
-  "p14_cares_vela_monolingual", "estimate", -15.2,
-  "p14_cares_vela_monolingual", "std_error", 2.5,
-  "p14_cares_coffman_monolingual", "estimate", -15.5,
-  "p14_cares_coffman_monolingual", "std_error", 2.4,
-  "p16_coffman_monolingual_republican", "estimate", -16.8,
-  "p16_coffman_monolingual_republican", "std_error", 4.0,
-  "p16_coffman_monolingual_democrat", "estimate", -14.1,
-  "p16_coffman_monolingual_democrat", "std_error", 3.3,
-  "p17_linked_fate_bush_bilingual", "estimate", 0.24,
-  "p17_linked_fate_bush_bilingual", "std_error", 0.04,
-  "p17_linked_fate_vela_coffman_bilingual", "estimate", 0.13,
-  "p17_linked_fate_vela_coffman_bilingual", "std_error", 0.04,
-  "appendixC_ame_vs_ols", "max_abs_difference", 0.005
-)
-
-published <- bind_rows(published, mutate(prose, table_figure = "text"))
+# What this file does not carry ----
+# Only the cells of the typeset tables are parsed here. Every number the article states
+# in a sentence, including the balance test printed beneath Table 3, is transcribed
+# inside build_ground_truth.R against the claim id the extraction gives it, and the
+# extraction in published_claims.csv is the second transcription of those same pages.
 
 write_csv(published, here::here("ground_truth", "published_values.csv"))
-print(str_glue("Parsed {nrow(published)} published values."))
+print(str_glue("Parsed {nrow(published)} published table cells."))

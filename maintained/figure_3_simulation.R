@@ -51,10 +51,19 @@ ggsave(here::here("maintained", "output", "figure_3_simulation.png"), g, width =
 # The full surface is 10,201 cells. What the figure is read for is the break-even
 # frontier, the mistargeting risk at which the net effect turns from positive to
 # negative, so that is what is written out alongside a coarse grid of the surface.
-surface <- gg_df |>
-  filter(prop_bilingual %in% seq(0, 1, by = 0.1),
-         prop_mistargeted %in% seq(0, 1, by = 0.1)) |>
-  mutate(quantity = "net_effect", value = net_effect) |>
+#
+# The coarse grid is built on its own rather than filtered out of the fine one:
+# seq(0, 1, by = 0.01) and seq(0, 1, by = 0.1) do not agree on 0.3 or 0.6 in floating
+# point, so a %in% filter silently drops two of the eleven lines on each axis.
+surface <- expand_grid(
+  prop_bilingual = seq(0, 1, by = 0.1),
+  prop_mistargeted = seq(0, 1, by = 0.1)
+) |>
+  mutate(
+    quantity = "net_effect",
+    value = prop_bilingual * assumed_ate_bilingual +
+      (1 - prop_bilingual) * prop_mistargeted * assumed_ate_monolingual
+  ) |>
   select(quantity, prop_bilingual, prop_mistargeted, value)
 
 break_even <- tibble(prop_bilingual = seq(0, 1, by = 0.1)) |>
