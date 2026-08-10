@@ -234,19 +234,40 @@ for (tab in names(c_anchors)) {
   }
 }
 
-# Table 2, the Lucid column ----
+# Table 2, all three columns ----
 # Each row is a mean and a standard error for the Lucid sample, then the same pair for
-# the LNS and Pew samples, which come from surveys the deposit does not contain.
+# the LNS and Pew samples. Six rows carry all three samples; the two income measures are
+# reported for two samples each, the seven-level scale for Lucid and LNS and the
+# nine-level scale for Lucid and Pew, so which columns a row fills is declared rather
+# than inferred from how many numbers happen to be on the line.
 block <- after(paper, "Comparison of Lucid bilinguals to national-sample bilinguals", 20)
-t2_labels <- c(female = "Female", age = "Age", education_5 = "Education(5 levels)",
-               mexican = "Mexican", cuban = "Cuban", other_hispanic = "Other Hispanic",
-               income_7 = "Income(7 levels)", income_9 = "Income(9 levels)", n = "N ")
-for (stat in names(t2_labels)) {
-  line <- block[row_line(block, t2_labels[[stat]])]
+t2_rows <- tribble(
+  ~stat, ~label, ~columns,
+  "female", "Female", c("lucid", "lns", "pew"),
+  "age", "Age", c("lucid", "lns", "pew"),
+  "education_5", "Education(5 levels)", c("lucid", "lns", "pew"),
+  "mexican", "Mexican", c("lucid", "lns", "pew"),
+  "cuban", "Cuban", c("lucid", "lns", "pew"),
+  "other_hispanic", "Other Hispanic", c("lucid", "lns", "pew"),
+  "income_7", "Income(7 levels)", c("lucid", "lns"),
+  "income_9", "Income(9 levels)", c("lucid", "pew"),
+  "n", "N ", c("lucid", "lns", "pew")
+)
+for (j in seq_len(nrow(t2_rows))) {
+  stat <- t2_rows$stat[j]
+  cols <- t2_rows$columns[[j]]
+  line <- block[row_line(block, t2_rows$label[j])]
   # Three of the row labels carry a digit inside the label itself.
   vals <- toks(str_remove(line, "\\([0-9] levels\\)"))
-  add("table_2", "lucid", stat, vals[1])
-  if (stat != "n") add("table_2", "lucid", paste0(stat, "_se"), vals[2])
+  stopifnot(length(vals) == length(cols) * if (stat == "n") 1 else 2)
+  for (k in seq_along(cols)) {
+    if (stat == "n") {
+      add("table_2", cols[k], stat, vals[k])
+    } else {
+      add("table_2", cols[k], stat, vals[2 * k - 1])
+      add("table_2", cols[k], paste0(stat, "_se"), vals[2 * k])
+    }
+  }
 }
 
 # Table 3, the cell counts ----

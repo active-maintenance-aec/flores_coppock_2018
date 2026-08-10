@@ -77,6 +77,8 @@ n_rewrite_verifiable <- sum(!is.na(gt$match_rewrite))
 n_rewrite_match <- sum(gt$match_rewrite == 1, na.rm = TRUE)
 n_rewrite_fail <- sum(gt$match_rewrite == 0, na.rm = TRUE)
 n_table_2 <- sum(gt$table_figure == "table_2")
+n_table_2_lucid <- sum(gt$table_figure == "table_2" & str_starts(gt$claim, "lucid"))
+n_table_2_national <- n_table_2 - n_table_2_lucid
 n_no_script <- sum(is.na(gt$match) & !is.na(gt$value_paper))
 n_holds <- sum(gt$holds, na.rm = TRUE)
 n_holds_fail <- sum(!gt$holds, na.rm = TRUE)
@@ -103,7 +105,7 @@ Two things are nonetheless wrong with the deposit, and neither shows up as an er
 
 ### Does the maintained rewrite reproduce the paper?
 
-Every number the article prints reproduces. Of the `r n_rewrite_verifiable` claims carrying a published value, `r n_rewrite_match` match it to the precision the article reports. That includes the `r n_table_2` values of Table 2 that no deposited script computes, which the rewrite recovers from the deposited `study_1.csv`.
+Every number the article prints reproduces. Of the `r n_rewrite_verifiable` claims carrying a published value, `r n_rewrite_match` match it to the precision the article reports. That includes all `r n_table_2` values of Table 2, which no deposited script computes: `r n_table_2_lucid` the rewrite recovers from the deposited `study_1.csv`, and `r n_table_2_national` from the two national surveys the article compares its sample against.
 
 The `r n_rewrite_fail` that do not match are not estimates. They are the endpoints the article gives for two of its five outcome scales, which it describes as running from 1 to 4 where the analysed variables run from 0 to 3. Three further claims are prose that the data contradict: each of three references to a lettered appendix section names the wrong section. All `r n_paper_internal` are errors in the article rather than in the code, they move no estimate and no conclusion, and they are corrected in `flores_coppock_2018_errata.pdf` at the root of this repository.
 
@@ -223,7 +225,7 @@ The ground truth records `r n_claims` rows: every coefficient, standard error, s
 
 `value_paper` is carried as the string the page prints, and a value agrees when the pipeline's number, printed to that page's own precision, gives the same digits. The distinction is not cosmetic: `r sum(str_detect(gt$value_paper, "\\.\\d*0$"), na.rm = TRUE)` of the published values end in a decimal zero that a numeric column silently drops, turning Table 5's standard error of 0.020 into 0.02 and comparing it at a tenth of the intended tolerance.
 
-`r n_no_script` published quantities are not printed by any deposited script: the `r n_table_2` values of the Lucid column of Table 2, discussed below, and `r n_no_script - n_table_2` quantities the article states in prose, mostly recruitment and quiz-passing counts that the deposit records in its data but never reports.
+`r n_no_script` published quantities are not printed by any deposited script: the `r n_table_2` values of Table 2, discussed below, and `r n_no_script - n_table_2` quantities the article states in prose, mostly recruitment and quiz-passing counts that the deposit records in its data but never reports.
 
 `ground_truth/build_ground_truth.R` rebuilds the table at the end of every run. Its only hardcoded inputs are the published values, which serve as comparison targets; `value_rewrite` is read back out of `maintained/output/`, so the table cannot drift from the code it grades. `defect_locus` records, for every row that is not a clean match, whether the fault lies with the article, the deposited code, the environment or this repository. `r sum(!is.na(gt$defect_locus))` rows carry one: `r n_paper_internal` are the article, and the remaining `r sum(!is.na(gt$defect_locus)) - n_paper_internal` is a claim the deposit never computed.
 
@@ -265,9 +267,11 @@ gt |>
 
 ## Table 2 has no code
 
-Table 2 compares the bilingual Lucid sample in the Bush experiment against bilingual respondents in the 2006 Latino National Survey and the 2012 Pew National Survey of Latinos. Its Lucid column is nine numbers computed from `study_1.csv`, and no script in the deposit computes them. The archive's `FC_bilinguals_in_text_stats.R` ends with a summary of five covariates from `study_3.csv`, which is a different sample and a different set of variables; nothing produces Table 2.
+Table 2 compares the bilingual Lucid sample in the Bush experiment against bilingual respondents in the 2006 Latino National Survey and the 2012 Pew National Survey of Latinos. No script in the deposit computes any part of it. The archive's `FC_bilinguals_in_text_stats.R` ends with a summary of five covariates from `study_3.csv`, which is a different sample and a different set of variables; nothing produces Table 2.
 
-The rewrite adds `table_2_sample_comparison.R`, and all `r n_table_2` values reproduce. Doing so requires one undocumented recode: `educ_5` stores "Not Found" as 99 for 96 of the 1,862 respondents, and leaving those in returns a mean of 7.95 against the article's 3.01. The LNS and Pew columns come from surveys that are not part of the deposit and cannot be checked here.
+The rewrite adds `table_2_sample_comparison.R`, and all `r n_table_2` values reproduce. The Lucid column's `r n_table_2_lucid` come from the deposited `study_1.csv`, and getting them requires one undocumented recode: `educ_5` stores "Not Found" as 99 for 96 of the 1,862 respondents, and leaving those in returns a mean of 7.95 against the article's 3.01. The `r n_table_2_national` in the LNS and Pew columns are weighted means among the bilingual respondents of the two national surveys, carrying the standard error of a weighted mean rather than of an unweighted one.
+
+Those two surveys are licensed and neither may be redistributed, so neither the deposit nor this repository carries them. What this repository carries is the aggregate, in `maintained/output/table_2_sample_comparison.csv`, which is what the published table prints and the article therefore already made public. The script recomputes the two columns from the microdata when they are present at `licensed_data/national_surveys_stacked.rdata`, and without them leaves the committed values standing and says why.
 
 ```{r table_2}
 read_csv(here::here("maintained", "output", "table_2_sample_comparison.csv"),
@@ -275,16 +279,17 @@ read_csv(here::here("maintained", "output", "table_2_sample_comparison.csv"),
   left_join(
     gt |>
       filter(table_figure == "table_2", !str_detect(claim, "_se$")) |>
-      mutate(quantity = str_remove(claim, "^lucid, ")) |>
-      select(quantity, paper_mean = value_paper),
-    by = "quantity"
+      separate_wider_delim(claim, ", ", names = c("column", "quantity")) |>
+      select(column, quantity, paper_mean = value_paper),
+    by = c("column", "quantity")
   ) |>
   mutate(across(c(mean, se), \(x) sprintf("%.2f", x))) |>
-  select(quantity, paper_mean, mean, se, n_nonmissing) |>
+  select(column, quantity, paper_mean, mean, se, n_nonmissing) |>
   kable(
     booktabs = TRUE,
-    col.names = c("Quantity", "Paper", "Rewrite mean", "Rewrite SE", "Non-missing"),
-    caption = "Table 2, Lucid column: the article's value against the rewrite, which is the only code that computes it."
+    col.names = c("Column", "Quantity", "Paper", "Rewrite mean", "Rewrite SE",
+                  "Non-missing"),
+    caption = "Table 2: the article's value against the rewrite, which is the only code that computes it."
   ) |>
   latex_only(\(k) k |> kable_styling(latex_options = "hold_position", font_size = 8))
 ```
@@ -421,7 +426,7 @@ float_coverage |>
     column_spec(5, width = "6cm"))
 ```
 
-`r n_float_covered` of the `r n_float_published` numbers the article's floats carry are covered. The `r n_float_published - n_float_covered` that are not fall into three groups: Table 1's eight language indicators, which are notation; the thirty Latino National Survey and Pew columns of Table 2, which come from two surveys the deposit does not contain; and Table 4's nine advertisement running times and election years, which the deposit does not record. Figures 1 and 2 print no estimate on their faces, so what each asserts is the number of estimates it plots, counted off the published page and recomputed from the figure's own CSV.
+`r n_float_covered` of the `r n_float_published` numbers the article's floats carry are covered. The `r n_float_published - n_float_covered` that are not fall into two groups: Table 1's eight language indicators, which are notation, and Table 4's nine advertisement running times and election years, which the deposit does not record. Table 4 carries no estimate at all: it is the six advertisements' titles, running times, links and full transcripts in English and Spanish, which `ground_truth/extract_published_table_4.R` parses word by word out of the published table into `published_table_4_transcripts.csv`, so the one float in the article whose content is text rather than numbers is recorded rather than merely counted. Figures 1 and 2 print no estimate on their faces, so what each asserts is the number of estimates it plots, counted off the published page and recomputed from the figure's own CSV.
 
 ## Errata
 

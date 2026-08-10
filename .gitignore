@@ -1,6 +1,12 @@
 # The deposited archive is fetched from Dataverse by download_original.R, not redistributed.
 original/
 
+# The Latino National Survey (ICPSR 20862) and Pew's 2012 National Survey of Latinos are
+# licensed and may not be redistributed. Table 2's LNS and Pew columns are computed from
+# them when they are present here; what this repository carries is the aggregate, in
+# maintained/output/table_2_sample_comparison.csv, which is what the published table prints.
+licensed_data/
+
 # Working log stays private, per the house rule for public repos.
 notes.md
 

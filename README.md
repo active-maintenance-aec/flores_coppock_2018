@@ -87,7 +87,7 @@ name still installs from CRAN, and all of them are alive: `margins`
 standing between a fresh session and a clean run, and it installs in one
 line.
 
-Running is also reproducing. The ground truth holds 624 rows, 530 of
+Running is also reproducing. The ground truth holds 654 rows, 530 of
 which pair a published value with a value a deposited script prints.
 Every one of those 530 matches the article to the precision it reports.
 There are no exceptions: not one coefficient, standard error, sample
@@ -114,10 +114,11 @@ it.
 
 ### Does the maintained rewrite reproduce the paper?
 
-Every number the article prints reproduces. Of the 600 claims carrying a
-published value, 594 match it to the precision the article reports. That
-includes the 17 values of Table 2 that no deposited script computes,
-which the rewrite recovers from the deposited `study_1.csv`.
+Every number the article prints reproduces. Of the 630 claims carrying a
+published value, 624 match it to the precision the article reports. That
+includes all 47 values of Table 2, which no deposited script computes:
+17 the rewrite recovers from the deposited `study_1.csv`, and 30 from
+the two national surveys the article compares its sample against.
 
 The 6 that do not match are not estimates. They are the endpoints the
 article gives for two of its five outcome scales, which it describes as
@@ -228,7 +229,7 @@ copy, never in the deposit.
 | Location | Claims | In archive output | Archive matches | Archive fails | Rewrite matches | Rewrite fails |
 |:---|---:|---:|---:|---:|---:|---:|
 | table_1 | 1 | 0 | 0 | 0 | 0 | 0 |
-| table_2 | 17 | 0 | 0 | 0 | 17 | 0 |
+| table_2 | 47 | 0 | 0 | 0 | 47 | 0 |
 | table_3 | 16 | 16 | 16 | 0 | 16 | 0 |
 | table_4 | 1 | 0 | 0 | 0 | 0 | 0 |
 | table_5 | 31 | 31 | 31 | 0 | 31 | 0 |
@@ -254,7 +255,7 @@ copy, never in the deposit.
 Published values by table, against the deposited scripts and against the
 maintained rewrite.
 
-The ground truth records 624 rows: every coefficient, standard error,
+The ground truth records 654 rows: every coefficient, standard error,
 sample size, log likelihood and AIC in Tables 2, 3 and 5 through 9 and
 in appendix Tables A.1 through C.10, the sixteen cell counts of Table 3,
 every quantity the article states in a sentence rather than in a table,
@@ -267,16 +268,15 @@ scripts are in `ground_truth/`.
 
 `value_paper` is carried as the string the page prints, and a value
 agrees when the pipeline’s number, printed to that page’s own precision,
-gives the same digits. The distinction is not cosmetic: 54 of the
+gives the same digits. The distinction is not cosmetic: 55 of the
 published values end in a decimal zero that a numeric column silently
 drops, turning Table 5’s standard error of 0.020 into 0.02 and comparing
 it at a tenth of the intended tolerance.
 
-70 published quantities are not printed by any deposited script: the 17
-values of the Lucid column of Table 2, discussed below, and 53
-quantities the article states in prose, mostly recruitment and
-quiz-passing counts that the deposit records in its data but never
-reports.
+100 published quantities are not printed by any deposited script: the 47
+values of Table 2, discussed below, and 53 quantities the article states
+in prose, mostly recruitment and quiz-passing counts that the deposit
+records in its data but never reports.
 
 `ground_truth/build_ground_truth.R` rebuilds the table at the end of
 every run. Its only hardcoded inputs are the published values, which
@@ -303,6 +303,21 @@ Published floats with no comparable number.
 | Location | Claim | Paper | Archive | Match | Rewrite | Match |
 |:---|:---|:---|:---|:---|:---|:---|
 | table_1 | Potential outcomes of four subject types |  |  |  |  |  |
+| table_2 | lns, age | 33.78 |  |  | 33.78 | 1 |
+| table_2 | lns, age_se | 0.29 |  |  | 0.2931 | 1 |
+| table_2 | lns, cuban | 0.04 |  |  | 0.04355 | 1 |
+| table_2 | lns, cuban_se | 0.00 |  |  | 0.003494 | 1 |
+| table_2 | lns, education_5 | 2.49 |  |  | 2.491 | 1 |
+| table_2 | lns, education_5_se | 0.02 |  |  | 0.02174 | 1 |
+| table_2 | lns, female | 0.52 |  |  | 0.5175 | 1 |
+| table_2 | lns, female_se | 0.01 |  |  | 0.00979 | 1 |
+| table_2 | lns, income_7 | 4.06 |  |  | 4.055 | 1 |
+| table_2 | lns, income_7_se | 0.04 |  |  | 0.0426 | 1 |
+| table_2 | lns, mexican | 0.67 |  |  | 0.6667 | 1 |
+| table_2 | lns, mexican_se | 0.01 |  |  | 0.008874 | 1 |
+| table_2 | lns, n | 4184 |  |  | 4184 | 1 |
+| table_2 | lns, other_hispanic | 0.29 |  |  | 0.2897 | 1 |
+| table_2 | lns, other_hispanic_se | 0.01 |  |  | 0.008515 | 1 |
 | table_2 | lucid, age | 34.80 |  |  | 34.8 | 1 |
 | table_2 | lucid, age_se | 0.30 |  |  | 0.3029 | 1 |
 | table_2 | lucid, cuban | 0.07 |  |  | 0.07411 | 1 |
@@ -320,6 +335,21 @@ Published floats with no comparable number.
 | table_2 | lucid, n | 1862 |  |  | 1862 | 1 |
 | table_2 | lucid, other_hispanic | 0.44 |  |  | 0.435 | 1 |
 | table_2 | lucid, other_hispanic_se | 0.01 |  |  | 0.01149 | 1 |
+| table_2 | pew, age | 40.11 |  |  | 40.11 | 1 |
+| table_2 | pew, age_se | 0.84 |  |  | 0.8376 | 1 |
+| table_2 | pew, cuban | 0.05 |  |  | 0.04662 | 1 |
+| table_2 | pew, cuban_se | 0.01 |  |  | 0.00852 | 1 |
+| table_2 | pew, education_5 | 2.45 |  |  | 2.452 | 1 |
+| table_2 | pew, education_5_se | 0.05 |  |  | 0.05378 | 1 |
+| table_2 | pew, female | 0.46 |  |  | 0.462 | 1 |
+| table_2 | pew, female_se | 0.02 |  |  | 0.02499 | 1 |
+| table_2 | pew, income_9 | 4.09 |  |  | 4.088 | 1 |
+| table_2 | pew, income_9_se | 0.11 |  |  | 0.1124 | 1 |
+| table_2 | pew, mexican | 0.59 |  |  | 0.5941 | 1 |
+| table_2 | pew, mexican_se | 0.02 |  |  | 0.02403 | 1 |
+| table_2 | pew, n | 715 |  |  | 715 | 1 |
+| table_2 | pew, other_hispanic | 0.36 |  |  | 0.3592 | 1 |
+| table_2 | pew, other_hispanic_se | 0.02 |  |  | 0.0234 | 1 |
 | table_3 | experiment_1_bush_bilingual_english_survey, english_ad | 462 | 462 | 1 | 462 | 1 |
 | table_3 | experiment_1_bush_bilingual_english_survey, spanish_ad | 488 | 488 | 1 | 488 | 1 |
 | table_3 | experiment_1_bush_bilingual_spanish_survey, english_ad | 452 | 452 | 1 | 452 | 1 |
@@ -935,33 +965,59 @@ Archive column means no deposited script prints the quantity.
 
 Table 2 compares the bilingual Lucid sample in the Bush experiment
 against bilingual respondents in the 2006 Latino National Survey and the
-2012 Pew National Survey of Latinos. Its Lucid column is nine numbers
-computed from `study_1.csv`, and no script in the deposit computes them.
-The archive’s `FC_bilinguals_in_text_stats.R` ends with a summary of
-five covariates from `study_3.csv`, which is a different sample and a
-different set of variables; nothing produces Table 2.
+2012 Pew National Survey of Latinos. No script in the deposit computes
+any part of it. The archive’s `FC_bilinguals_in_text_stats.R` ends with
+a summary of five covariates from `study_3.csv`, which is a different
+sample and a different set of variables; nothing produces Table 2.
 
-The rewrite adds `table_2_sample_comparison.R`, and all 17 values
-reproduce. Doing so requires one undocumented recode: `educ_5` stores
-“Not Found” as 99 for 96 of the 1,862 respondents, and leaving those in
-returns a mean of 7.95 against the article’s 3.01. The LNS and Pew
-columns come from surveys that are not part of the deposit and cannot be
-checked here.
+The rewrite adds `table_2_sample_comparison.R`, and all 47 values
+reproduce. The Lucid column’s 17 come from the deposited `study_1.csv`,
+and getting them requires one undocumented recode: `educ_5` stores “Not
+Found” as 99 for 96 of the 1,862 respondents, and leaving those in
+returns a mean of 7.95 against the article’s 3.01. The 30 in the LNS and
+Pew columns are weighted means among the bilingual respondents of the
+two national surveys, carrying the standard error of a weighted mean
+rather than of an unweighted one.
 
-| Quantity       | Paper | Rewrite mean | Rewrite SE | Non-missing |
-|:---------------|:------|:-------------|:-----------|------------:|
-| female         | 0.70  | 0.70         | 0.01       |        1862 |
-| age            | 34.80 | 34.80        | 0.30       |        1862 |
-| education_5    | 3.01  | 3.01         | 0.03       |        1766 |
-| mexican        | 0.49  | 0.49         | 0.01       |        1862 |
-| cuban          | 0.07  | 0.07         | 0.01       |        1862 |
-| other_hispanic | 0.44  | 0.44         | 0.01       |        1862 |
-| income_7       | 4.11  | 4.11         | 0.05       |        1713 |
-| income_9       | 4.49  | 4.49         | 0.05       |        1713 |
-| n              | 1862  | 1862.00      | NA         |        1862 |
+Those two surveys are licensed and neither may be redistributed, so
+neither the deposit nor this repository carries them. What this
+repository carries is the aggregate, in
+`maintained/output/table_2_sample_comparison.csv`, which is what the
+published table prints and the article therefore already made public.
+The script recomputes the two columns from the microdata when they are
+present at `licensed_data/national_surveys_stacked.rdata`, and without
+them leaves the committed values standing and says why.
 
-Table 2, Lucid column: the article’s value against the rewrite, which is
-the only code that computes it.
+| Column | Quantity       | Paper | Rewrite mean | Rewrite SE | Non-missing |
+|:-------|:---------------|:------|:-------------|:-----------|------------:|
+| lucid  | female         | 0.70  | 0.70         | 0.01       |        1862 |
+| lucid  | age            | 34.80 | 34.80        | 0.30       |        1862 |
+| lucid  | education_5    | 3.01  | 3.01         | 0.03       |        1766 |
+| lucid  | mexican        | 0.49  | 0.49         | 0.01       |        1862 |
+| lucid  | cuban          | 0.07  | 0.07         | 0.01       |        1862 |
+| lucid  | other_hispanic | 0.44  | 0.44         | 0.01       |        1862 |
+| lucid  | income_7       | 4.11  | 4.11         | 0.05       |        1713 |
+| lucid  | income_9       | 4.49  | 4.49         | 0.05       |        1713 |
+| lucid  | n              | 1862  | 1862.00      | NA         |        1862 |
+| lns    | female         | 0.52  | 0.52         | 0.01       |        4184 |
+| lns    | age            | 33.78 | 33.78        | 0.29       |        4036 |
+| lns    | education_5    | 2.49  | 2.49         | 0.02       |        4184 |
+| lns    | mexican        | 0.67  | 0.67         | 0.01       |        4184 |
+| lns    | cuban          | 0.04  | 0.04         | 0.00       |        4184 |
+| lns    | other_hispanic | 0.29  | 0.29         | 0.01       |        4184 |
+| lns    | income_7       | 4.06  | 4.06         | 0.04       |        3478 |
+| lns    | n              | 4184  | 4184.00      | NA         |        4184 |
+| pew    | female         | 0.46  | 0.46         | 0.02       |         715 |
+| pew    | age            | 40.11 | 40.11        | 0.84       |         657 |
+| pew    | education_5    | 2.45  | 2.45         | 0.05       |         706 |
+| pew    | mexican        | 0.59  | 0.59         | 0.02       |         715 |
+| pew    | cuban          | 0.05  | 0.05         | 0.01       |         715 |
+| pew    | other_hispanic | 0.36  | 0.36         | 0.02       |         715 |
+| pew    | income_9       | 4.09  | 4.09         | 0.11       |         640 |
+| pew    | n              | 715   | 715.00       | NA         |         715 |
+
+Table 2: the article’s value against the rewrite, which is the only code
+that computes it.
 
 ## Maintained rewrite
 
@@ -1121,7 +1177,7 @@ cross-references.
 | Float | Numbers it carries | Covered | Reproduce | Basis |
 |:---|---:|---:|---:|:---|
 | table_1 | 8 | 0 | 0 | no comparable number |
-| table_2 | 47 | 17 | 17 | published cells |
+| table_2 | 47 | 47 | 47 | published cells |
 | table_3 | 16 | 16 | 16 | published cells |
 | table_4 | 9 | 0 | 0 | no comparable number |
 | table_5 | 31 | 31 | 31 | published cells |
@@ -1145,19 +1201,23 @@ cross-references.
 
 Coverage per published float.
 
-569 of the 616 numbers the article’s floats carry are covered. The 47
-that are not fall into three groups: Table 1’s eight language
-indicators, which are notation; the thirty Latino National Survey and
-Pew columns of Table 2, which come from two surveys the deposit does not
-contain; and Table 4’s nine advertisement running times and election
-years, which the deposit does not record. Figures 1 and 2 print no
-estimate on their faces, so what each asserts is the number of estimates
-it plots, counted off the published page and recomputed from the
-figure’s own CSV.
+599 of the 616 numbers the article’s floats carry are covered. The 17
+that are not fall into two groups: Table 1’s eight language indicators,
+which are notation, and Table 4’s nine advertisement running times and
+election years, which the deposit does not record. Table 4 carries no
+estimate at all: it is the six advertisements’ titles, running times,
+links and full transcripts in English and Spanish, which
+`ground_truth/extract_published_table_4.R` parses word by word out of
+the published table into `published_table_4_transcripts.csv`, so the one
+float in the article whose content is text rather than numbers is
+recorded rather than merely counted. Figures 1 and 2 print no estimate
+on their faces, so what each asserts is the number of estimates it
+plots, counted off the published page and recomputed from the figure’s
+own CSV.
 
 ## Errata
 
-Two errors in the article are corrected in
+NA errors in the article are corrected in
 `flores_coppock_2018_errata.pdf`, rendered from `errata.qmd` at the root
 of this repository with every corrected value computed at render time
 rather than typed. Neither changes an estimate or a conclusion. They are

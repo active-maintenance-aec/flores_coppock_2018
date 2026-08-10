@@ -201,7 +201,7 @@ rewrite <- bind_rows(
   out("table_2_sample_comparison.csv") |>
     pivot_longer(c(mean, se), names_to = "which", values_to = "value_rewrite") |>
     filter(!is.na(value_rewrite)) |>
-    transmute(table_figure = "table_2", column = "lucid",
+    transmute(table_figure = "table_2", column,
               stat = if_else(which == "se", paste0(quantity, "_se"), quantity),
               value_rewrite),
   # Table 3's cell counts.
@@ -241,7 +241,7 @@ table_rows <- join_sides(published, archive, rewrite) |>
     holds = NA,
     defect_locus = NA_character_,
     notes = if_else(table_figure == "table_2",
-                    "No deposited script computes any part of Table 2; the rewrite is the only code that produces it",
+                    "No deposited script computes any part of Table 2; the rewrite is the only code that produces it. Its Lucid column comes from the deposited study_1.csv, and its LNS and Pew columns from the Latino National Survey (ICPSR 20862) and Pew's 2012 National Survey of Latinos, which are licensed and are not redistributed with this repository",
                     NA_character_)
   )
 
