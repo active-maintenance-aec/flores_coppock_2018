@@ -15,3 +15,6 @@ report/maintained/
 **/*.quarto_ipynb
 
 .DS_Store
+
+# The remastered edition is not public. See claude_control/protocols/remaster.md.
+remaster/

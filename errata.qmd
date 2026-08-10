@@ -96,11 +96,19 @@ entries <- tribble(
   str_c(
     "Confidence in Candidate: \"How confident are you in [Candidate]'s ability to make the right decisions about illegal immigration? Are you very confident, somewhat confident, not too confident, or not at all confident?\" [Scale from [[1 to 4]], where [[4]] indicates greater confidence]",
     "\n\n",
-    "Linked Fate: \"Do you think that what happens generally to Hispanics and Latinos in this country will have something to do with what happens in your life? Will it affect you a lot, some, a little or not at all?\" [Scale from [[1 to 4]], where [[4]] indicates \"a lot\"]"),
+    "Linked Fate: \"Do you think that what happens generally to Hispanics and Latinos in this country will have something to do with what happens in your life? Will it affect you a lot, some, a little or not at all?\" [Scale from [[1 to 4]], where [[4]] indicates \"a lot\"]",
+    "\n\n",
+    "(Scale from [[1 to 4]], where [[4]] indicates greater confidence.)",
+    "\n\n",
+    "(Scale from [[1 to 4]], where [[4]] indicates \"a lot.\")"),
   str_c(
     str_glue("Confidence in Candidate: \"How confident are you in [Candidate]'s ability to make the right decisions about illegal immigration? Are you very confident, somewhat confident, not too confident, or not at all confident?\" [Scale from [[{confidence_low} to {confidence_high}]], where [[{confidence_high}]] indicates greater confidence]"),
     "\n\n",
-    str_glue("Linked Fate: \"Do you think that what happens generally to Hispanics and Latinos in this country will have something to do with what happens in your life? Will it affect you a lot, some, a little or not at all?\" [Scale from [[{linked_fate_low} to {linked_fate_high}]], where [[{linked_fate_high}]] indicates \"a lot\"]")),
+    str_glue("Linked Fate: \"Do you think that what happens generally to Hispanics and Latinos in this country will have something to do with what happens in your life? Will it affect you a lot, some, a little or not at all?\" [Scale from [[{linked_fate_low} to {linked_fate_high}]], where [[{linked_fate_high}]] indicates \"a lot\"]"),
+    "\n\n",
+    str_glue("(Scale from [[{confidence_low} to {confidence_high}]], where [[{confidence_high}]] indicates greater confidence.)"),
+    "\n\n",
+    str_glue("(Scale from [[{linked_fate_low} to {linked_fate_high}]], where [[{linked_fate_high}]] indicates \"a lot.\")")),
   str_glue(
     "The confidence and linked fate variables in the replication data take the values ",
     "{str_flatten_comma(seq(confidence_low, confidence_high))} and are analysed on that ",
@@ -111,8 +119,9 @@ entries <- tribble(
     "The three other outcome measures are described correctly. A shift of the scale leaves ",
     "every treatment effect unchanged, so no estimate in Tables 8 or 9, in appendix Tables ",
     "A.3 or B.8, or in Figures 1 or 2 is affected; what the correction changes is how a ",
-    "reader should read the constants. Appendix D restates both brackets in the Spanish ",
-    "version of the questionnaire and takes the same correction."),
+    "reader should read the constants. The last two quotations above are the same two ",
+    "brackets as they are restated in appendix section D, beside the Spanish version of ",
+    "each question; they take the same correction."),
 
   2, "cross_reference", "pipeline", "full",
   "Three references to a lettered appendix section name the wrong section",
@@ -134,7 +143,101 @@ entries <- tribble(
     "is {section_title('D')}, Appendix C is {section_title('C')}, and Appendix A is ",
     "{section_title('A')}. The article's two other references, to Appendix A for the ",
     "interaction specifications and to Appendix B for the partisanship tables, resolve ",
-    "correctly, as does the cross-reference from appendix section C to Tables 5 and 7.")
+    "correctly, as does the cross-reference from appendix section C to Tables 5 and 7."),
+
+  # Entries 3 to 13 were found by reading every word of the published article and its
+  # appendix against the published PDF while preparing the remastered edition, which is a
+  # finer sieve than the pipeline: none of them is a number, so nothing in the ground
+  # truth, in in_text_claims.R or in the corpus reference audit could have raised them.
+  # Each bibliographic entry is verified against the authoritative record by DOI.
+
+  3, "spelling", "reading", "brief",
+  "A misspelled word in the account of the randomized language-of-contact experiments",
+  "published, p. 614",
+  "Binder and [[colleages]] (2013)",
+  "Binder and [[colleagues]] (2013)",
+  "",
+
+  4, "spelling", "reading", "brief",
+  "Figure 2's caption misspells advertisement",
+  "published, p. 628",
+  "Heterogeneous effects of Spanish-language [[advertisment]] on four outcomes",
+  "Heterogeneous effects of Spanish-language [[advertisement]] on four outcomes",
+  "",
+
+  5, "spelling", "reading", "brief",
+  "A misspelled word in note 4",
+  "published, p. 631",
+  "The quiz was administered [[post-treatmeant]].",
+  "The quiz was administered [[post-treatment]].",
+  "",
+
+  6, "spelling", "reading", "brief",
+  "A misspelled word in appendix section C",
+  "supplemental appendix, p. 5",
+  "we include [[logisitic]] regression tables for completeness",
+  "we include [[logistic]] regression tables for completeness",
+  "",
+
+  7, "bibliographic", "crossref", "brief",
+  "Both authors' names are mangled in the Soto and Merolla reference",
+  "published, p. 633",
+  "[[Soto, V. M., & Merolla, D. J. L.]] (2006).",
+  "[[DeFrancesco Soto, V. M., & Merolla, J. L.]] (2006).",
+  str_c("The authors of record for doi:10.1007/s11109-006-9012-7 are Victoria M. ",
+        "DeFrancesco Soto and Jennifer L. Merolla. The publisher's reference processor ",
+        "dropped DeFrancesco from the first surname and carried its initial onto the ",
+        "second author's. The in-text citations follow the published surname and are ",
+        "left as they stand."),
+
+  8, "bibliographic", "crossref", "brief",
+  "The first author's surname is mangled in the Lavariega Monforti reference",
+  "published, p. 633",
+  "[[Monforti, J. L.]], Michelson, M., & Franco, A. (2013).",
+  "[[Lavariega Monforti, J.]], Michelson, M., & Franco, A. (2013).",
+  str_c("The author of record for doi:10.1080/21565503.2013.842491 is Jessica Lavariega ",
+        "Monforti. Lavariega is part of the surname and has been demoted to an initial. ",
+        "The in-text citations follow the published surname and are left as they stand."),
+
+  9, "bibliographic", "crossref", "brief",
+  "The Mackie and Cooper reference prints a first page in place of a page range",
+  "published, p. 632",
+  "Journal of Personality and Social Psychology, 46(3), [[575]].",
+  "Journal of Personality and Social Psychology, 46(3), [[575-585]].",
+  "doi:10.1037/0022-3514.46.3.575 gives the article's pages as 575 to 585.",
+
+  10, "bibliographic", "crossref", "brief",
+  "The Rubin reference prints a first page in place of a page range",
+  "published, p. 633",
+  "Journal of Educational Psychology, 66(5), [[688]].",
+  "Journal of Educational Psychology, 66(5), [[688-701]].",
+  "doi:10.1037/h0037350 gives the article's pages as 688 to 701.",
+
+  11, "bibliographic", "crossref", "brief",
+  "The Jones-Correa reference prints an issue-level locator in place of the article's DOI",
+  "published, p. 632",
+  "[[doi:10.1111/ssqu.2005.86.issue-3]]",
+  "[[doi:10.1111/j.0038-4941.2005.00317.x]]",
+  str_c("The printed string is Wiley's identifier for the whole issue of Social Science ",
+        "Quarterly and resolves to no article. The article's own DOI is given here."),
+
+  12, "bibliographic", "publisher record", "brief",
+  "The Tajfel reference gives the wrong city and the wrong publisher",
+  "published, p. 633",
+  "[[Cambridge, MA: CUP Archive.]]",
+  "[[Cambridge, UK: Cambridge University Press.]]",
+  str_c("Human Groups and Social Categories was published in 1981 by Cambridge University ",
+        "Press in Cambridge, England. CUP Archive is a digitisation imprint under which ",
+        "the scan is catalogued, not the book's publisher."),
+
+  13, "bibliographic", "publisher record", "brief",
+  "Both authors' names are mangled in the Valdés and Seoane reference",
+  "published, p. 633",
+  "[[Valdés, M., & Seoane, I. M. H.]] (1995).",
+  "[[Valdés, M. I., & Seoane, M. H.]] (1995).",
+  str_c("The Hispanic Market Handbook is by M. Isabel Valdés and Marta H. Seoane. The ",
+        "first author's second given initial was carried onto the second author's name, ",
+        "the same defect as entry 7.")
 ) |>
   mutate(across(c(title, published, corrected, note), as.character))
 
@@ -146,16 +249,18 @@ blocks <- function(x) str_split_1(x, "\n\n")
 
 # The count of entries is read off the spine rather than typed, and the note spells it out.
 spell <- function(n) {
-  words <- c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten")
+  words <- c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+             "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen")
   stopifnot(n >= 1, n <= length(words))
   words[n]
 }
 
 # A heading is only a heading when a blank line precedes it, which is why every emitted
-# entry opens with one.
-emit <- function(n, lead) {
+# entry opens with one. An entry with no lead sentence prints none rather than a blank.
+emit <- function(n, lead = "") {
   e <- entries |> filter(entry == n)
-  cat("\n\n## ", e$entry, ". ", e$title, "\n\n", lead, "\n\n", sep = "")
+  cat("\n\n## ", e$entry, ". ", e$title, "\n\n", sep = "")
+  if (nzchar(lead)) cat(lead, "\n\n", sep = "")
   walk2(blocks(e$published), blocks(e$corrected), function(was, now) {
     cat("> ", bold(was), "\n\n**Corrected:** ", bold(now), "\n\n", sep = "")
   })
@@ -163,7 +268,7 @@ emit <- function(n, lead) {
 }
 ```
 
-`r glue::glue("This note corrects {spell(nrow(entries))} errors in Flores, A. and Coppock, A. (2018), \"Do bilinguals respond more favorably to candidate advertisements in English or in Spanish?\", *Political Communication* 35(4), 612-633, doi [10.1080/10584609.2018.1426663](https://doi.org/10.1080/10584609.2018.1426663). Neither changes any estimate, any table or figure, or any conclusion of the article. Every corrected value is computed at render time from the maintained replication code at [github.com/active-maintenance-aec/flores_coppock_2018](https://github.com/active-maintenance-aec/flores_coppock_2018), which reproduces all {nrow(published_values)} numbers printed in the article's and the appendix's tables.")`
+`r glue::glue("This note corrects {spell(nrow(entries))} errors in Flores, A. and Coppock, A. (2018), \"Do bilinguals respond more favorably to candidate advertisements in English or in Spanish?\", *Political Communication* 35(4), 612-633, doi [10.1080/10584609.2018.1426663](https://doi.org/10.1080/10584609.2018.1426663). Not one of them changes an estimate or a conclusion of the article. The first two correct how a reader should read a scale and where a cross-reference points; the rest are {spell(sum(entries$class == 'spelling'))} misspellings and {spell(sum(entries$class == 'bibliographic'))} inaccurate entries in the reference list. Every corrected value that the replication code can supply is computed at render time from the maintained code at [github.com/active-maintenance-aec/flores_coppock_2018](https://github.com/active-maintenance-aec/flores_coppock_2018), which reproduces all {nrow(published_values)} numbers printed in the article's and the appendix's tables; every bibliographic correction is verified against the cited work's own record.")`
 
 Changed text is shown in bold on both sides of each correction.
 
@@ -173,6 +278,12 @@ emit(1, "The Outcome Measures section describes the coding of each dependent var
 
 ```{r entry-2, results="asis"}
 emit(2, glue::glue("The appendix's contents page lists {str_flatten_comma(paste0(appendix_sections$letter, ' ', appendix_sections$title))}. Three of the article's five references to a lettered section point elsewhere."))
+```
+
+```{r entries-3-onwards, results="asis"}
+# Everything after entry 2 was found by reading the published article word by word while
+# preparing the remastered edition. Each is short enough to speak for itself.
+walk(entries$entry[entries$entry > 2], emit)
 ```
 
 ```{r emit-spine}
