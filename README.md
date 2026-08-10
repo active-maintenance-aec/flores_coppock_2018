@@ -1160,16 +1160,18 @@ figure’s own CSV.
 Two errors in the article are corrected in
 `flores_coppock_2018_errata.pdf`, rendered from `errata.qmd` at the root
 of this repository with every corrected value computed at render time
-rather than typed. Neither changes an estimate or a conclusion.
+rather than typed. Neither changes an estimate or a conclusion. They are
+numbered here as the note numbers them.
 
-The first is that the Outcome Measures section gives the wrong endpoints
-for two of its five scales. Confidence in Candidate and Linked Fate are
-described as running from 1 to 4; the variables the article analyses run
-from 0 to 3, which is the scale the control means in Tables 8 and 9 are
-on. A shift of a scale leaves every treatment effect unchanged, so what
-the correction changes is how a reader should read the constants.
+**Entry 1** is that the Outcome Measures section gives the wrong
+endpoints for two of its five scales. Confidence in Candidate and Linked
+Fate are described as running from 1 to 4; the variables the article
+analyses run from 0 to 3, which is the scale the control means in Tables
+8 and 9 are on. A shift of a scale leaves every treatment effect
+unchanged, so what the correction changes is how a reader should read
+the constants.
 
-The second is that three of the article’s five references to a lettered
+**Entry 2** is that three of the article’s five references to a lettered
 appendix section name the wrong section: the language quiz is said to be
 in Appendix D and is in Appendix E, the Spanish-language survey is said
 to be in Appendix C and is in Appendix D, and the logistic regression
@@ -1323,7 +1325,7 @@ seed to pin and no sampler change to inherit.
 |:----------|:-----------------------|
 | R version | 4.6.0                  |
 | Platform  | aarch64-apple-darwin23 |
-| Date run  | 2026-08-09             |
+| Date run  | 2026-08-10             |
 
 | Package         | Version |
 |:----------------|:--------|

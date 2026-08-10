@@ -425,11 +425,21 @@ float_coverage |>
 
 ## Errata
 
-Two errors in the article are corrected in `flores_coppock_2018_errata.pdf`, rendered from `errata.qmd` at the root of this repository with every corrected value computed at render time rather than typed. Neither changes an estimate or a conclusion.
+```{r errata_spine}
+# The errata are defined once, in errata.qmd, which writes errata_entries.csv when it
+# renders. This section reads that file rather than keeping a second copy of the count or
+# the numbering, because a second copy is how the two would come to disagree.
+spine <- read_csv(here::here("errata_entries.csv"), show_col_types = FALSE)
+n_errata <- nrow(spine)
+spell <- function(n) c("one", "two", "three", "four", "five", "six", "seven", "eight",
+                       "nine", "ten")[n]
+```
 
-The first is that the Outcome Measures section gives the wrong endpoints for two of its five scales. Confidence in Candidate and Linked Fate are described as running from 1 to 4; the variables the article analyses run from 0 to 3, which is the scale the control means in Tables 8 and 9 are on. A shift of a scale leaves every treatment effect unchanged, so what the correction changes is how a reader should read the constants.
+`r str_to_sentence(spell(n_errata))` errors in the article are corrected in `flores_coppock_2018_errata.pdf`, rendered from `errata.qmd` at the root of this repository with every corrected value computed at render time rather than typed. Neither changes an estimate or a conclusion. They are numbered here as the note numbers them.
 
-The second is that three of the article's five references to a lettered appendix section name the wrong section: the language quiz is said to be in Appendix D and is in Appendix E, the Spanish-language survey is said to be in Appendix C and is in Appendix D, and the logistic regression tables are said to be in Appendix A and are in Appendix C.
+**Entry 1** is that the Outcome Measures section gives the wrong endpoints for two of its five scales. Confidence in Candidate and Linked Fate are described as running from 1 to 4; the variables the article analyses run from 0 to 3, which is the scale the control means in Tables 8 and 9 are on. A shift of a scale leaves every treatment effect unchanged, so what the correction changes is how a reader should read the constants.
+
+**Entry 2** is that three of the article's five references to a lettered appendix section name the wrong section: the language quiz is said to be in Appendix D and is in Appendix E, the Spanish-language survey is said to be in Appendix C and is in Appendix D, and the logistic regression tables are said to be in Appendix A and are in Appendix C.
 
 One descriptive claim sits close to the line and is recorded as holding. The article says that "among monolinguals, the pattern of treatment effects does not differ by respondent partisanship", glossing that in the next sentence as "Monolingual Republicans and Democrats alike respond negatively to the Spanish-language advertisement". All sixteen monolingual estimates are indeed negative. Two of the eight Democrat-Republican differences do separate from zero at conventional levels, so the sentence holds as the article itself defines it and not on a stricter reading.
 
