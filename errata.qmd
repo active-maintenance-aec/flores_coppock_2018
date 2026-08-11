@@ -87,8 +87,14 @@ logit_letter <- section_letter("Binary Choice Models")
 #
 # Numbering is the published note's and is APPEND-ONLY: an entry can already have been
 # cited, so a later finding is added at the end and never interleaved.
+#
+# claim_ids names the ground-truth rows an entry corrects, semicolon-separated, so that
+# "is this finding published?" is a query rather than a judgment. It is empty for entries 3
+# to 13: a misspelling and a mangled reference-list entry are not extraction claims, so no
+# ground-truth row exists to name. Every id listed here is checked against the ground truth
+# by build_ground_truth.R.
 entries <- tribble(
-  ~entry, ~class, ~source, ~form, ~title, ~location, ~published, ~corrected, ~note,
+  ~entry, ~class, ~source, ~form, ~title, ~location, ~published, ~corrected, ~note, ~claim_ids,
 
   1, "definition", "pipeline", "full",
   "Two outcome scales are described as running from 1 to 4 and are analysed as running from 0 to 3",
@@ -122,6 +128,8 @@ entries <- tribble(
     "reader should read the constants. The last two quotations above are the same two ",
     "brackets as they are restated in appendix section D, beside the Spanish version of ",
     "each question; they take the same correction."),
+  str_c("design_confidence_min;design_confidence_max;design_confidence_top;",
+        "design_linked_fate_min;design_linked_fate_max;design_linked_fate_top"),
 
   2, "cross_reference", "pipeline", "full",
   "Three references to a lettered appendix section name the wrong section",
@@ -144,6 +152,8 @@ entries <- tribble(
     "{section_title('A')}. The article's two other references, to Appendix A for the ",
     "interaction specifications and to Appendix B for the partisanship tables, resolve ",
     "correctly, as does the cross-reference from appendix section C to Tables 5 and 7."),
+  str_c("design_appendix_quiz_reference;design_appendix_survey_reference;",
+        "design_appendix_logit_reference"),
 
   # Entries 3 to 13 were found by reading every word of the published article and its
   # appendix against the published PDF while preparing the remastered edition, which is a
@@ -157,12 +167,14 @@ entries <- tribble(
   "Binder and [[colleages]] (2013)",
   "Binder and [[colleagues]] (2013)",
   "",
+  "",
 
   4, "spelling", "reading", "brief",
   "Figure 2's caption misspells advertisement",
   "published, p. 628",
   "Heterogeneous effects of Spanish-language [[advertisment]] on four outcomes",
   "Heterogeneous effects of Spanish-language [[advertisement]] on four outcomes",
+  "",
   "",
 
   5, "spelling", "reading", "brief",
@@ -171,12 +183,14 @@ entries <- tribble(
   "The quiz was administered [[post-treatmeant]].",
   "The quiz was administered [[post-treatment]].",
   "",
+  "",
 
   6, "spelling", "reading", "brief",
   "A misspelled word in appendix section C",
   "supplemental appendix, p. 5",
   "we include [[logisitic]] regression tables for completeness",
   "we include [[logistic]] regression tables for completeness",
+  "",
   "",
 
   7, "bibliographic", "crossref", "brief",
@@ -189,6 +203,7 @@ entries <- tribble(
         "dropped DeFrancesco from the first surname and carried its initial onto the ",
         "second author's. The in-text citations follow the published surname and are ",
         "left as they stand."),
+  "",
 
   8, "bibliographic", "crossref", "brief",
   "The first author's surname is mangled in the Lavariega Monforti reference",
@@ -198,6 +213,7 @@ entries <- tribble(
   str_c("The author of record for doi:10.1080/21565503.2013.842491 is Jessica Lavariega ",
         "Monforti. Lavariega is part of the surname and has been demoted to an initial. ",
         "The in-text citations follow the published surname and are left as they stand."),
+  "",
 
   9, "bibliographic", "crossref", "brief",
   "The Mackie and Cooper reference prints a first page in place of a page range",
@@ -205,6 +221,7 @@ entries <- tribble(
   "Journal of Personality and Social Psychology, 46(3), [[575]].",
   "Journal of Personality and Social Psychology, 46(3), [[575-585]].",
   "doi:10.1037/0022-3514.46.3.575 gives the article's pages as 575 to 585.",
+  "",
 
   10, "bibliographic", "crossref", "brief",
   "The Rubin reference prints a first page in place of a page range",
@@ -212,6 +229,7 @@ entries <- tribble(
   "Journal of Educational Psychology, 66(5), [[688]].",
   "Journal of Educational Psychology, 66(5), [[688-701]].",
   "doi:10.1037/h0037350 gives the article's pages as 688 to 701.",
+  "",
 
   11, "bibliographic", "crossref", "brief",
   "The Jones-Correa reference prints an issue-level locator in place of the article's DOI",
@@ -220,6 +238,7 @@ entries <- tribble(
   "[[doi:10.1111/j.0038-4941.2005.00317.x]]",
   str_c("The printed string is Wiley's identifier for the whole issue of Social Science ",
         "Quarterly and resolves to no article. The article's own DOI is given here."),
+  "",
 
   12, "bibliographic", "publisher record", "brief",
   "The Tajfel reference gives the wrong city and the wrong publisher",
@@ -229,6 +248,7 @@ entries <- tribble(
   str_c("Human Groups and Social Categories was published in 1981 by Cambridge University ",
         "Press in Cambridge, England. CUP Archive is a digitisation imprint under which ",
         "the scan is catalogued, not the book's publisher."),
+  "",
 
   13, "bibliographic", "publisher record", "brief",
   "Both authors' names are mangled in the Valdés and Seoane reference",
@@ -237,9 +257,10 @@ entries <- tribble(
   "[[Valdés, M. I., & Seoane, M. H.]] (1995).",
   str_c("The Hispanic Market Handbook is by M. Isabel Valdés and Marta H. Seoane. The ",
         "first author's second given initial was carried onto the second author's name, ",
-        "the same defect as entry 7.")
+        "the same defect as entry 7."),
+  ""
 ) |>
-  mutate(across(c(title, published, corrected, note), as.character))
+  mutate(across(c(title, published, corrected, note, claim_ids), as.character))
 
 stopifnot(nrow(entries) == max(entries$entry), !anyDuplicated(entries$entry))
 
