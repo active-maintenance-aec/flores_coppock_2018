@@ -65,416 +65,416 @@ flores_coppock_2018,table_3_experiment_3_coffman_monolingual_english_survey_engl
 flores_coppock_2018,table_3_experiment_3_coffman_monolingual_english_survey_spanish_ad,table_3,"experiment_3_coffman_monolingual_english_survey, spanish_ad",633,633,0,1,633,1,NA,NA,NA
 flores_coppock_2018,table_4_advertisements,table_4,Advertisement treatments,NA,NA,NA,NA,NA,NA,NA,NA,"The advertisement titles, running times, YouTube links and full transcripts in English and Spanish for all three candidates. Its nine numbers are six running times and three election years, none of which the deposit records."
 flores_coppock_2018,table_5_bush_bilingual_N,table_5,"bush_bilingual, N",1849,1849,0,1,1849,1,NA,NA,NA
-flores_coppock_2018,table_5_bush_bilingual_Z_ad,table_5,"bush_bilingual, Z_ad",0.049,0.049,3,1,0.04896649860286413,1,NA,NA,NA
-flores_coppock_2018,table_5_bush_bilingual_Z_ad_se,table_5,"bush_bilingual, Z_ad_se",0.023,0.023,3,1,0.02322386529140922,1,NA,NA,NA
-flores_coppock_2018,table_5_bush_bilingual_Z_survey,table_5,"bush_bilingual, Z_survey",0.005,0.005,3,1,0.00541482215498102,1,NA,NA,NA
-flores_coppock_2018,table_5_bush_bilingual_Z_survey_se,table_5,"bush_bilingual, Z_survey_se",0.023,0.023,3,1,0.02322841347235384,1,NA,NA,NA
-flores_coppock_2018,table_5_bush_bilingual_constant,table_5,"bush_bilingual, constant",0.449,0.449,3,1,0.44947056639429456,1,NA,NA,NA
-flores_coppock_2018,table_5_bush_bilingual_constant_se,table_5,"bush_bilingual, constant_se",0.02,0.020,3,1,0.0200911736787028,1,NA,NA,NA
+flores_coppock_2018,table_5_bush_bilingual_Z_ad,table_5,"bush_bilingual, Z_ad",0.049,0.049,3,1,0.04896649860286398,1,NA,NA,NA
+flores_coppock_2018,table_5_bush_bilingual_Z_ad_se,table_5,"bush_bilingual, Z_ad_se",0.023,0.023,3,1,0.02322386529140891,1,NA,NA,NA
+flores_coppock_2018,table_5_bush_bilingual_Z_survey,table_5,"bush_bilingual, Z_survey",0.005,0.005,3,1,0.00541482215498058,1,NA,NA,NA
+flores_coppock_2018,table_5_bush_bilingual_Z_survey_se,table_5,"bush_bilingual, Z_survey_se",0.023,0.023,3,1,0.02322841347235395,1,NA,NA,NA
+flores_coppock_2018,table_5_bush_bilingual_constant,table_5,"bush_bilingual, constant",0.449,0.449,3,1,0.4494705663942981,1,NA,NA,NA
+flores_coppock_2018,table_5_bush_bilingual_constant_se,table_5,"bush_bilingual, constant_se",0.02,0.020,3,1,0.02009117367870286,1,NA,NA,NA
 flores_coppock_2018,table_5_coffman_bilingual_N,table_5,"coffman_bilingual, N",1681,1681,0,1,1681,1,NA,NA,NA
-flores_coppock_2018,table_5_coffman_bilingual_Z_ad,table_5,"coffman_bilingual, Z_ad",0.003,0.003,3,1,0.00270556056502625,1,NA,NA,NA
-flores_coppock_2018,table_5_coffman_bilingual_Z_ad_se,table_5,"coffman_bilingual, Z_ad_se",0.024,0.024,3,1,0.0236239175783759,1,NA,NA,NA
-flores_coppock_2018,table_5_coffman_bilingual_Z_survey,table_5,"coffman_bilingual, Z_survey",-0.028,-0.028,3,1,-0.02779040605064514,1,NA,NA,NA
-flores_coppock_2018,table_5_coffman_bilingual_Z_survey_se,table_5,"coffman_bilingual, Z_survey_se",0.024,0.024,3,1,0.02360668366879583,1,NA,NA,NA
-flores_coppock_2018,table_5_coffman_bilingual_constant,table_5,"coffman_bilingual, constant",0.384,0.384,3,1,0.38436045770242105,1,NA,NA,NA
-flores_coppock_2018,table_5_coffman_bilingual_constant_se,table_5,"coffman_bilingual, constant_se",0.02,0.020,3,1,0.02012506643881051,1,NA,NA,NA
+flores_coppock_2018,table_5_coffman_bilingual_Z_ad,table_5,"coffman_bilingual, Z_ad",0.003,0.003,3,1,0.00270556056502585,1,NA,NA,NA
+flores_coppock_2018,table_5_coffman_bilingual_Z_ad_se,table_5,"coffman_bilingual, Z_ad_se",0.024,0.024,3,1,0.02362391757837582,1,NA,NA,NA
+flores_coppock_2018,table_5_coffman_bilingual_Z_survey,table_5,"coffman_bilingual, Z_survey",-0.028,-0.028,3,1,-0.02779040605064527,1,NA,NA,NA
+flores_coppock_2018,table_5_coffman_bilingual_Z_survey_se,table_5,"coffman_bilingual, Z_survey_se",0.024,0.024,3,1,0.02360668366879578,1,NA,NA,NA
+flores_coppock_2018,table_5_coffman_bilingual_constant,table_5,"coffman_bilingual, constant",0.384,0.384,3,1,0.3843604577024188,1,NA,NA,NA
+flores_coppock_2018,table_5_coffman_bilingual_constant_se,table_5,"coffman_bilingual, constant_se",0.02,0.020,3,1,0.02012506643881014,1,NA,NA,NA
 flores_coppock_2018,table_5_coffman_monolingual_N,table_5,"coffman_monolingual, N",1343,1343,0,1,1343,1,NA,NA,NA
-flores_coppock_2018,table_5_coffman_monolingual_Z_ad,table_5,"coffman_monolingual, Z_ad",-0.187,-0.187,3,1,-0.1872416171595141,1,NA,NA,NA
-flores_coppock_2018,table_5_coffman_monolingual_Z_ad_se,table_5,"coffman_monolingual, Z_ad_se",0.026,0.026,3,1,0.02645251048376894,1,NA,NA,NA
-flores_coppock_2018,table_5_coffman_monolingual_constant,table_5,"coffman_monolingual, constant",0.513,0.513,3,1,0.5126760563380292,1,NA,NA,NA
-flores_coppock_2018,table_5_coffman_monolingual_constant_se,table_5,"coffman_monolingual, constant_se",0.019,0.019,3,1,0.01877185863039825,1,NA,NA,NA
+flores_coppock_2018,table_5_coffman_monolingual_Z_ad,table_5,"coffman_monolingual, Z_ad",-0.187,-0.187,3,1,-0.1872416171595139,1,NA,NA,NA
+flores_coppock_2018,table_5_coffman_monolingual_Z_ad_se,table_5,"coffman_monolingual, Z_ad_se",0.026,0.026,3,1,0.02645251048376886,1,NA,NA,NA
+flores_coppock_2018,table_5_coffman_monolingual_constant,table_5,"coffman_monolingual, constant",0.513,0.513,3,1,0.5126760563380311,1,NA,NA,NA
+flores_coppock_2018,table_5_coffman_monolingual_constant_se,table_5,"coffman_monolingual, constant_se",0.019,0.019,3,1,0.01877185863039834,1,NA,NA,NA
 flores_coppock_2018,table_5_vela_bilingual_N,table_5,"vela_bilingual, N",1680,1680,0,1,1680,1,NA,NA,NA
-flores_coppock_2018,table_5_vela_bilingual_Z_ad,table_5,"vela_bilingual, Z_ad",0.049,0.049,3,1,0.04855036917379873,1,NA,NA,NA
-flores_coppock_2018,table_5_vela_bilingual_Z_ad_se,table_5,"vela_bilingual, Z_ad_se",0.024,0.024,3,1,0.0239042736077789,1,NA,NA,NA
-flores_coppock_2018,table_5_vela_bilingual_Z_survey,table_5,"vela_bilingual, Z_survey",0.073,0.073,3,1,0.07295796961285887,1,NA,NA,NA
-flores_coppock_2018,table_5_vela_bilingual_Z_survey_se,table_5,"vela_bilingual, Z_survey_se",0.024,0.024,3,1,0.02390292897354181,1,NA,NA,NA
-flores_coppock_2018,table_5_vela_bilingual_constant,table_5,"vela_bilingual, constant",0.535,0.535,3,1,0.5348397348455044,1,NA,NA,NA
-flores_coppock_2018,table_5_vela_bilingual_constant_se,table_5,"vela_bilingual, constant_se",0.021,0.021,3,1,0.02071915781857486,1,NA,NA,NA
+flores_coppock_2018,table_5_vela_bilingual_Z_ad,table_5,"vela_bilingual, Z_ad",0.049,0.049,3,1,0.04855036917379833,1,NA,NA,NA
+flores_coppock_2018,table_5_vela_bilingual_Z_ad_se,table_5,"vela_bilingual, Z_ad_se",0.024,0.024,3,1,0.0239042736077788,1,NA,NA,NA
+flores_coppock_2018,table_5_vela_bilingual_Z_survey,table_5,"vela_bilingual, Z_survey",0.073,0.073,3,1,0.07295796961285839,1,NA,NA,NA
+flores_coppock_2018,table_5_vela_bilingual_Z_survey_se,table_5,"vela_bilingual, Z_survey_se",0.024,0.024,3,1,0.02390292897354174,1,NA,NA,NA
+flores_coppock_2018,table_5_vela_bilingual_constant,table_5,"vela_bilingual, constant",0.535,0.535,3,1,0.5348397348455058,1,NA,NA,NA
+flores_coppock_2018,table_5_vela_bilingual_constant_se,table_5,"vela_bilingual, constant_se",0.021,0.021,3,1,0.02071915781857496,1,NA,NA,NA
 flores_coppock_2018,table_5_vela_monolingual_N,table_5,"vela_monolingual, N",1343,1343,0,1,1343,1,NA,NA,NA
-flores_coppock_2018,table_5_vela_monolingual_Z_ad,table_5,"vela_monolingual, Z_ad",-0.02,-0.020,3,1,-0.02011754269239282,1,NA,NA,NA
-flores_coppock_2018,table_5_vela_monolingual_Z_ad_se,table_5,"vela_monolingual, Z_ad_se",0.026,0.026,3,1,0.02614225131630957,1,NA,NA,NA
-flores_coppock_2018,table_5_vela_monolingual_constant,table_5,"vela_monolingual, constant",0.366,0.366,3,1,0.3659259259259262,1,NA,NA,NA
-flores_coppock_2018,table_5_vela_monolingual_constant_se,table_5,"vela_monolingual, constant_se",0.019,0.019,3,1,0.01855396102786972,1,NA,NA,NA
+flores_coppock_2018,table_5_vela_monolingual_Z_ad,table_5,"vela_monolingual, Z_ad",-0.02,-0.020,3,1,-0.02011754269239292,1,NA,NA,NA
+flores_coppock_2018,table_5_vela_monolingual_Z_ad_se,table_5,"vela_monolingual, Z_ad_se",0.026,0.026,3,1,0.02614225131630967,1,NA,NA,NA
+flores_coppock_2018,table_5_vela_monolingual_constant,table_5,"vela_monolingual, constant",0.366,0.366,3,1,0.3659259259259278,1,NA,NA,NA
+flores_coppock_2018,table_5_vela_monolingual_constant_se,table_5,"vela_monolingual, constant_se",0.019,0.019,3,1,0.01855396102786992,1,NA,NA,NA
 flores_coppock_2018,table_6_bush_bilingual_N,table_6,"bush_bilingual, N",1862,1862,0,1,1862,1,NA,NA,NA
-flores_coppock_2018,table_6_bush_bilingual_Z_ad,table_6,"bush_bilingual, Z_ad",0.167,0.167,3,1,0.16681094744208505,1,NA,NA,NA
-flores_coppock_2018,table_6_bush_bilingual_Z_ad_se,table_6,"bush_bilingual, Z_ad_se",0.075,0.075,3,1,0.07532993746018998,1,NA,NA,NA
-flores_coppock_2018,table_6_bush_bilingual_Z_survey,table_6,"bush_bilingual, Z_survey",0.165,0.165,3,1,0.1649721017920034,1,NA,NA,NA
-flores_coppock_2018,table_6_bush_bilingual_Z_survey_se,table_6,"bush_bilingual, Z_survey_se",0.075,0.075,3,1,0.07546236595153992,1,NA,NA,NA
-flores_coppock_2018,table_6_bush_bilingual_constant,table_6,"bush_bilingual, constant",4.81,4.810,3,1,4.810101323840313,1,NA,NA,NA
-flores_coppock_2018,table_6_bush_bilingual_constant_se,table_6,"bush_bilingual, constant_se",0.063,0.063,3,1,0.06342592393567516,1,NA,NA,NA
+flores_coppock_2018,table_6_bush_bilingual_Z_ad,table_6,"bush_bilingual, Z_ad",0.167,0.167,3,1,0.1668109474420808,1,NA,NA,NA
+flores_coppock_2018,table_6_bush_bilingual_Z_ad_se,table_6,"bush_bilingual, Z_ad_se",0.075,0.075,3,1,0.07532993746019008,1,NA,NA,NA
+flores_coppock_2018,table_6_bush_bilingual_Z_survey,table_6,"bush_bilingual, Z_survey",0.165,0.165,3,1,0.16497210179200691,1,NA,NA,NA
+flores_coppock_2018,table_6_bush_bilingual_Z_survey_se,table_6,"bush_bilingual, Z_survey_se",0.075,0.075,3,1,0.07546236595154066,1,NA,NA,NA
+flores_coppock_2018,table_6_bush_bilingual_constant,table_6,"bush_bilingual, constant",4.81,4.810,3,1,4.810101323840234,1,NA,NA,NA
+flores_coppock_2018,table_6_bush_bilingual_constant_se,table_6,"bush_bilingual, constant_se",0.063,0.063,3,1,0.06342592393567394,1,NA,NA,NA
 flores_coppock_2018,table_6_coffman_bilingual_N,table_6,"coffman_bilingual, N",1680,1680,0,1,1680,1,NA,NA,NA
-flores_coppock_2018,table_6_coffman_bilingual_Z_ad,table_6,"coffman_bilingual, Z_ad",0.019,0.019,3,1,0.01944945727789393,1,NA,NA,NA
-flores_coppock_2018,table_6_coffman_bilingual_Z_ad_se,table_6,"coffman_bilingual, Z_ad_se",0.077,0.077,3,1,0.07728247254898762,1,NA,NA,NA
-flores_coppock_2018,table_6_coffman_bilingual_Z_survey,table_6,"coffman_bilingual, Z_survey",0.093,0.093,3,1,0.09270950902074274,1,NA,NA,NA
-flores_coppock_2018,table_6_coffman_bilingual_Z_survey_se,table_6,"coffman_bilingual, Z_survey_se",0.078,0.078,3,1,0.07772749481994262,1,NA,NA,NA
-flores_coppock_2018,table_6_coffman_bilingual_constant,table_6,"coffman_bilingual, constant",4.902,4.902,3,1,4.901791434591623,1,NA,NA,NA
-flores_coppock_2018,table_6_coffman_bilingual_constant_se,table_6,"coffman_bilingual, constant_se",0.066,0.066,3,1,0.06603110441680671,1,NA,NA,NA
+flores_coppock_2018,table_6_coffman_bilingual_Z_ad,table_6,"coffman_bilingual, Z_ad",0.019,0.019,3,1,0.0194494572778944,1,NA,NA,NA
+flores_coppock_2018,table_6_coffman_bilingual_Z_ad_se,table_6,"coffman_bilingual, Z_ad_se",0.077,0.077,3,1,0.07728247254898848,1,NA,NA,NA
+flores_coppock_2018,table_6_coffman_bilingual_Z_survey,table_6,"coffman_bilingual, Z_survey",0.093,0.093,3,1,0.09270950902074228,1,NA,NA,NA
+flores_coppock_2018,table_6_coffman_bilingual_Z_survey_se,table_6,"coffman_bilingual, Z_survey_se",0.078,0.078,3,1,0.07772749481994258,1,NA,NA,NA
+flores_coppock_2018,table_6_coffman_bilingual_constant,table_6,"coffman_bilingual, constant",4.902,4.902,3,1,4.901791434591632,1,NA,NA,NA
+flores_coppock_2018,table_6_coffman_bilingual_constant_se,table_6,"coffman_bilingual, constant_se",0.066,0.066,3,1,0.06603110441680772,1,NA,NA,NA
 flores_coppock_2018,table_6_coffman_monolingual_N,table_6,"coffman_monolingual, N",1342,1342,0,1,1342,1,NA,NA,NA
-flores_coppock_2018,table_6_coffman_monolingual_Z_ad,table_6,"coffman_monolingual, Z_ad",-0.83,-0.830,3,1,-0.8298671777500422,1,NA,NA,NA
-flores_coppock_2018,table_6_coffman_monolingual_Z_ad_se,table_6,"coffman_monolingual, Z_ad_se",0.074,0.074,3,1,0.07375969582270482,1,NA,NA,NA
-flores_coppock_2018,table_6_coffman_monolingual_constant,table_6,"coffman_monolingual, constant",5.161,5.161,3,1,5.160563380281694,1,NA,NA,NA
-flores_coppock_2018,table_6_coffman_monolingual_constant_se,table_6,"coffman_monolingual, constant_se",0.054,0.054,3,1,0.05443620461391845,1,NA,NA,NA
+flores_coppock_2018,table_6_coffman_monolingual_Z_ad,table_6,"coffman_monolingual, Z_ad",-0.83,-0.830,3,1,-0.8298671777500496,1,NA,NA,NA
+flores_coppock_2018,table_6_coffman_monolingual_Z_ad_se,table_6,"coffman_monolingual, Z_ad_se",0.074,0.074,3,1,0.07375969582270551,1,NA,NA,NA
+flores_coppock_2018,table_6_coffman_monolingual_constant,table_6,"coffman_monolingual, constant",5.161,5.161,3,1,5.160563380281661,1,NA,NA,NA
+flores_coppock_2018,table_6_coffman_monolingual_constant_se,table_6,"coffman_monolingual, constant_se",0.054,0.054,3,1,0.05443620461391804,1,NA,NA,NA
 flores_coppock_2018,table_6_vela_bilingual_N,table_6,"vela_bilingual, N",1680,1680,0,1,1680,1,NA,NA,NA
-flores_coppock_2018,table_6_vela_bilingual_Z_ad,table_6,"vela_bilingual, Z_ad",0.068,0.068,3,1,0.06760489231253662,1,NA,NA,NA
-flores_coppock_2018,table_6_vela_bilingual_Z_ad_se,table_6,"vela_bilingual, Z_ad_se",0.067,0.067,3,1,0.0674695434370164,1,NA,NA,NA
-flores_coppock_2018,table_6_vela_bilingual_Z_survey,table_6,"vela_bilingual, Z_survey",0.149,0.149,3,1,0.149426641688701,1,NA,NA,NA
-flores_coppock_2018,table_6_vela_bilingual_Z_survey_se,table_6,"vela_bilingual, Z_survey_se",0.067,0.067,3,1,0.06745376331504367,1,NA,NA,NA
-flores_coppock_2018,table_6_vela_bilingual_constant,table_6,"vela_bilingual, constant",4.994,4.994,3,1,4.994446686686978,1,NA,NA,NA
-flores_coppock_2018,table_6_vela_bilingual_constant_se,table_6,"vela_bilingual, constant_se",0.057,0.057,3,1,0.05685053738332083,1,NA,NA,NA
+flores_coppock_2018,table_6_vela_bilingual_Z_ad,table_6,"vela_bilingual, Z_ad",0.068,0.068,3,1,0.06760489231253555,1,NA,NA,NA
+flores_coppock_2018,table_6_vela_bilingual_Z_ad_se,table_6,"vela_bilingual, Z_ad_se",0.067,0.067,3,1,0.0674695434370161,1,NA,NA,NA
+flores_coppock_2018,table_6_vela_bilingual_Z_survey,table_6,"vela_bilingual, Z_survey",0.149,0.149,3,1,0.1494266416887011,1,NA,NA,NA
+flores_coppock_2018,table_6_vela_bilingual_Z_survey_se,table_6,"vela_bilingual, Z_survey_se",0.067,0.067,3,1,0.06745376331504394,1,NA,NA,NA
+flores_coppock_2018,table_6_vela_bilingual_constant,table_6,"vela_bilingual, constant",4.994,4.994,3,1,4.994446686686988,1,NA,NA,NA
+flores_coppock_2018,table_6_vela_bilingual_constant_se,table_6,"vela_bilingual, constant_se",0.057,0.057,3,1,0.0568505373833214,1,NA,NA,NA
 flores_coppock_2018,table_6_vela_monolingual_N,table_6,"vela_monolingual, N",1341,1341,0,1,1341,1,NA,NA,NA
-flores_coppock_2018,table_6_vela_monolingual_Z_ad,table_6,"vela_monolingual, Z_ad",-0.472,-0.472,3,1,-0.4722861121368104,1,NA,NA,NA
-flores_coppock_2018,table_6_vela_monolingual_Z_ad_se,table_6,"vela_monolingual, Z_ad_se",0.07,0.070,3,1,0.06956345311144738,1,NA,NA,NA
-flores_coppock_2018,table_6_vela_monolingual_constant,table_6,"vela_monolingual, constant",4.712,4.712,3,1,4.712166172106834,1,NA,NA,NA
-flores_coppock_2018,table_6_vela_monolingual_constant_se,table_6,"vela_monolingual, constant_se",0.051,0.051,3,1,0.05074739215359186,1,NA,NA,NA
+flores_coppock_2018,table_6_vela_monolingual_Z_ad,table_6,"vela_monolingual, Z_ad",-0.472,-0.472,3,1,-0.4722861121368062,1,NA,NA,NA
+flores_coppock_2018,table_6_vela_monolingual_Z_ad_se,table_6,"vela_monolingual, Z_ad_se",0.07,0.070,3,1,0.0695634531114469,1,NA,NA,NA
+flores_coppock_2018,table_6_vela_monolingual_constant,table_6,"vela_monolingual, constant",4.712,4.712,3,1,4.712166172106826,1,NA,NA,NA
+flores_coppock_2018,table_6_vela_monolingual_constant_se,table_6,"vela_monolingual, constant_se",0.051,0.051,3,1,0.05074739215359163,1,NA,NA,NA
 flores_coppock_2018,table_7_bush_bilingual_N,table_7,"bush_bilingual, N",1858,1858,0,1,1858,1,NA,NA,NA
-flores_coppock_2018,table_7_bush_bilingual_Z_ad,table_7,"bush_bilingual, Z_ad",0.037,0.037,3,1,0.03736599165233557,1,NA,NA,NA
-flores_coppock_2018,table_7_bush_bilingual_Z_ad_se,table_7,"bush_bilingual, Z_ad_se",0.02,0.020,3,1,0.02044872125469444,1,NA,NA,NA
-flores_coppock_2018,table_7_bush_bilingual_Z_survey,table_7,"bush_bilingual, Z_survey",-0.035,-0.035,3,1,-0.03474562464246641,1,NA,NA,NA
-flores_coppock_2018,table_7_bush_bilingual_Z_survey_se,table_7,"bush_bilingual, Z_survey_se",0.02,0.020,3,1,0.02045164096318168,1,NA,NA,NA
-flores_coppock_2018,table_7_bush_bilingual_constant,table_7,"bush_bilingual, constant",0.734,0.734,3,1,0.7342494858433282,1,NA,NA,NA
-flores_coppock_2018,table_7_bush_bilingual_constant_se,table_7,"bush_bilingual, constant_se",0.018,0.018,3,1,0.01776041300572103,1,NA,NA,NA
+flores_coppock_2018,table_7_bush_bilingual_Z_ad,table_7,"bush_bilingual, Z_ad",0.037,0.037,3,1,0.03736599165233497,1,NA,NA,NA
+flores_coppock_2018,table_7_bush_bilingual_Z_ad_se,table_7,"bush_bilingual, Z_ad_se",0.02,0.020,3,1,0.02044872125469448,1,NA,NA,NA
+flores_coppock_2018,table_7_bush_bilingual_Z_survey,table_7,"bush_bilingual, Z_survey",-0.035,-0.035,3,1,-0.03474562464246555,1,NA,NA,NA
+flores_coppock_2018,table_7_bush_bilingual_Z_survey_se,table_7,"bush_bilingual, Z_survey_se",0.02,0.020,3,1,0.02045164096318158,1,NA,NA,NA
+flores_coppock_2018,table_7_bush_bilingual_constant,table_7,"bush_bilingual, constant",0.734,0.734,3,1,0.7342494858433122,1,NA,NA,NA
+flores_coppock_2018,table_7_bush_bilingual_constant_se,table_7,"bush_bilingual, constant_se",0.018,0.018,3,1,0.01776041300572067,1,NA,NA,NA
 flores_coppock_2018,table_7_coffman_bilingual_N,table_7,"coffman_bilingual, N",1680,1680,0,1,1680,1,NA,NA,NA
-flores_coppock_2018,table_7_coffman_bilingual_Z_ad,table_7,"coffman_bilingual, Z_ad",0.035,0.035,3,1,0.03455868519331801,1,NA,NA,NA
-flores_coppock_2018,table_7_coffman_bilingual_Z_ad_se,table_7,"coffman_bilingual, Z_ad_se",0.021,0.021,3,1,0.02137846517987714,1,NA,NA,NA
-flores_coppock_2018,table_7_coffman_bilingual_Z_survey,table_7,"coffman_bilingual, Z_survey",-0.045,-0.045,3,1,-0.04487728079630943,1,NA,NA,NA
-flores_coppock_2018,table_7_coffman_bilingual_Z_survey_se,table_7,"coffman_bilingual, Z_survey_se",0.021,0.021,3,1,0.02147828440056571,1,NA,NA,NA
-flores_coppock_2018,table_7_coffman_bilingual_constant,table_7,"coffman_bilingual, constant",0.744,0.744,3,1,0.7441704739900041,1,NA,NA,NA
-flores_coppock_2018,table_7_coffman_bilingual_constant_se,table_7,"coffman_bilingual, constant_se",0.018,0.018,3,1,0.01812074798226348,1,NA,NA,NA
+flores_coppock_2018,table_7_coffman_bilingual_Z_ad,table_7,"coffman_bilingual, Z_ad",0.035,0.035,3,1,0.03455868519331875,1,NA,NA,NA
+flores_coppock_2018,table_7_coffman_bilingual_Z_ad_se,table_7,"coffman_bilingual, Z_ad_se",0.021,0.021,3,1,0.02137846517987737,1,NA,NA,NA
+flores_coppock_2018,table_7_coffman_bilingual_Z_survey,table_7,"coffman_bilingual, Z_survey",-0.045,-0.045,3,1,-0.04487728079630927,1,NA,NA,NA
+flores_coppock_2018,table_7_coffman_bilingual_Z_survey_se,table_7,"coffman_bilingual, Z_survey_se",0.021,0.021,3,1,0.02147828440056568,1,NA,NA,NA
+flores_coppock_2018,table_7_coffman_bilingual_constant,table_7,"coffman_bilingual, constant",0.744,0.744,3,1,0.744170473990005,1,NA,NA,NA
+flores_coppock_2018,table_7_coffman_bilingual_constant_se,table_7,"coffman_bilingual, constant_se",0.018,0.018,3,1,0.01812074798226374,1,NA,NA,NA
 flores_coppock_2018,table_7_coffman_monolingual_N,table_7,"coffman_monolingual, N",1337,1337,0,1,1337,1,NA,NA,NA
-flores_coppock_2018,table_7_coffman_monolingual_Z_ad,table_7,"coffman_monolingual, Z_ad",-0.155,-0.155,3,1,-0.15519432692912263,1,NA,NA,NA
-flores_coppock_2018,table_7_coffman_monolingual_Z_ad_se,table_7,"coffman_monolingual, Z_ad_se",0.024,0.024,3,1,0.02388982213479516,1,NA,NA,NA
-flores_coppock_2018,table_7_coffman_monolingual_constant,table_7,"coffman_monolingual, constant",0.815,0.815,3,1,0.8149717514124275,1,NA,NA,NA
-flores_coppock_2018,table_7_coffman_monolingual_constant_se,table_7,"coffman_monolingual, constant_se",0.015,0.015,3,1,0.01460429476136814,1,NA,NA,NA
+flores_coppock_2018,table_7_coffman_monolingual_Z_ad,table_7,"coffman_monolingual, Z_ad",-0.155,-0.155,3,1,-0.15519432692912227,1,NA,NA,NA
+flores_coppock_2018,table_7_coffman_monolingual_Z_ad_se,table_7,"coffman_monolingual, Z_ad_se",0.024,0.024,3,1,0.02388982213479525,1,NA,NA,NA
+flores_coppock_2018,table_7_coffman_monolingual_constant,table_7,"coffman_monolingual, constant",0.815,0.815,3,1,0.8149717514124243,1,NA,NA,NA
+flores_coppock_2018,table_7_coffman_monolingual_constant_se,table_7,"coffman_monolingual, constant_se",0.015,0.015,3,1,0.01460429476136813,1,NA,NA,NA
 flores_coppock_2018,table_7_vela_bilingual_N,table_7,"vela_bilingual, N",1680,1680,0,1,1680,1,NA,NA,NA
-flores_coppock_2018,table_7_vela_bilingual_Z_ad,table_7,"vela_bilingual, Z_ad",0.018,0.018,3,1,0.01760540160002676,1,NA,NA,NA
-flores_coppock_2018,table_7_vela_bilingual_Z_ad_se,table_7,"vela_bilingual, Z_ad_se",0.017,0.017,3,1,0.01681737335069086,1,NA,NA,NA
-flores_coppock_2018,table_7_vela_bilingual_Z_survey,table_7,"vela_bilingual, Z_survey",-0.024,-0.024,3,1,-0.02399193875553389,1,NA,NA,NA
-flores_coppock_2018,table_7_vela_bilingual_Z_survey_se,table_7,"vela_bilingual, Z_survey_se",0.017,0.017,3,1,0.0169063135753888,1,NA,NA,NA
-flores_coppock_2018,table_7_vela_bilingual_constant,table_7,"vela_bilingual, constant",0.865,0.865,3,1,0.8647335055744698,1,NA,NA,NA
-flores_coppock_2018,table_7_vela_bilingual_constant_se,table_7,"vela_bilingual, constant_se",0.014,0.014,3,1,0.01424565602962468,1,NA,NA,NA
+flores_coppock_2018,table_7_vela_bilingual_Z_ad,table_7,"vela_bilingual, Z_ad",0.018,0.018,3,1,0.0176054016000268,1,NA,NA,NA
+flores_coppock_2018,table_7_vela_bilingual_Z_ad_se,table_7,"vela_bilingual, Z_ad_se",0.017,0.017,3,1,0.01681737335069081,1,NA,NA,NA
+flores_coppock_2018,table_7_vela_bilingual_Z_survey,table_7,"vela_bilingual, Z_survey",-0.024,-0.024,3,1,-0.02399193875553391,1,NA,NA,NA
+flores_coppock_2018,table_7_vela_bilingual_Z_survey_se,table_7,"vela_bilingual, Z_survey_se",0.017,0.017,3,1,0.01690631357538875,1,NA,NA,NA
+flores_coppock_2018,table_7_vela_bilingual_constant,table_7,"vela_bilingual, constant",0.865,0.865,3,1,0.8647335055744716,1,NA,NA,NA
+flores_coppock_2018,table_7_vela_bilingual_constant_se,table_7,"vela_bilingual, constant_se",0.014,0.014,3,1,0.01424565602962477,1,NA,NA,NA
 flores_coppock_2018,table_7_vela_monolingual_N,table_7,"vela_monolingual, N",1336,1336,0,1,1336,1,NA,NA,NA
-flores_coppock_2018,table_7_vela_monolingual_Z_ad,table_7,"vela_monolingual, Z_ad",-0.152,-0.152,3,1,-0.15201663872627613,1,NA,NA,NA
-flores_coppock_2018,table_7_vela_monolingual_Z_ad_se,table_7,"vela_monolingual, Z_ad_se",0.025,0.025,3,1,0.02465573417346855,1,NA,NA,NA
-flores_coppock_2018,table_7_vela_monolingual_constant,table_7,"vela_monolingual, constant",0.78,0.780,3,1,0.7804154302670646,1,NA,NA,NA
-flores_coppock_2018,table_7_vela_monolingual_constant_se,table_7,"vela_monolingual, constant_se",0.016,0.016,3,1,0.01595718577359371,1,NA,NA,NA
+flores_coppock_2018,table_7_vela_monolingual_Z_ad,table_7,"vela_monolingual, Z_ad",-0.152,-0.152,3,1,-0.1520166387262766,1,NA,NA,NA
+flores_coppock_2018,table_7_vela_monolingual_Z_ad_se,table_7,"vela_monolingual, Z_ad_se",0.025,0.025,3,1,0.02465573417346872,1,NA,NA,NA
+flores_coppock_2018,table_7_vela_monolingual_constant,table_7,"vela_monolingual, constant",0.78,0.780,3,1,0.7804154302670668,1,NA,NA,NA
+flores_coppock_2018,table_7_vela_monolingual_constant_se,table_7,"vela_monolingual, constant_se",0.016,0.016,3,1,0.01595718577359385,1,NA,NA,NA
 flores_coppock_2018,table_8_bush_bilingual_N,table_8,"bush_bilingual, N",1861,1861,0,1,1861,1,NA,NA,NA
-flores_coppock_2018,table_8_bush_bilingual_Z_ad,table_8,"bush_bilingual, Z_ad",0.076,0.076,3,1,0.0757876511855037,1,NA,NA,NA
-flores_coppock_2018,table_8_bush_bilingual_Z_ad_se,table_8,"bush_bilingual, Z_ad_se",0.042,0.042,3,1,0.04151635727646064,1,NA,NA,NA
-flores_coppock_2018,table_8_bush_bilingual_Z_survey,table_8,"bush_bilingual, Z_survey",-0.018,-0.018,3,1,-0.01847760215749234,1,NA,NA,NA
-flores_coppock_2018,table_8_bush_bilingual_Z_survey_se,table_8,"bush_bilingual, Z_survey_se",0.042,0.042,3,1,0.04155833680317605,1,NA,NA,NA
-flores_coppock_2018,table_8_bush_bilingual_constant,table_8,"bush_bilingual, constant",1.768,1.768,3,1,1.7684375012857565,1,NA,NA,NA
-flores_coppock_2018,table_8_bush_bilingual_constant_se,table_8,"bush_bilingual, constant_se",0.035,0.035,3,1,0.03545271873773787,1,NA,NA,NA
+flores_coppock_2018,table_8_bush_bilingual_Z_ad,table_8,"bush_bilingual, Z_ad",0.076,0.076,3,1,0.0757876511855023,1,NA,NA,NA
+flores_coppock_2018,table_8_bush_bilingual_Z_ad_se,table_8,"bush_bilingual, Z_ad_se",0.042,0.042,3,1,0.04151635727646085,1,NA,NA,NA
+flores_coppock_2018,table_8_bush_bilingual_Z_survey,table_8,"bush_bilingual, Z_survey",-0.018,-0.018,3,1,-0.0184776021574926,1,NA,NA,NA
+flores_coppock_2018,table_8_bush_bilingual_Z_survey_se,table_8,"bush_bilingual, Z_survey_se",0.042,0.042,3,1,0.04155833680317632,1,NA,NA,NA
+flores_coppock_2018,table_8_bush_bilingual_constant,table_8,"bush_bilingual, constant",1.768,1.768,3,1,1.768437501285742,1,NA,NA,NA
+flores_coppock_2018,table_8_bush_bilingual_constant_se,table_8,"bush_bilingual, constant_se",0.035,0.035,3,1,0.03545271873773717,1,NA,NA,NA
 flores_coppock_2018,table_8_coffman_bilingual_N,table_8,"coffman_bilingual, N",1679,1679,0,1,1679,1,NA,NA,NA
-flores_coppock_2018,table_8_coffman_bilingual_Z_ad,table_8,"coffman_bilingual, Z_ad",0.03,0.030,3,1,0.03039949243366188,1,NA,NA,NA
-flores_coppock_2018,table_8_coffman_bilingual_Z_ad_se,table_8,"coffman_bilingual, Z_ad_se",0.041,0.041,3,1,0.04090070614885235,1,NA,NA,NA
-flores_coppock_2018,table_8_coffman_bilingual_Z_survey,table_8,"coffman_bilingual, Z_survey",-0.084,-0.084,3,1,-0.08435252944201191,1,NA,NA,NA
-flores_coppock_2018,table_8_coffman_bilingual_Z_survey_se,table_8,"coffman_bilingual, Z_survey_se",0.041,0.041,3,1,0.04092225306718437,1,NA,NA,NA
-flores_coppock_2018,table_8_coffman_bilingual_constant,table_8,"coffman_bilingual, constant",1.814,1.814,3,1,1.8142999027372448,1,NA,NA,NA
-flores_coppock_2018,table_8_coffman_bilingual_constant_se,table_8,"coffman_bilingual, constant_se",0.034,0.034,3,1,0.03399470468561017,1,NA,NA,NA
+flores_coppock_2018,table_8_coffman_bilingual_Z_ad,table_8,"coffman_bilingual, Z_ad",0.03,0.030,3,1,0.03039949243366122,1,NA,NA,NA
+flores_coppock_2018,table_8_coffman_bilingual_Z_ad_se,table_8,"coffman_bilingual, Z_ad_se",0.041,0.041,3,1,0.04090070614885185,1,NA,NA,NA
+flores_coppock_2018,table_8_coffman_bilingual_Z_survey,table_8,"coffman_bilingual, Z_survey",-0.084,-0.084,3,1,-0.0843525294420112,1,NA,NA,NA
+flores_coppock_2018,table_8_coffman_bilingual_Z_survey_se,table_8,"coffman_bilingual, Z_survey_se",0.041,0.041,3,1,0.04092225306718428,1,NA,NA,NA
+flores_coppock_2018,table_8_coffman_bilingual_constant,table_8,"coffman_bilingual, constant",1.814,1.814,3,1,1.8142999027372375,1,NA,NA,NA
+flores_coppock_2018,table_8_coffman_bilingual_constant_se,table_8,"coffman_bilingual, constant_se",0.034,0.034,3,1,0.03399470468560996,1,NA,NA,NA
 flores_coppock_2018,table_8_coffman_monolingual_N,table_8,"coffman_monolingual, N",1338,1338,0,1,1338,1,NA,NA,NA
-flores_coppock_2018,table_8_coffman_monolingual_Z_ad,table_8,"coffman_monolingual, Z_ad",-0.31,-0.310,3,1,-0.31014622768458006,1,NA,NA,NA
-flores_coppock_2018,table_8_coffman_monolingual_Z_ad_se,table_8,"coffman_monolingual, Z_ad_se",0.044,0.044,3,1,0.04409709738146659,1,NA,NA,NA
-flores_coppock_2018,table_8_coffman_monolingual_constant,table_8,"coffman_monolingual, constant",1.966,1.966,3,1,1.9661971830985936,1,NA,NA,NA
-flores_coppock_2018,table_8_coffman_monolingual_constant_se,table_8,"coffman_monolingual, constant_se",0.029,0.029,3,1,0.02947013927066198,1,NA,NA,NA
+flores_coppock_2018,table_8_coffman_monolingual_Z_ad,table_8,"coffman_monolingual, Z_ad",-0.31,-0.310,3,1,-0.3101462276845775,1,NA,NA,NA
+flores_coppock_2018,table_8_coffman_monolingual_Z_ad_se,table_8,"coffman_monolingual, Z_ad_se",0.044,0.044,3,1,0.04409709738146636,1,NA,NA,NA
+flores_coppock_2018,table_8_coffman_monolingual_constant,table_8,"coffman_monolingual, constant",1.966,1.966,3,1,1.9661971830985792,1,NA,NA,NA
+flores_coppock_2018,table_8_coffman_monolingual_constant_se,table_8,"coffman_monolingual, constant_se",0.029,0.029,3,1,0.02947013927066159,1,NA,NA,NA
 flores_coppock_2018,table_8_vela_bilingual_N,table_8,"vela_bilingual, N",1680,1680,0,1,1680,1,NA,NA,NA
-flores_coppock_2018,table_8_vela_bilingual_Z_ad,table_8,"vela_bilingual, Z_ad",0.103,0.103,3,1,0.10271177334359852,1,NA,NA,NA
-flores_coppock_2018,table_8_vela_bilingual_Z_ad_se,table_8,"vela_bilingual, Z_ad_se",0.038,0.038,3,1,0.03786502664637425,1,NA,NA,NA
-flores_coppock_2018,table_8_vela_bilingual_Z_survey,table_8,"vela_bilingual, Z_survey",0.011,0.011,3,1,0.01075924580257995,1,NA,NA,NA
-flores_coppock_2018,table_8_vela_bilingual_Z_survey_se,table_8,"vela_bilingual, Z_survey_se",0.038,0.038,3,1,0.03793099703221256,1,NA,NA,NA
-flores_coppock_2018,table_8_vela_bilingual_constant,table_8,"vela_bilingual, constant",1.915,1.915,3,1,1.915380532978896,1,NA,NA,NA
-flores_coppock_2018,table_8_vela_bilingual_constant_se,table_8,"vela_bilingual, constant_se",0.033,0.033,3,1,0.03254047398601165,1,NA,NA,NA
+flores_coppock_2018,table_8_vela_bilingual_Z_ad,table_8,"vela_bilingual, Z_ad",0.103,0.103,3,1,0.1027117733435976,1,NA,NA,NA
+flores_coppock_2018,table_8_vela_bilingual_Z_ad_se,table_8,"vela_bilingual, Z_ad_se",0.038,0.038,3,1,0.03786502664637411,1,NA,NA,NA
+flores_coppock_2018,table_8_vela_bilingual_Z_survey,table_8,"vela_bilingual, Z_survey",0.011,0.011,3,1,0.010759245802579,1,NA,NA,NA
+flores_coppock_2018,table_8_vela_bilingual_Z_survey_se,table_8,"vela_bilingual, Z_survey_se",0.038,0.038,3,1,0.03793099703221247,1,NA,NA,NA
+flores_coppock_2018,table_8_vela_bilingual_constant,table_8,"vela_bilingual, constant",1.915,1.915,3,1,1.9153805329789009,1,NA,NA,NA
+flores_coppock_2018,table_8_vela_bilingual_constant_se,table_8,"vela_bilingual, constant_se",0.033,0.033,3,1,0.03254047398601183,1,NA,NA,NA
 flores_coppock_2018,table_8_vela_monolingual_N,table_8,"vela_monolingual, N",1338,1338,0,1,1338,1,NA,NA,NA
-flores_coppock_2018,table_8_vela_monolingual_Z_ad,table_8,"vela_monolingual, Z_ad",-0.16,-0.160,3,1,-0.1602346237640353,1,NA,NA,NA
-flores_coppock_2018,table_8_vela_monolingual_Z_ad_se,table_8,"vela_monolingual, Z_ad_se",0.047,0.047,3,1,0.04695249649205393,1,NA,NA,NA
-flores_coppock_2018,table_8_vela_monolingual_constant,table_8,"vela_monolingual, constant",1.73,1.730,3,1,1.7303703703703714,1,NA,NA,NA
-flores_coppock_2018,table_8_vela_monolingual_constant_se,table_8,"vela_monolingual, constant_se",0.031,0.031,3,1,0.0314127693469844,1,NA,NA,NA
+flores_coppock_2018,table_8_vela_monolingual_Z_ad,table_8,"vela_monolingual, Z_ad",-0.16,-0.160,3,1,-0.16023462376403744,1,NA,NA,NA
+flores_coppock_2018,table_8_vela_monolingual_Z_ad_se,table_8,"vela_monolingual, Z_ad_se",0.047,0.047,3,1,0.04695249649205432,1,NA,NA,NA
+flores_coppock_2018,table_8_vela_monolingual_constant,table_8,"vela_monolingual, constant",1.73,1.730,3,1,1.7303703703703612,1,NA,NA,NA
+flores_coppock_2018,table_8_vela_monolingual_constant_se,table_8,"vela_monolingual, constant_se",0.031,0.031,3,1,0.03141276934698418,1,NA,NA,NA
 flores_coppock_2018,table_9_bush_bilingual_N,table_9,"bush_bilingual, N",1861,1861,0,1,1861,1,NA,NA,NA
-flores_coppock_2018,table_9_bush_bilingual_Z_survey,table_9,"bush_bilingual, Z_survey",0.243,0.243,3,1,0.24272228320526923,1,NA,NA,NA
-flores_coppock_2018,table_9_bush_bilingual_Z_survey_se,table_9,"bush_bilingual, Z_survey_se",0.04,0.040,3,1,0.04030021104028934,1,NA,NA,NA
-flores_coppock_2018,table_9_bush_bilingual_constant,table_9,"bush_bilingual, constant",2.08,2.080,3,1,2.0799999999999956,1,NA,NA,NA
-flores_coppock_2018,table_9_bush_bilingual_constant_se,table_9,"bush_bilingual, constant_se",0.031,0.031,3,1,0.0312056018144867,1,NA,NA,NA
+flores_coppock_2018,table_9_bush_bilingual_Z_survey,table_9,"bush_bilingual, Z_survey",0.243,0.243,3,1,0.2427222832052696,1,NA,NA,NA
+flores_coppock_2018,table_9_bush_bilingual_Z_survey_se,table_9,"bush_bilingual, Z_survey_se",0.04,0.040,3,1,0.04030021104028922,1,NA,NA,NA
+flores_coppock_2018,table_9_bush_bilingual_constant,table_9,"bush_bilingual, constant",2.08,2.080,3,1,2.07999999999998,1,NA,NA,NA
+flores_coppock_2018,table_9_bush_bilingual_constant_se,table_9,"bush_bilingual, constant_se",0.031,0.031,3,1,0.03120560181448602,1,NA,NA,NA
 flores_coppock_2018,table_9_vela_coffman_bilingual_N,table_9,"vela_coffman_bilingual, N",1681,1681,0,1,1681,1,NA,NA,NA
-flores_coppock_2018,table_9_vela_coffman_bilingual_Z_survey,table_9,"vela_coffman_bilingual, Z_survey",0.131,0.131,3,1,0.13110568289174684,1,NA,NA,NA
-flores_coppock_2018,table_9_vela_coffman_bilingual_Z_survey_se,table_9,"vela_coffman_bilingual, Z_survey_se",0.041,0.041,3,1,0.04126566016011654,1,NA,NA,NA
-flores_coppock_2018,table_9_vela_coffman_bilingual_constant,table_9,"vela_coffman_bilingual, constant",2.106,2.106,3,1,2.105802047781575,1,NA,NA,NA
-flores_coppock_2018,table_9_vela_coffman_bilingual_constant_se,table_9,"vela_coffman_bilingual, constant_se",0.031,0.031,3,1,0.03098948870093595,1,NA,NA,NA
-flores_coppock_2018,figure_1_plotted_coordinates,figure_1,"All plotted estimates, standard errors and confidence limits",NA,NA,NA,NA,NA,NA,NA,NA,"The published figure prints no numbers, so there is nothing in it to compare against the article. All 20 plotted estimates agree with the deposit's own models on all four quantities, to within 0."
+flores_coppock_2018,table_9_vela_coffman_bilingual_Z_survey,table_9,"vela_coffman_bilingual, Z_survey",0.131,0.131,3,1,0.1311056828917476,1,NA,NA,NA
+flores_coppock_2018,table_9_vela_coffman_bilingual_Z_survey_se,table_9,"vela_coffman_bilingual, Z_survey_se",0.041,0.041,3,1,0.04126566016011627,1,NA,NA,NA
+flores_coppock_2018,table_9_vela_coffman_bilingual_constant,table_9,"vela_coffman_bilingual, constant",2.106,2.106,3,1,2.10580204778154,1,NA,NA,NA
+flores_coppock_2018,table_9_vela_coffman_bilingual_constant_se,table_9,"vela_coffman_bilingual, constant_se",0.031,0.031,3,1,0.03098948870093564,1,NA,NA,NA
+flores_coppock_2018,figure_1_plotted_coordinates,figure_1,"All plotted estimates, standard errors and confidence limits",NA,NA,NA,NA,NA,NA,NA,NA,"The published figure prints no numbers, so there is nothing in it to compare against the article. All 20 plotted estimates agree with the deposit's own models on all four quantities, to within 9e-15."
 flores_coppock_2018,float_figure_1,figure_1,Estimates Figure 1 plots,NA,20,0,NA,20,1,NA,NA,"The published figure prints no estimate on its face, so the countable claim is how many it plots. The deposited script that draws it saves a PDF and writes no estimate, so the archive side was recovered by refitting the models it specifies."
 flores_coppock_2018,results_figure_1_outcomes,figure_1,Figure 1 covers four outcomes,NA,4,0,NA,4,1,NA,NA,NA
-flores_coppock_2018,figure_2_plotted_coordinates,figure_2,"All plotted estimates, standard errors and confidence limits",NA,NA,NA,NA,NA,NA,NA,NA,"As Figure 1. All 32 plotted estimates agree with the deposit's own models on all four quantities, to within 0."
+flores_coppock_2018,figure_2_plotted_coordinates,figure_2,"All plotted estimates, standard errors and confidence limits",NA,NA,NA,NA,NA,NA,NA,NA,"As Figure 1. All 32 plotted estimates agree with the deposit's own models on all four quantities, to within 2e-15."
 flores_coppock_2018,float_figure_2,figure_2,Estimates Figure 2 plots,NA,32,0,NA,32,1,NA,NA,As Figure 1.
 flores_coppock_2018,results_figure_2_dvs,figure_2,Figure 2 covers four dependent variables,NA,4,0,NA,4,1,NA,NA,NA
 flores_coppock_2018,results_figure_2_caption_outcomes,figure_2,Figure 2's caption names four outcomes,NA,4,0,NA,4,1,NA,NA,NA
 flores_coppock_2018,figure_3_surface,figure_3,Net effect surface,NA,NA,NA,NA,NA,NA,NA,NA,"A calibration exercise rather than an estimate: the net effect of a Spanish-language strategy over the share of bilinguals in the electorate and the risk of mistargeting, holding the two effects at the values the article supposes on page 18. The surface is deterministic given those two numbers, and the rewrite writes 132 of its values to figure_3_simulation.csv."
 flores_coppock_2018,float_figure_3,figure_3,Points of the simulated surface the rewrite commits,NA,NA,0,NA,121,NA,NA,NA,"Figure 3 is a continuous raster and its cells cannot be counted from the page, so no published count can be laid against this one. The deposited script draws the figure to the screen and never saves it."
 flores_coppock_2018,table_a1_bush_bilingual_N,table_a1,"bush_bilingual, N",1849,1849,0,1,1849,1,NA,NA,NA
-flores_coppock_2018,table_a1_bush_bilingual_Z_ad,table_a1,"bush_bilingual, Z_ad",0.061,0.061,3,1,0.06065397053539406,1,NA,NA,NA
-flores_coppock_2018,table_a1_bush_bilingual_Z_ad_se,table_a1,"bush_bilingual, Z_ad_se",0.032,0.032,3,1,0.03248484499629067,1,NA,NA,NA
-flores_coppock_2018,table_a1_bush_bilingual_Z_survey,table_a1,"bush_bilingual, Z_survey",0.018,0.018,3,1,0.01754623801684947,1,NA,NA,NA
-flores_coppock_2018,table_a1_bush_bilingual_Z_survey_se,table_a1,"bush_bilingual, Z_survey_se",0.033,0.033,3,1,0.03305067400980541,1,NA,NA,NA
-flores_coppock_2018,table_a1_bush_bilingual_constant,table_a1,"bush_bilingual, constant",0.443,0.443,3,1,0.4434782608695652,1,NA,NA,NA
-flores_coppock_2018,table_a1_bush_bilingual_constant_se,table_a1,"bush_bilingual, constant_se",0.023,0.023,3,1,0.02318840579710162,1,NA,NA,NA
-flores_coppock_2018,table_a1_bush_bilingual_interaction,table_a1,"bush_bilingual, interaction",-0.024,-0.024,3,1,-0.02387145187794865,1,NA,NA,NA
-flores_coppock_2018,table_a1_bush_bilingual_interaction_se,table_a1,"bush_bilingual, interaction_se",0.046,0.046,3,1,0.04646880699314373,1,NA,NA,NA
+flores_coppock_2018,table_a1_bush_bilingual_Z_ad,table_a1,"bush_bilingual, Z_ad",0.061,0.061,3,1,0.0606539705353934,1,NA,NA,NA
+flores_coppock_2018,table_a1_bush_bilingual_Z_ad_se,table_a1,"bush_bilingual, Z_ad_se",0.032,0.032,3,1,0.03248484499629014,1,NA,NA,NA
+flores_coppock_2018,table_a1_bush_bilingual_Z_survey,table_a1,"bush_bilingual, Z_survey",0.018,0.018,3,1,0.01754623801684867,1,NA,NA,NA
+flores_coppock_2018,table_a1_bush_bilingual_Z_survey_se,table_a1,"bush_bilingual, Z_survey_se",0.033,0.033,3,1,0.03305067400980572,1,NA,NA,NA
+flores_coppock_2018,table_a1_bush_bilingual_constant,table_a1,"bush_bilingual, constant",0.443,0.443,3,1,0.443478260869569,1,NA,NA,NA
+flores_coppock_2018,table_a1_bush_bilingual_constant_se,table_a1,"bush_bilingual, constant_se",0.023,0.023,3,1,0.02318840579710149,1,NA,NA,NA
+flores_coppock_2018,table_a1_bush_bilingual_interaction,table_a1,"bush_bilingual, interaction",-0.024,-0.024,3,1,-0.02387145187794791,1,NA,NA,NA
+flores_coppock_2018,table_a1_bush_bilingual_interaction_se,table_a1,"bush_bilingual, interaction_se",0.046,0.046,3,1,0.04646880699314398,1,NA,NA,NA
 flores_coppock_2018,table_a1_coffman_bilingual_N,table_a1,"coffman_bilingual, N",1681,1681,0,1,1681,1,NA,NA,NA
-flores_coppock_2018,table_a1_coffman_bilingual_Z_ad,table_a1,"coffman_bilingual, Z_ad",-0.039,-0.039,3,1,-0.0388295666597552,1,NA,NA,NA
-flores_coppock_2018,table_a1_coffman_bilingual_Z_ad_se,table_a1,"coffman_bilingual, Z_ad_se",0.033,0.033,3,1,0.0328453981273008,1,NA,NA,NA
-flores_coppock_2018,table_a1_coffman_bilingual_Z_survey,table_a1,"coffman_bilingual, Z_survey",-0.069,-0.069,3,1,-0.06947873978752843,1,NA,NA,NA
-flores_coppock_2018,table_a1_coffman_bilingual_Z_survey_se,table_a1,"coffman_bilingual, Z_survey_se",0.033,0.033,3,1,0.0325711455488979,1,NA,NA,NA
-flores_coppock_2018,table_a1_coffman_bilingual_constant,table_a1,"coffman_bilingual, constant",0.404,0.404,3,1,0.40439560439560335,1,NA,NA,NA
-flores_coppock_2018,table_a1_coffman_bilingual_constant_se,table_a1,"coffman_bilingual, constant_se",0.023,0.023,3,1,0.02303319762477282,1,NA,NA,NA
-flores_coppock_2018,table_a1_coffman_bilingual_interaction,table_a1,"coffman_bilingual, interaction",0.087,0.087,3,1,0.08711480178921227,1,NA,NA,NA
-flores_coppock_2018,table_a1_coffman_bilingual_interaction_se,table_a1,"coffman_bilingual, interaction_se",0.047,0.047,3,1,0.04723522947678066,1,NA,NA,NA
+flores_coppock_2018,table_a1_coffman_bilingual_Z_ad,table_a1,"coffman_bilingual, Z_ad",-0.039,-0.039,3,1,-0.03882956665975569,1,NA,NA,NA
+flores_coppock_2018,table_a1_coffman_bilingual_Z_ad_se,table_a1,"coffman_bilingual, Z_ad_se",0.033,0.033,3,1,0.03284539812730051,1,NA,NA,NA
+flores_coppock_2018,table_a1_coffman_bilingual_Z_survey,table_a1,"coffman_bilingual, Z_survey",-0.069,-0.069,3,1,-0.0694787397875291,1,NA,NA,NA
+flores_coppock_2018,table_a1_coffman_bilingual_Z_survey_se,table_a1,"coffman_bilingual, Z_survey_se",0.033,0.033,3,1,0.03257114554889797,1,NA,NA,NA
+flores_coppock_2018,table_a1_coffman_bilingual_constant,table_a1,"coffman_bilingual, constant",0.404,0.404,3,1,0.4043956043956009,1,NA,NA,NA
+flores_coppock_2018,table_a1_coffman_bilingual_constant_se,table_a1,"coffman_bilingual, constant_se",0.023,0.023,3,1,0.02303319762477224,1,NA,NA,NA
+flores_coppock_2018,table_a1_coffman_bilingual_interaction,table_a1,"coffman_bilingual, interaction",0.087,0.087,3,1,0.0871148017892131,1,NA,NA,NA
+flores_coppock_2018,table_a1_coffman_bilingual_interaction_se,table_a1,"coffman_bilingual, interaction_se",0.047,0.047,3,1,0.04723522947678067,1,NA,NA,NA
 flores_coppock_2018,table_a1_vela_bilingual_N,table_a1,"vela_bilingual, N",1680,1680,0,1,1680,1,NA,NA,NA
-flores_coppock_2018,table_a1_vela_bilingual_Z_ad,table_a1,"vela_bilingual, Z_ad",0.075,0.075,3,1,0.07463275165138664,1,NA,NA,NA
-flores_coppock_2018,table_a1_vela_bilingual_Z_ad_se,table_a1,"vela_bilingual, Z_ad_se",0.033,0.033,3,1,0.03345720172666369,1,NA,NA,NA
-flores_coppock_2018,table_a1_vela_bilingual_Z_survey,table_a1,"vela_bilingual, Z_survey",0.1,0.100,3,1,0.09968944099378942,1,NA,NA,NA
-flores_coppock_2018,table_a1_vela_bilingual_Z_survey_se,table_a1,"vela_bilingual, Z_survey_se",0.034,0.034,3,1,0.0336716289750759,1,NA,NA,NA
-flores_coppock_2018,table_a1_vela_bilingual_constant,table_a1,"vela_bilingual, constant",0.522,0.522,3,1,0.5217391304347798,1,NA,NA,NA
-flores_coppock_2018,table_a1_vela_bilingual_constant_se,table_a1,"vela_bilingual, constant_se",0.024,0.024,3,1,0.02392301347805959,1,NA,NA,NA
-flores_coppock_2018,table_a1_vela_bilingual_interaction,table_a1,"vela_bilingual, interaction",-0.055,-0.055,3,1,-0.0547000665354548,1,NA,NA,NA
-flores_coppock_2018,table_a1_vela_bilingual_interaction_se,table_a1,"vela_bilingual, interaction_se",0.048,0.048,3,1,0.04779719153583046,1,NA,NA,NA
+flores_coppock_2018,table_a1_vela_bilingual_Z_ad,table_a1,"vela_bilingual, Z_ad",0.075,0.075,3,1,0.07463275165138569,1,NA,NA,NA
+flores_coppock_2018,table_a1_vela_bilingual_Z_ad_se,table_a1,"vela_bilingual, Z_ad_se",0.033,0.033,3,1,0.03345720172666305,1,NA,NA,NA
+flores_coppock_2018,table_a1_vela_bilingual_Z_survey,table_a1,"vela_bilingual, Z_survey",0.1,0.100,3,1,0.09968944099378894,1,NA,NA,NA
+flores_coppock_2018,table_a1_vela_bilingual_Z_survey_se,table_a1,"vela_bilingual, Z_survey_se",0.034,0.034,3,1,0.03367162897507599,1,NA,NA,NA
+flores_coppock_2018,table_a1_vela_bilingual_constant,table_a1,"vela_bilingual, constant",0.522,0.522,3,1,0.5217391304347815,1,NA,NA,NA
+flores_coppock_2018,table_a1_vela_bilingual_constant_se,table_a1,"vela_bilingual, constant_se",0.024,0.024,3,1,0.02392301347805954,1,NA,NA,NA
+flores_coppock_2018,table_a1_vela_bilingual_interaction,table_a1,"vela_bilingual, interaction",-0.055,-0.055,3,1,-0.05470006653545477,1,NA,NA,NA
+flores_coppock_2018,table_a1_vela_bilingual_interaction_se,table_a1,"vela_bilingual, interaction_se",0.048,0.048,3,1,0.04779719153583068,1,NA,NA,NA
 flores_coppock_2018,table_a2_bush_bilingual_N,table_a2,"bush_bilingual, N",1858,1858,0,1,1858,1,NA,NA,NA
-flores_coppock_2018,table_a2_bush_bilingual_Z_ad,table_a2,"bush_bilingual, Z_ad",0.034,0.034,3,1,0.03408979795016818,1,NA,NA,NA
-flores_coppock_2018,table_a2_bush_bilingual_Z_ad_se,table_a2,"bush_bilingual, Z_ad_se",0.028,0.028,3,1,0.02803453429779303,1,NA,NA,NA
-flores_coppock_2018,table_a2_bush_bilingual_Z_survey,table_a2,"bush_bilingual, Z_survey",-0.038,-0.038,3,1,-0.03815295815295794,1,NA,NA,NA
-flores_coppock_2018,table_a2_bush_bilingual_Z_survey_se,table_a2,"bush_bilingual, Z_survey_se",0.03,0.030,3,1,0.02985346479694143,1,NA,NA,NA
-flores_coppock_2018,table_a2_bush_bilingual_constant,table_a2,"bush_bilingual, constant",0.736,0.736,3,1,0.7359307359307418,1,NA,NA,NA
-flores_coppock_2018,table_a2_bush_bilingual_constant_se,table_a2,"bush_bilingual, constant_se",0.021,0.021,3,1,0.02053179576666104,1,NA,NA,NA
-flores_coppock_2018,table_a2_bush_bilingual_interaction,table_a2,"bush_bilingual, interaction",0.007,0.007,3,1,0.00669451577532178,1,NA,NA,NA
-flores_coppock_2018,table_a2_bush_bilingual_interaction_se,table_a2,"bush_bilingual, interaction_se",0.041,0.041,3,1,0.04095362787941459,1,NA,NA,NA
+flores_coppock_2018,table_a2_bush_bilingual_Z_ad,table_a2,"bush_bilingual, Z_ad",0.034,0.034,3,1,0.03408979795016695,1,NA,NA,NA
+flores_coppock_2018,table_a2_bush_bilingual_Z_ad_se,table_a2,"bush_bilingual, Z_ad_se",0.028,0.028,3,1,0.02803453429779328,1,NA,NA,NA
+flores_coppock_2018,table_a2_bush_bilingual_Z_survey,table_a2,"bush_bilingual, Z_survey",-0.038,-0.038,3,1,-0.03815295815295776,1,NA,NA,NA
+flores_coppock_2018,table_a2_bush_bilingual_Z_survey_se,table_a2,"bush_bilingual, Z_survey_se",0.03,0.030,3,1,0.02985346479694127,1,NA,NA,NA
+flores_coppock_2018,table_a2_bush_bilingual_constant,table_a2,"bush_bilingual, constant",0.736,0.736,3,1,0.7359307359307261,1,NA,NA,NA
+flores_coppock_2018,table_a2_bush_bilingual_constant_se,table_a2,"bush_bilingual, constant_se",0.021,0.021,3,1,0.02053179576666058,1,NA,NA,NA
+flores_coppock_2018,table_a2_bush_bilingual_interaction,table_a2,"bush_bilingual, interaction",0.007,0.007,3,1,0.00669451577532304,1,NA,NA,NA
+flores_coppock_2018,table_a2_bush_bilingual_interaction_se,table_a2,"bush_bilingual, interaction_se",0.041,0.041,3,1,0.04095362787941437,1,NA,NA,NA
 flores_coppock_2018,table_a2_coffman_bilingual_N,table_a2,"coffman_bilingual, N",1680,1680,0,1,1680,1,NA,NA,NA
-flores_coppock_2018,table_a2_coffman_bilingual_Z_ad,table_a2,"coffman_bilingual, Z_ad",0.051,0.051,3,1,0.05097030628945443,1,NA,NA,NA
-flores_coppock_2018,table_a2_coffman_bilingual_Z_ad_se,table_a2,"coffman_bilingual, Z_ad_se",0.029,0.029,3,1,0.028716187397646,1,NA,NA,NA
-flores_coppock_2018,table_a2_coffman_bilingual_Z_survey,table_a2,"coffman_bilingual, Z_survey",-0.028,-0.028,3,1,-0.02842525645376021,1,NA,NA,NA
-flores_coppock_2018,table_a2_coffman_bilingual_Z_survey_se,table_a2,"coffman_bilingual, Z_survey_se",0.03,0.030,3,1,0.03033309288702911,1,NA,NA,NA
-flores_coppock_2018,table_a2_coffman_bilingual_constant,table_a2,"coffman_bilingual, constant",0.736,0.736,3,1,0.7362637362637334,1,NA,NA,NA
-flores_coppock_2018,table_a2_coffman_bilingual_constant_se,table_a2,"coffman_bilingual, constant_se",0.021,0.021,3,1,0.02068110328000365,1,NA,NA,NA
-flores_coppock_2018,table_a2_coffman_bilingual_interaction,table_a2,"coffman_bilingual, interaction",-0.034,-0.034,3,1,-0.03439933728053375,1,NA,NA,NA
-flores_coppock_2018,table_a2_coffman_bilingual_interaction_se,table_a2,"coffman_bilingual, interaction_se",0.043,0.043,3,1,0.04292292373153619,1,NA,NA,NA
+flores_coppock_2018,table_a2_coffman_bilingual_Z_ad,table_a2,"coffman_bilingual, Z_ad",0.051,0.051,3,1,0.05097030628945524,1,NA,NA,NA
+flores_coppock_2018,table_a2_coffman_bilingual_Z_ad_se,table_a2,"coffman_bilingual, Z_ad_se",0.029,0.029,3,1,0.02871618739764664,1,NA,NA,NA
+flores_coppock_2018,table_a2_coffman_bilingual_Z_survey,table_a2,"coffman_bilingual, Z_survey",-0.028,-0.028,3,1,-0.02842525645376022,1,NA,NA,NA
+flores_coppock_2018,table_a2_coffman_bilingual_Z_survey_se,table_a2,"coffman_bilingual, Z_survey_se",0.03,0.030,3,1,0.03033309288702912,1,NA,NA,NA
+flores_coppock_2018,table_a2_coffman_bilingual_constant,table_a2,"coffman_bilingual, constant",0.736,0.736,3,1,0.7362637362637343,1,NA,NA,NA
+flores_coppock_2018,table_a2_coffman_bilingual_constant_se,table_a2,"coffman_bilingual, constant_se",0.021,0.021,3,1,0.02068110328000415,1,NA,NA,NA
+flores_coppock_2018,table_a2_coffman_bilingual_interaction,table_a2,"coffman_bilingual, interaction",-0.034,-0.034,3,1,-0.03439933728053327,1,NA,NA,NA
+flores_coppock_2018,table_a2_coffman_bilingual_interaction_se,table_a2,"coffman_bilingual, interaction_se",0.043,0.043,3,1,0.04292292373153601,1,NA,NA,NA
 flores_coppock_2018,table_a2_vela_bilingual_N,table_a2,"vela_bilingual, N",1680,1680,0,1,1680,1,NA,NA,NA
-flores_coppock_2018,table_a2_vela_bilingual_Z_ad,table_a2,"vela_bilingual, Z_ad",0.013,0.013,3,1,0.01254170623245527,1,NA,NA,NA
-flores_coppock_2018,table_a2_vela_bilingual_Z_ad_se,table_a2,"vela_bilingual, Z_ad_se",0.022,0.022,3,1,0.02245710846355561,1,NA,NA,NA
-flores_coppock_2018,table_a2_vela_bilingual_Z_survey,table_a2,"vela_bilingual, Z_survey",-0.029,-0.029,3,1,-0.02918164977661488,1,NA,NA,NA
-flores_coppock_2018,table_a2_vela_bilingual_Z_survey_se,table_a2,"vela_bilingual, Z_survey_se",0.024,0.024,3,1,0.024245716784765,1,NA,NA,NA
-flores_coppock_2018,table_a2_vela_bilingual_constant,table_a2,"vela_bilingual, constant",0.867,0.867,3,1,0.8672768878718491,1,NA,NA,NA
-flores_coppock_2018,table_a2_vela_bilingual_constant_se,table_a2,"vela_bilingual, constant_se",0.016,0.016,3,1,0.01624833708041597,1,NA,NA,NA
-flores_coppock_2018,table_a2_vela_bilingual_interaction,table_a2,"vela_bilingual, interaction",0.011,0.011,3,1,0.01061960017492428,1,NA,NA,NA
-flores_coppock_2018,table_a2_vela_bilingual_interaction_se,table_a2,"vela_bilingual, interaction_se",0.034,0.034,3,1,0.03379052866360819,1,NA,NA,NA
+flores_coppock_2018,table_a2_vela_bilingual_Z_ad,table_a2,"vela_bilingual, Z_ad",0.013,0.013,3,1,0.01254170623245517,1,NA,NA,NA
+flores_coppock_2018,table_a2_vela_bilingual_Z_ad_se,table_a2,"vela_bilingual, Z_ad_se",0.022,0.022,3,1,0.02245710846355517,1,NA,NA,NA
+flores_coppock_2018,table_a2_vela_bilingual_Z_survey,table_a2,"vela_bilingual, Z_survey",-0.029,-0.029,3,1,-0.02918164977661516,1,NA,NA,NA
+flores_coppock_2018,table_a2_vela_bilingual_Z_survey_se,table_a2,"vela_bilingual, Z_survey_se",0.024,0.024,3,1,0.02424571678476505,1,NA,NA,NA
+flores_coppock_2018,table_a2_vela_bilingual_constant,table_a2,"vela_bilingual, constant",0.867,0.867,3,1,0.8672768878718509,1,NA,NA,NA
+flores_coppock_2018,table_a2_vela_bilingual_constant_se,table_a2,"vela_bilingual, constant_se",0.016,0.016,3,1,0.01624833708041595,1,NA,NA,NA
+flores_coppock_2018,table_a2_vela_bilingual_interaction,table_a2,"vela_bilingual, interaction",0.011,0.011,3,1,0.0106196001749248,1,NA,NA,NA
+flores_coppock_2018,table_a2_vela_bilingual_interaction_se,table_a2,"vela_bilingual, interaction_se",0.034,0.034,3,1,0.03379052866360838,1,NA,NA,NA
 flores_coppock_2018,table_a3_bush_bilingual_N,table_a3,"bush_bilingual, N",1861,1861,0,1,1861,1,NA,NA,NA
-flores_coppock_2018,table_a3_bush_bilingual_Z_ad,table_a3,"bush_bilingual, Z_ad",0.135,0.135,3,1,0.1348555815768921,1,NA,NA,NA
-flores_coppock_2018,table_a3_bush_bilingual_Z_ad_se,table_a3,"bush_bilingual, Z_ad_se",0.058,0.058,3,1,0.05766009621054666,1,NA,NA,NA
-flores_coppock_2018,table_a3_bush_bilingual_Z_survey,table_a3,"bush_bilingual, Z_survey",0.043,0.043,3,1,0.04287821323219504,1,NA,NA,NA
-flores_coppock_2018,table_a3_bush_bilingual_Z_survey_se,table_a3,"bush_bilingual, Z_survey_se",0.058,0.058,3,1,0.05816081411383671,1,NA,NA,NA
-flores_coppock_2018,table_a3_bush_bilingual_constant,table_a3,"bush_bilingual, constant",1.738,1.738,3,1,1.738095238095233,1,NA,NA,NA
-flores_coppock_2018,table_a3_bush_bilingual_constant_se,table_a3,"bush_bilingual, constant_se",0.041,0.041,3,1,0.040613789284362,1,NA,NA,NA
-flores_coppock_2018,table_a3_bush_bilingual_interaction,table_a3,"bush_bilingual, interaction",-0.121,-0.121,3,1,-0.120622061226765,1,NA,NA,NA
-flores_coppock_2018,table_a3_bush_bilingual_interaction_se,table_a3,"bush_bilingual, interaction_se",0.083,0.083,3,1,0.08305182924147889,1,NA,NA,NA
+flores_coppock_2018,table_a3_bush_bilingual_Z_ad,table_a3,"bush_bilingual, Z_ad",0.135,0.135,3,1,0.13485558157688976,1,NA,NA,NA
+flores_coppock_2018,table_a3_bush_bilingual_Z_ad_se,table_a3,"bush_bilingual, Z_ad_se",0.058,0.058,3,1,0.05766009621054715,1,NA,NA,NA
+flores_coppock_2018,table_a3_bush_bilingual_Z_survey,table_a3,"bush_bilingual, Z_survey",0.043,0.043,3,1,0.04287821323219319,1,NA,NA,NA
+flores_coppock_2018,table_a3_bush_bilingual_Z_survey_se,table_a3,"bush_bilingual, Z_survey_se",0.058,0.058,3,1,0.05816081411383633,1,NA,NA,NA
+flores_coppock_2018,table_a3_bush_bilingual_constant,table_a3,"bush_bilingual, constant",1.738,1.738,3,1,1.7380952380952197,1,NA,NA,NA
+flores_coppock_2018,table_a3_bush_bilingual_constant_se,table_a3,"bush_bilingual, constant_se",0.041,0.041,3,1,0.04061378928436092,1,NA,NA,NA
+flores_coppock_2018,table_a3_bush_bilingual_interaction,table_a3,"bush_bilingual, interaction",-0.121,-0.121,3,1,-0.12062206122676236,1,NA,NA,NA
+flores_coppock_2018,table_a3_bush_bilingual_interaction_se,table_a3,"bush_bilingual, interaction_se",0.083,0.083,3,1,0.083051829241479,1,NA,NA,NA
 flores_coppock_2018,table_a3_coffman_bilingual_N,table_a3,"coffman_bilingual, N",1679,1679,0,1,1679,1,NA,NA,NA
-flores_coppock_2018,table_a3_coffman_bilingual_Z_ad,table_a3,"coffman_bilingual, Z_ad",-0.04,-0.040,3,1,-0.03950698284750215,1,NA,NA,NA
-flores_coppock_2018,table_a3_coffman_bilingual_Z_ad_se,table_a3,"coffman_bilingual, Z_ad_se",0.056,0.056,3,1,0.05619968028121617,1,NA,NA,NA
-flores_coppock_2018,table_a3_coffman_bilingual_Z_survey,table_a3,"coffman_bilingual, Z_survey",-0.154,-0.154,3,1,-0.1544309228080832,1,NA,NA,NA
-flores_coppock_2018,table_a3_coffman_bilingual_Z_survey_se,table_a3,"coffman_bilingual, Z_survey_se",0.057,0.057,3,1,0.05654139383523617,1,NA,NA,NA
-flores_coppock_2018,table_a3_coffman_bilingual_constant,table_a3,"coffman_bilingual, constant",1.848,1.848,3,1,1.8480176211453776,1,NA,NA,NA
-flores_coppock_2018,table_a3_coffman_bilingual_constant_se,table_a3,"coffman_bilingual, constant_se",0.038,0.038,3,1,0.03847920098819838,1,NA,NA,NA
-flores_coppock_2018,table_a3_coffman_bilingual_interaction,table_a3,"coffman_bilingual, interaction",0.146,0.146,3,1,0.14644521889341217,1,NA,NA,NA
-flores_coppock_2018,table_a3_coffman_bilingual_interaction_se,table_a3,"coffman_bilingual, interaction_se",0.082,0.082,3,1,0.08187760274663917,1,NA,NA,NA
+flores_coppock_2018,table_a3_coffman_bilingual_Z_ad,table_a3,"coffman_bilingual, Z_ad",-0.04,-0.040,3,1,-0.0395069828475028,1,NA,NA,NA
+flores_coppock_2018,table_a3_coffman_bilingual_Z_ad_se,table_a3,"coffman_bilingual, Z_ad_se",0.056,0.056,3,1,0.05619968028121572,1,NA,NA,NA
+flores_coppock_2018,table_a3_coffman_bilingual_Z_survey,table_a3,"coffman_bilingual, Z_survey",-0.154,-0.154,3,1,-0.15443092280808268,1,NA,NA,NA
+flores_coppock_2018,table_a3_coffman_bilingual_Z_survey_se,table_a3,"coffman_bilingual, Z_survey_se",0.057,0.057,3,1,0.05654139383523612,1,NA,NA,NA
+flores_coppock_2018,table_a3_coffman_bilingual_constant,table_a3,"coffman_bilingual, constant",1.848,1.848,3,1,1.8480176211453712,1,NA,NA,NA
+flores_coppock_2018,table_a3_coffman_bilingual_constant_se,table_a3,"coffman_bilingual, constant_se",0.038,0.038,3,1,0.03847920098819847,1,NA,NA,NA
+flores_coppock_2018,table_a3_coffman_bilingual_interaction,table_a3,"coffman_bilingual, interaction",0.146,0.146,3,1,0.1464452188934125,1,NA,NA,NA
+flores_coppock_2018,table_a3_coffman_bilingual_interaction_se,table_a3,"coffman_bilingual, interaction_se",0.082,0.082,3,1,0.08187760274663931,1,NA,NA,NA
 flores_coppock_2018,table_a3_vela_bilingual_N,table_a3,"vela_bilingual, N",1680,1680,0,1,1680,1,NA,NA,NA
-flores_coppock_2018,table_a3_vela_bilingual_Z_ad,table_a3,"vela_bilingual, Z_ad",0.107,0.107,3,1,0.10736468500443865,1,NA,NA,NA
-flores_coppock_2018,table_a3_vela_bilingual_Z_ad_se,table_a3,"vela_bilingual, Z_ad_se",0.052,0.052,3,1,0.05208605862080361,1,NA,NA,NA
-flores_coppock_2018,table_a3_vela_bilingual_Z_survey,table_a3,"vela_bilingual, Z_survey",0.016,0.016,3,1,0.01552795031056045,1,NA,NA,NA
-flores_coppock_2018,table_a3_vela_bilingual_Z_survey_se,table_a3,"vela_bilingual, Z_survey_se",0.054,0.054,3,1,0.05352575043240777,1,NA,NA,NA
-flores_coppock_2018,table_a3_vela_bilingual_constant,table_a3,"vela_bilingual, constant",1.913,1.913,3,1,1.913043478260866,1,NA,NA,NA
-flores_coppock_2018,table_a3_vela_bilingual_constant_se,table_a3,"vela_bilingual, constant_se",0.037,0.037,3,1,0.03741312670029786,1,NA,NA,NA
-flores_coppock_2018,table_a3_vela_bilingual_interaction,table_a3,"vela_bilingual, interaction",-0.01,-0.010,3,1,-0.00975810310466257,1,NA,NA,NA
-flores_coppock_2018,table_a3_vela_bilingual_interaction_se,table_a3,"vela_bilingual, interaction_se",0.076,0.076,3,1,0.07587306900640291,1,NA,NA,NA
+flores_coppock_2018,table_a3_vela_bilingual_Z_ad,table_a3,"vela_bilingual, Z_ad",0.107,0.107,3,1,0.10736468500443748,1,NA,NA,NA
+flores_coppock_2018,table_a3_vela_bilingual_Z_ad_se,table_a3,"vela_bilingual, Z_ad_se",0.052,0.052,3,1,0.05208605862080261,1,NA,NA,NA
+flores_coppock_2018,table_a3_vela_bilingual_Z_survey,table_a3,"vela_bilingual, Z_survey",0.016,0.016,3,1,0.01552795031055934,1,NA,NA,NA
+flores_coppock_2018,table_a3_vela_bilingual_Z_survey_se,table_a3,"vela_bilingual, Z_survey_se",0.054,0.054,3,1,0.05352575043240788,1,NA,NA,NA
+flores_coppock_2018,table_a3_vela_bilingual_constant,table_a3,"vela_bilingual, constant",1.913,1.913,3,1,1.9130434782608707,1,NA,NA,NA
+flores_coppock_2018,table_a3_vela_bilingual_constant_se,table_a3,"vela_bilingual, constant_se",0.037,0.037,3,1,0.03741312670029777,1,NA,NA,NA
+flores_coppock_2018,table_a3_vela_bilingual_interaction,table_a3,"vela_bilingual, interaction",-0.01,-0.010,3,1,-0.00975810310466222,1,NA,NA,NA
+flores_coppock_2018,table_a3_vela_bilingual_interaction_se,table_a3,"vela_bilingual, interaction_se",0.076,0.076,3,1,0.07587306900640327,1,NA,NA,NA
 flores_coppock_2018,table_a4_bush_bilingual_N,table_a4,"bush_bilingual, N",1862,1862,0,1,1862,1,NA,NA,NA
-flores_coppock_2018,table_a4_bush_bilingual_Z_ad,table_a4,"bush_bilingual, Z_ad",0.248,0.248,3,1,0.24799517422468617,1,NA,NA,NA
-flores_coppock_2018,table_a4_bush_bilingual_Z_ad_se,table_a4,"bush_bilingual, Z_ad_se",0.101,0.101,3,1,0.101372475490892,1,NA,NA,NA
-flores_coppock_2018,table_a4_bush_bilingual_Z_survey,table_a4,"bush_bilingual, Z_survey",0.249,0.249,3,1,0.24930084664597968,1,NA,NA,NA
-flores_coppock_2018,table_a4_bush_bilingual_Z_survey_se,table_a4,"bush_bilingual, Z_survey_se",0.107,0.107,3,1,0.107200495543704,1,NA,NA,NA
-flores_coppock_2018,table_a4_bush_bilingual_constant,table_a4,"bush_bilingual, constant",4.768,4.768,3,1,4.768398268398303,1,NA,NA,NA
-flores_coppock_2018,table_a4_bush_bilingual_constant_se,table_a4,"bush_bilingual, constant_se",0.072,0.072,3,1,0.07206908871870198,1,NA,NA,NA
-flores_coppock_2018,table_a4_bush_bilingual_interaction,table_a4,"bush_bilingual, interaction",-0.166,-0.166,3,1,-0.16569428926893573,1,NA,NA,NA
+flores_coppock_2018,table_a4_bush_bilingual_Z_ad,table_a4,"bush_bilingual, Z_ad",0.248,0.248,3,1,0.2479951742246753,1,NA,NA,NA
+flores_coppock_2018,table_a4_bush_bilingual_Z_ad_se,table_a4,"bush_bilingual, Z_ad_se",0.101,0.101,3,1,0.10137247549089246,1,NA,NA,NA
+flores_coppock_2018,table_a4_bush_bilingual_Z_survey,table_a4,"bush_bilingual, Z_survey",0.249,0.249,3,1,0.24930084664597676,1,NA,NA,NA
+flores_coppock_2018,table_a4_bush_bilingual_Z_survey_se,table_a4,"bush_bilingual, Z_survey_se",0.107,0.107,3,1,0.10720049554370596,1,NA,NA,NA
+flores_coppock_2018,table_a4_bush_bilingual_constant,table_a4,"bush_bilingual, constant",4.768,4.768,3,1,4.7683982683982284,1,NA,NA,NA
+flores_coppock_2018,table_a4_bush_bilingual_constant_se,table_a4,"bush_bilingual, constant_se",0.072,0.072,3,1,0.07206908871870016,1,NA,NA,NA
+flores_coppock_2018,table_a4_bush_bilingual_interaction,table_a4,"bush_bilingual, interaction",-0.166,-0.166,3,1,-0.1656942892689212,1,NA,NA,NA
 flores_coppock_2018,table_a4_bush_bilingual_interaction_se,table_a4,"bush_bilingual, interaction_se",0.151,0.151,3,1,0.15091700997445515,1,NA,NA,NA
 flores_coppock_2018,table_a4_coffman_bilingual_N,table_a4,"coffman_bilingual, N",1680,1680,0,1,1680,1,NA,NA,NA
-flores_coppock_2018,table_a4_coffman_bilingual_Z_ad,table_a4,"coffman_bilingual, Z_ad",-0.089,-0.089,3,1,-0.08859792689579825,1,NA,NA,NA
-flores_coppock_2018,table_a4_coffman_bilingual_Z_ad_se,table_a4,"coffman_bilingual, Z_ad_se",0.104,0.104,3,1,0.10363072585841376,1,NA,NA,NA
-flores_coppock_2018,table_a4_coffman_bilingual_Z_survey,table_a4,"coffman_bilingual, Z_survey",-0.016,-0.016,3,1,-0.01560387356111743,1,NA,NA,NA
-flores_coppock_2018,table_a4_coffman_bilingual_Z_survey_se,table_a4,"coffman_bilingual, Z_survey_se",0.111,0.111,3,1,0.11084395795552122,1,NA,NA,NA
-flores_coppock_2018,table_a4_coffman_bilingual_constant,table_a4,"coffman_bilingual, constant",4.954,4.954,3,1,4.953846153846147,1,NA,NA,NA
-flores_coppock_2018,table_a4_coffman_bilingual_constant_se,table_a4,"coffman_bilingual, constant_se",0.076,0.076,3,1,0.07558107089562956,1,NA,NA,NA
-flores_coppock_2018,table_a4_coffman_bilingual_interaction,table_a4,"coffman_bilingual, interaction",0.226,0.226,3,1,0.22647113217506787,1,NA,NA,NA
-flores_coppock_2018,table_a4_coffman_bilingual_interaction_se,table_a4,"coffman_bilingual, interaction_se",0.155,0.155,3,1,0.1551126995108402,1,NA,NA,NA
+flores_coppock_2018,table_a4_coffman_bilingual_Z_ad,table_a4,"coffman_bilingual, Z_ad",-0.089,-0.089,3,1,-0.08859792689579973,1,NA,NA,NA
+flores_coppock_2018,table_a4_coffman_bilingual_Z_ad_se,table_a4,"coffman_bilingual, Z_ad_se",0.104,0.104,3,1,0.10363072585841626,1,NA,NA,NA
+flores_coppock_2018,table_a4_coffman_bilingual_Z_survey,table_a4,"coffman_bilingual, Z_survey",-0.016,-0.016,3,1,-0.01560387356111821,1,NA,NA,NA
+flores_coppock_2018,table_a4_coffman_bilingual_Z_survey_se,table_a4,"coffman_bilingual, Z_survey_se",0.111,0.111,3,1,0.1108439579555216,1,NA,NA,NA
+flores_coppock_2018,table_a4_coffman_bilingual_constant,table_a4,"coffman_bilingual, constant",4.954,4.954,3,1,4.953846153846158,1,NA,NA,NA
+flores_coppock_2018,table_a4_coffman_bilingual_constant_se,table_a4,"coffman_bilingual, constant_se",0.076,0.076,3,1,0.07558107089563168,1,NA,NA,NA
+flores_coppock_2018,table_a4_coffman_bilingual_interaction,table_a4,"coffman_bilingual, interaction",0.226,0.226,3,1,0.2264711321750679,1,NA,NA,NA
+flores_coppock_2018,table_a4_coffman_bilingual_interaction_se,table_a4,"coffman_bilingual, interaction_se",0.155,0.155,3,1,0.15511269951083975,1,NA,NA,NA
 flores_coppock_2018,table_a4_vela_bilingual_N,table_a4,"vela_bilingual, N",1680,1680,0,1,1680,1,NA,NA,NA
-flores_coppock_2018,table_a4_vela_bilingual_Z_ad,table_a4,"vela_bilingual, Z_ad",0.166,0.166,3,1,0.1657796369736084,1,NA,NA,NA
-flores_coppock_2018,table_a4_vela_bilingual_Z_ad_se,table_a4,"vela_bilingual, Z_ad_se",0.093,0.093,3,1,0.09340654340094108,1,NA,NA,NA
-flores_coppock_2018,table_a4_vela_bilingual_Z_survey,table_a4,"vela_bilingual, Z_survey",0.25,0.250,3,1,0.25015800370491403,1,NA,NA,NA
-flores_coppock_2018,table_a4_vela_bilingual_Z_survey_se,table_a4,"vela_bilingual, Z_survey_se",0.092,0.092,3,1,0.09249827051349936,1,NA,NA,NA
-flores_coppock_2018,table_a4_vela_bilingual_constant,table_a4,"vela_bilingual, constant",4.945,4.945,3,1,4.945080091533175,1,NA,NA,NA
-flores_coppock_2018,table_a4_vela_bilingual_constant_se,table_a4,"vela_bilingual, constant_se",0.065,0.065,3,1,0.06474451234608683,1,NA,NA,NA
-flores_coppock_2018,table_a4_vela_bilingual_interaction,table_a4,"vela_bilingual, interaction",-0.206,-0.206,3,1,-0.20616208916708267,1,NA,NA,NA
+flores_coppock_2018,table_a4_vela_bilingual_Z_ad,table_a4,"vela_bilingual, Z_ad",0.166,0.166,3,1,0.16577963697360654,1,NA,NA,NA
+flores_coppock_2018,table_a4_vela_bilingual_Z_ad_se,table_a4,"vela_bilingual, Z_ad_se",0.093,0.093,3,1,0.09340654340094064,1,NA,NA,NA
+flores_coppock_2018,table_a4_vela_bilingual_Z_survey,table_a4,"vela_bilingual, Z_survey",0.25,0.250,3,1,0.25015800370491426,1,NA,NA,NA
+flores_coppock_2018,table_a4_vela_bilingual_Z_survey_se,table_a4,"vela_bilingual, Z_survey_se",0.092,0.092,3,1,0.09249827051350012,1,NA,NA,NA
+flores_coppock_2018,table_a4_vela_bilingual_constant,table_a4,"vela_bilingual, constant",4.945,4.945,3,1,4.9450800915331845,1,NA,NA,NA
+flores_coppock_2018,table_a4_vela_bilingual_constant_se,table_a4,"vela_bilingual, constant_se",0.065,0.065,3,1,0.06474451234608768,1,NA,NA,NA
+flores_coppock_2018,table_a4_vela_bilingual_interaction,table_a4,"vela_bilingual, interaction",-0.206,-0.206,3,1,-0.2061620891670816,1,NA,NA,NA
 flores_coppock_2018,table_a4_vela_bilingual_interaction_se,table_a4,"vela_bilingual, interaction_se",0.135,0.135,3,1,0.13500647820574369,1,NA,NA,NA
 flores_coppock_2018,table_b5_coffman_bilingual_democrat_N,table_b5,"coffman_bilingual_democrat, N",1029,1029,0,1,1029,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_bilingual_democrat_Z_ad,table_b5,"coffman_bilingual_democrat, Z_ad",-0.003,-0.003,3,1,-0.00269822288153547,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_bilingual_democrat_Z_ad_se,table_b5,"coffman_bilingual_democrat, Z_ad_se",0.027,0.027,3,1,0.02692831755741119,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_bilingual_democrat_constant,table_b5,"coffman_bilingual_democrat, constant",0.248,0.248,3,1,0.2481343283582086,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_bilingual_democrat_constant_se,table_b5,"coffman_bilingual_democrat, constant_se",0.019,0.019,3,1,0.01867397026141377,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_bilingual_democrat_Z_ad,table_b5,"coffman_bilingual_democrat, Z_ad",-0.003,-0.003,3,1,-0.00269822288153537,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_bilingual_democrat_Z_ad_se,table_b5,"coffman_bilingual_democrat, Z_ad_se",0.027,0.027,3,1,0.02692831755741124,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_bilingual_democrat_constant,table_b5,"coffman_bilingual_democrat, constant",0.248,0.248,3,1,0.24813432835820776,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_bilingual_democrat_constant_se,table_b5,"coffman_bilingual_democrat, constant_se",0.019,0.019,3,1,0.0186739702614137,1,NA,NA,NA
 flores_coppock_2018,table_b5_coffman_bilingual_republican_N,table_b5,"coffman_bilingual_republican, N",335,335,0,1,335,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_bilingual_republican_Z_ad,table_b5,"coffman_bilingual_republican, Z_ad",0.022,0.022,3,1,0.02232142857142857,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_bilingual_republican_Z_ad_se,table_b5,"coffman_bilingual_republican, Z_ad_se",0.045,0.045,3,1,0.04519955091948885,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_bilingual_republican_constant,table_b5,"coffman_bilingual_republican, constant",0.771,0.771,3,1,0.7714285714285725,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_bilingual_republican_constant_se,table_b5,"coffman_bilingual_republican, constant_se",0.032,0.032,3,1,0.03183348654463749,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_bilingual_republican_Z_ad,table_b5,"coffman_bilingual_republican, Z_ad",0.022,0.022,3,1,0.02232142857142859,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_bilingual_republican_Z_ad_se,table_b5,"coffman_bilingual_republican, Z_ad_se",0.045,0.045,3,1,0.04519955091948883,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_bilingual_republican_constant,table_b5,"coffman_bilingual_republican, constant",0.771,0.771,3,1,0.771428571428572,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_bilingual_republican_constant_se,table_b5,"coffman_bilingual_republican, constant_se",0.032,0.032,3,1,0.03183348654463745,1,NA,NA,NA
 flores_coppock_2018,table_b5_coffman_monolingual_democrat_N,table_b5,"coffman_monolingual_democrat, N",579,579,0,1,579,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_monolingual_democrat_Z_ad,table_b5,"coffman_monolingual_democrat, Z_ad",-0.141,-0.141,3,1,-0.14051086178085445,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_monolingual_democrat_Z_ad_se,table_b5,"coffman_monolingual_democrat, Z_ad_se",0.033,0.033,3,1,0.03339650421153042,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_monolingual_democrat_constant,table_b5,"coffman_monolingual_democrat, constant",0.281,0.281,3,1,0.2813559322033897,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_monolingual_democrat_constant_se,table_b5,"coffman_monolingual_democrat, constant_se",0.026,0.026,3,1,0.02622474629860822,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_monolingual_democrat_Z_ad,table_b5,"coffman_monolingual_democrat, Z_ad",-0.141,-0.141,3,1,-0.14051086178085473,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_monolingual_democrat_Z_ad_se,table_b5,"coffman_monolingual_democrat, Z_ad_se",0.033,0.033,3,1,0.03339650421153047,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_monolingual_democrat_constant,table_b5,"coffman_monolingual_democrat, constant",0.281,0.281,3,1,0.28135593220339034,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_monolingual_democrat_constant_se,table_b5,"coffman_monolingual_democrat, constant_se",0.026,0.026,3,1,0.02622474629860831,1,NA,NA,NA
 flores_coppock_2018,table_b5_coffman_monolingual_republican_N,table_b5,"coffman_monolingual_republican, N",491,491,0,1,491,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_monolingual_republican_Z_ad,table_b5,"coffman_monolingual_republican, Z_ad",-0.168,-0.168,3,1,-0.1677746441042175,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_monolingual_republican_Z_ad_se,table_b5,"coffman_monolingual_republican, Z_ad_se",0.04,0.040,3,1,0.03999238458118402,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_monolingual_republican_constant,table_b5,"coffman_monolingual_republican, constant",0.816,0.816,3,1,0.8161764705882367,1,NA,NA,NA
-flores_coppock_2018,table_b5_coffman_monolingual_republican_constant_se,table_b5,"coffman_monolingual_republican, constant_se",0.024,0.024,3,1,0.02352924218519306,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_monolingual_republican_Z_ad,table_b5,"coffman_monolingual_republican, Z_ad",-0.168,-0.168,3,1,-0.16777464410421658,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_monolingual_republican_Z_ad_se,table_b5,"coffman_monolingual_republican, Z_ad_se",0.04,0.040,3,1,0.03999238458118393,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_monolingual_republican_constant,table_b5,"coffman_monolingual_republican, constant",0.816,0.816,3,1,0.8161764705882321,1,NA,NA,NA
+flores_coppock_2018,table_b5_coffman_monolingual_republican_constant_se,table_b5,"coffman_monolingual_republican, constant_se",0.024,0.024,3,1,0.02352924218519307,1,NA,NA,NA
 flores_coppock_2018,table_b5_vela_bilingual_democrat_N,table_b5,"vela_bilingual_democrat, N",1029,1029,0,1,1029,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_bilingual_democrat_Z_ad,table_b5,"vela_bilingual_democrat, Z_ad",0.064,0.064,3,1,0.06364598291890249,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_bilingual_democrat_Z_ad_se,table_b5,"vela_bilingual_democrat, Z_ad_se",0.026,0.026,3,1,0.02591960004275359,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_bilingual_democrat_constant,table_b5,"vela_bilingual_democrat, constant",0.744,0.744,3,1,0.7442748091603073,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_bilingual_democrat_constant_se,table_b5,"vela_bilingual_democrat, constant_se",0.019,0.019,3,1,0.0190766701846529,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_bilingual_democrat_Z_ad,table_b5,"vela_bilingual_democrat, Z_ad",0.064,0.064,3,1,0.06364598291890267,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_bilingual_democrat_Z_ad_se,table_b5,"vela_bilingual_democrat, Z_ad_se",0.026,0.026,3,1,0.02591960004275363,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_bilingual_democrat_constant,table_b5,"vela_bilingual_democrat, constant",0.744,0.744,3,1,0.7442748091603055,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_bilingual_democrat_constant_se,table_b5,"vela_bilingual_democrat, constant_se",0.019,0.019,3,1,0.01907667018465289,1,NA,NA,NA
 flores_coppock_2018,table_b5_vela_bilingual_republican_N,table_b5,"vela_bilingual_republican, N",335,335,0,1,335,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_bilingual_republican_Z_ad,table_b5,"vela_bilingual_republican, Z_ad",-0.01,-0.010,3,1,-0.01022954091816367,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_bilingual_republican_Z_ad_se,table_b5,"vela_bilingual_republican, Z_ad_se",0.05,0.050,3,1,0.04955162715442215,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_bilingual_republican_constant,table_b5,"vela_bilingual_republican, constant",0.292,0.292,3,1,0.29166666666666663,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_bilingual_republican_constant_se,table_b5,"vela_bilingual_republican, constant_se",0.035,0.035,3,1,0.03517256196388212,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_bilingual_republican_Z_ad,table_b5,"vela_bilingual_republican, Z_ad",-0.01,-0.010,3,1,-0.01022954091816359,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_bilingual_republican_Z_ad_se,table_b5,"vela_bilingual_republican, Z_ad_se",0.05,0.050,3,1,0.0495516271544221,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_bilingual_republican_constant,table_b5,"vela_bilingual_republican, constant",0.292,0.292,3,1,0.29166666666666646,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_bilingual_republican_constant_se,table_b5,"vela_bilingual_republican, constant_se",0.035,0.035,3,1,0.03517256196388204,1,NA,NA,NA
 flores_coppock_2018,table_b5_vela_monolingual_democrat_N,table_b5,"vela_monolingual_democrat, N",579,579,0,1,579,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_monolingual_democrat_Z_ad,table_b5,"vela_monolingual_democrat, Z_ad",-0.044,-0.044,3,1,-0.04365998710262944,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_monolingual_democrat_Z_ad_se,table_b5,"vela_monolingual_democrat, Z_ad_se",0.04,0.040,3,1,0.04025262492830188,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_monolingual_democrat_constant,table_b5,"vela_monolingual_democrat, constant",0.648,0.648,3,1,0.6476868327402123,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_monolingual_democrat_constant_se,table_b5,"vela_monolingual_democrat, constant_se",0.029,0.029,3,1,0.02854749172338995,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_monolingual_democrat_Z_ad,table_b5,"vela_monolingual_democrat, Z_ad",-0.044,-0.044,3,1,-0.04365998710262988,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_monolingual_democrat_Z_ad_se,table_b5,"vela_monolingual_democrat, Z_ad_se",0.04,0.040,3,1,0.04025262492830192,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_monolingual_democrat_constant,table_b5,"vela_monolingual_democrat, constant",0.648,0.648,3,1,0.6476868327402132,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_monolingual_democrat_constant_se,table_b5,"vela_monolingual_democrat, constant_se",0.029,0.029,3,1,0.02854749172339004,1,NA,NA,NA
 flores_coppock_2018,table_b5_vela_monolingual_republican_N,table_b5,"vela_monolingual_republican, N",491,491,0,1,491,1,NA,NA,NA
 flores_coppock_2018,table_b5_vela_monolingual_republican_Z_ad,table_b5,"vela_monolingual_republican, Z_ad",-0.011,-0.011,3,1,-0.01121299710953853,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_monolingual_republican_Z_ad_se,table_b5,"vela_monolingual_republican, Z_ad_se",0.031,0.031,3,1,0.03062787961256405,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_monolingual_republican_constant,table_b5,"vela_monolingual_republican, constant",0.138,0.138,3,1,0.13779527559055113,1,NA,NA,NA
-flores_coppock_2018,table_b5_vela_monolingual_republican_constant_se,table_b5,"vela_monolingual_republican, constant_se",0.022,0.022,3,1,0.02167015922534215,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_monolingual_republican_Z_ad_se,table_b5,"vela_monolingual_republican, Z_ad_se",0.031,0.031,3,1,0.03062787961256403,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_monolingual_republican_constant,table_b5,"vela_monolingual_republican, constant",0.138,0.138,3,1,0.137795275590551,1,NA,NA,NA
+flores_coppock_2018,table_b5_vela_monolingual_republican_constant_se,table_b5,"vela_monolingual_republican, constant_se",0.022,0.022,3,1,0.02167015922534206,1,NA,NA,NA
 flores_coppock_2018,table_b6_coffman_bilingual_democrat_N,table_b6,"coffman_bilingual_democrat, N",1029,1029,0,1,1029,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_bilingual_democrat_Z_ad,table_b6,"coffman_bilingual_democrat, Z_ad",0.146,0.146,3,1,0.14613923284187508,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_bilingual_democrat_Z_ad_se,table_b6,"coffman_bilingual_democrat, Z_ad_se",0.102,0.102,3,1,0.10235519005687124,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_bilingual_democrat_constant,table_b6,"coffman_bilingual_democrat, constant",4.722,4.722,3,1,4.722014925373145,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_bilingual_democrat_constant_se,table_b6,"coffman_bilingual_democrat, constant_se",0.072,0.072,3,1,0.0722662904701759,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_bilingual_democrat_Z_ad,table_b6,"coffman_bilingual_democrat, Z_ad",0.146,0.146,3,1,0.14613923284187588,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_bilingual_democrat_Z_ad_se,table_b6,"coffman_bilingual_democrat, Z_ad_se",0.102,0.102,3,1,0.10235519005687133,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_bilingual_democrat_constant,table_b6,"coffman_bilingual_democrat, constant",4.722,4.722,3,1,4.72201492537313,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_bilingual_democrat_constant_se,table_b6,"coffman_bilingual_democrat, constant_se",0.072,0.072,3,1,0.07226629047017545,1,NA,NA,NA
 flores_coppock_2018,table_b6_coffman_bilingual_republican_N,table_b6,"coffman_bilingual_republican, N",335,335,0,1,335,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_bilingual_republican_Z_ad,table_b6,"coffman_bilingual_republican, Z_ad",-0.303,-0.303,3,1,-0.3030357142857147,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_bilingual_republican_Z_ad_se,table_b6,"coffman_bilingual_republican, Z_ad_se",0.159,0.159,3,1,0.15932088003750797,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_bilingual_republican_constant,table_b6,"coffman_bilingual_republican, constant",5.634,5.634,3,1,5.6342857142857135,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_bilingual_republican_constant_se,table_b6,"coffman_bilingual_republican, constant_se",0.112,0.112,3,1,0.11150475270442256,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_bilingual_republican_Z_ad,table_b6,"coffman_bilingual_republican, Z_ad",-0.303,-0.303,3,1,-0.3030357142857144,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_bilingual_republican_Z_ad_se,table_b6,"coffman_bilingual_republican, Z_ad_se",0.159,0.159,3,1,0.15932088003750788,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_bilingual_republican_constant,table_b6,"coffman_bilingual_republican, constant",5.634,5.634,3,1,5.634285714285711,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_bilingual_republican_constant_se,table_b6,"coffman_bilingual_republican, constant_se",0.112,0.112,3,1,0.11150475270442237,1,NA,NA,NA
 flores_coppock_2018,table_b6_coffman_monolingual_democrat_N,table_b6,"coffman_monolingual_democrat, N",579,579,0,1,579,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_monolingual_democrat_Z_ad,table_b6,"coffman_monolingual_democrat, Z_ad",-0.702,-0.702,3,1,-0.701885891620912,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_monolingual_democrat_Z_ad_se,table_b6,"coffman_monolingual_democrat, Z_ad_se",0.114,0.114,3,1,0.11405724247148603,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_monolingual_democrat_constant,table_b6,"coffman_monolingual_democrat, constant",4.969,4.969,3,1,4.969491525423723,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_monolingual_democrat_constant_se,table_b6,"coffman_monolingual_democrat, constant_se",0.086,0.086,3,1,0.08581682215991682,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_monolingual_democrat_Z_ad,table_b6,"coffman_monolingual_democrat, Z_ad",-0.702,-0.702,3,1,-0.7018858916209111,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_monolingual_democrat_Z_ad_se,table_b6,"coffman_monolingual_democrat, Z_ad_se",0.114,0.114,3,1,0.11405724247148616,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_monolingual_democrat_constant,table_b6,"coffman_monolingual_democrat, constant",4.969,4.969,3,1,4.969491525423729,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_monolingual_democrat_constant_se,table_b6,"coffman_monolingual_democrat, constant_se",0.086,0.086,3,1,0.08581682215991712,1,NA,NA,NA
 flores_coppock_2018,table_b6_coffman_monolingual_republican_N,table_b6,"coffman_monolingual_republican, N",490,490,0,1,490,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_monolingual_republican_Z_ad,table_b6,"coffman_monolingual_republican, Z_ad",-1.004,-1.004,3,1,-1.0036090124123045,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_monolingual_republican_Z_ad_se,table_b6,"coffman_monolingual_republican, Z_ad_se",0.123,0.123,3,1,0.12273401704834816,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_monolingual_republican_constant,table_b6,"coffman_monolingual_republican, constant",5.467,5.467,3,1,5.466911764705877,1,NA,NA,NA
-flores_coppock_2018,table_b6_coffman_monolingual_republican_constant_se,table_b6,"coffman_monolingual_republican, constant_se",0.083,0.083,3,1,0.08331813634802283,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_monolingual_republican_Z_ad,table_b6,"coffman_monolingual_republican, Z_ad",-1.004,-1.004,3,1,-1.0036090124123058,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_monolingual_republican_Z_ad_se,table_b6,"coffman_monolingual_republican, Z_ad_se",0.123,0.123,3,1,0.12273401704834834,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_monolingual_republican_constant,table_b6,"coffman_monolingual_republican, constant",5.467,5.467,3,1,5.466911764705893,1,NA,NA,NA
+flores_coppock_2018,table_b6_coffman_monolingual_republican_constant_se,table_b6,"coffman_monolingual_republican, constant_se",0.083,0.083,3,1,0.083318136348023,1,NA,NA,NA
 flores_coppock_2018,table_b6_vela_bilingual_democrat_N,table_b6,"vela_bilingual_democrat, N",1028,1028,0,1,1028,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_bilingual_democrat_Z_ad,table_b6,"vela_bilingual_democrat, Z_ad",0.116,0.116,3,1,0.11574578940991222,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_bilingual_democrat_Z_ad_se,table_b6,"vela_bilingual_democrat, Z_ad_se",0.082,0.082,3,1,0.08197458904909806,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_bilingual_democrat_constant,table_b6,"vela_bilingual_democrat, constant",5.317,5.317,3,1,5.316793893129771,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_bilingual_democrat_constant_se,table_b6,"vela_bilingual_democrat, constant_se",0.057,0.057,3,1,0.05735155943473359,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_bilingual_democrat_Z_ad,table_b6,"vela_bilingual_democrat, Z_ad",0.116,0.116,3,1,0.11574578940991231,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_bilingual_democrat_Z_ad_se,table_b6,"vela_bilingual_democrat, Z_ad_se",0.082,0.082,3,1,0.08197458904909814,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_bilingual_democrat_constant,table_b6,"vela_bilingual_democrat, constant",5.317,5.317,3,1,5.316793893129781,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_bilingual_democrat_constant_se,table_b6,"vela_bilingual_democrat, constant_se",0.057,0.057,3,1,0.0573515594347338,1,NA,NA,NA
 flores_coppock_2018,table_b6_vela_bilingual_republican_N,table_b6,"vela_bilingual_republican, N",335,335,0,1,335,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_bilingual_republican_Z_ad,table_b6,"vela_bilingual_republican, Z_ad",-0.247,-0.247,3,1,-0.24675648702594868,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_bilingual_republican_Z_ad_se,table_b6,"vela_bilingual_republican, Z_ad_se",0.16,0.160,3,1,0.15993706142617867,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_bilingual_republican_constant,table_b6,"vela_bilingual_republican, constant",4.792,4.792,3,1,4.791666666666668,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_bilingual_republican_constant_se,table_b6,"vela_bilingual_republican, constant_se",0.109,0.109,3,1,0.10938762283400608,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_bilingual_republican_Z_ad,table_b6,"vela_bilingual_republican, Z_ad",-0.247,-0.247,3,1,-0.24675648702594755,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_bilingual_republican_Z_ad_se,table_b6,"vela_bilingual_republican, Z_ad_se",0.16,0.160,3,1,0.15993706142617853,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_bilingual_republican_constant,table_b6,"vela_bilingual_republican, constant",4.792,4.792,3,1,4.791666666666664,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_bilingual_republican_constant_se,table_b6,"vela_bilingual_republican, constant_se",0.109,0.109,3,1,0.10938762283400588,1,NA,NA,NA
 flores_coppock_2018,table_b6_vela_monolingual_democrat_N,table_b6,"vela_monolingual_democrat, N",578,578,0,1,578,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_monolingual_democrat_Z_ad,table_b6,"vela_monolingual_democrat, Z_ad",-0.608,-0.608,3,1,-0.6084372003835093,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_monolingual_democrat_Z_ad_se,table_b6,"vela_monolingual_democrat, Z_ad_se",0.102,0.102,3,1,0.10242021502196716,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_monolingual_democrat_constant,table_b6,"vela_monolingual_democrat, constant",5.129,5.129,3,1,5.128571428571422,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_monolingual_democrat_constant_se,table_b6,"vela_monolingual_democrat, constant_se",0.078,0.078,3,1,0.0776784426845929,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_monolingual_democrat_Z_ad,table_b6,"vela_monolingual_democrat, Z_ad",-0.608,-0.608,3,1,-0.6084372003835092,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_monolingual_democrat_Z_ad_se,table_b6,"vela_monolingual_democrat, Z_ad_se",0.102,0.102,3,1,0.10242021502196703,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_monolingual_democrat_constant,table_b6,"vela_monolingual_democrat, constant",5.129,5.129,3,1,5.128571428571429,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_monolingual_democrat_constant_se,table_b6,"vela_monolingual_democrat, constant_se",0.078,0.078,3,1,0.0776784426845931,1,NA,NA,NA
 flores_coppock_2018,table_b6_vela_monolingual_republican_N,table_b6,"vela_monolingual_republican, N",491,491,0,1,491,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_monolingual_republican_Z_ad,table_b6,"vela_monolingual_republican, Z_ad",-0.399,-0.399,3,1,-0.399033190471445,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_monolingual_republican_Z_ad_se,table_b6,"vela_monolingual_republican, Z_ad_se",0.118,0.118,3,1,0.11838338541043486,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_monolingual_republican_constant,table_b6,"vela_monolingual_republican, constant",4.437,4.437,3,1,4.4370078740157455,1,NA,NA,NA
-flores_coppock_2018,table_b6_vela_monolingual_republican_constant_se,table_b6,"vela_monolingual_republican, constant_se",0.081,0.081,3,1,0.08146637460042298,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_monolingual_republican_Z_ad,table_b6,"vela_monolingual_republican, Z_ad",-0.399,-0.399,3,1,-0.39903319047144625,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_monolingual_republican_Z_ad_se,table_b6,"vela_monolingual_republican, Z_ad_se",0.118,0.118,3,1,0.11838338541043485,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_monolingual_republican_constant,table_b6,"vela_monolingual_republican, constant",4.437,4.437,3,1,4.437007874015735,1,NA,NA,NA
+flores_coppock_2018,table_b6_vela_monolingual_republican_constant_se,table_b6,"vela_monolingual_republican, constant_se",0.081,0.081,3,1,0.08146637460042272,1,NA,NA,NA
 flores_coppock_2018,table_b7_coffman_bilingual_democrat_N,table_b7,"coffman_bilingual_democrat, N",1029,1029,0,1,1029,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_bilingual_democrat_Z_ad,table_b7,"coffman_bilingual_democrat, Z_ad",0.078,0.078,3,1,0.0780516787260452,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_bilingual_democrat_Z_ad_se,table_b7,"coffman_bilingual_democrat, Z_ad_se",0.028,0.028,3,1,0.02843845893051647,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_bilingual_democrat_constant,table_b7,"coffman_bilingual_democrat, constant",0.662,0.662,3,1,0.662313432835822,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_bilingual_democrat_constant_se,table_b7,"coffman_bilingual_democrat, constant_se",0.02,0.020,3,1,0.02044616132978167,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_bilingual_democrat_Z_ad,table_b7,"coffman_bilingual_democrat, Z_ad",0.078,0.078,3,1,0.07805167872604524,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_bilingual_democrat_Z_ad_se,table_b7,"coffman_bilingual_democrat, Z_ad_se",0.028,0.028,3,1,0.0284384589305165,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_bilingual_democrat_constant,table_b7,"coffman_bilingual_democrat, constant",0.662,0.662,3,1,0.6623134328358206,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_bilingual_democrat_constant_se,table_b7,"coffman_bilingual_democrat, constant_se",0.02,0.020,3,1,0.02044616132978156,1,NA,NA,NA
 flores_coppock_2018,table_b7_coffman_bilingual_republican_N,table_b7,"coffman_bilingual_republican, N",335,335,0,1,335,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_bilingual_republican_Z_ad,table_b7,"coffman_bilingual_republican, Z_ad",-0.055,-0.055,3,1,-0.05499999999999983,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_bilingual_republican_Z_ad,table_b7,"coffman_bilingual_republican, Z_ad",-0.055,-0.055,3,1,-0.05499999999999996,1,NA,NA,NA
 flores_coppock_2018,table_b7_coffman_bilingual_republican_Z_ad_se,table_b7,"coffman_bilingual_republican, Z_ad_se",0.039,0.039,3,1,0.03892191438828093,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_bilingual_republican_constant,table_b7,"coffman_bilingual_republican, constant",0.88,0.880,3,1,0.8800000000000012,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_bilingual_republican_constant_se,table_b7,"coffman_bilingual_republican, constant_se",0.025,0.025,3,1,0.02463527048205765,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_bilingual_republican_constant,table_b7,"coffman_bilingual_republican, constant",0.88,0.880,3,1,0.8800000000000008,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_bilingual_republican_constant_se,table_b7,"coffman_bilingual_republican, constant_se",0.025,0.025,3,1,0.02463527048205762,1,NA,NA,NA
 flores_coppock_2018,table_b7_coffman_monolingual_democrat_N,table_b7,"coffman_monolingual_democrat, N",575,575,0,1,575,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_monolingual_democrat_Z_ad,table_b7,"coffman_monolingual_democrat, Z_ad",-0.133,-0.133,3,1,-0.1326337956575411,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_monolingual_democrat_Z_ad_se,table_b7,"coffman_monolingual_democrat, Z_ad_se",0.037,0.037,3,1,0.03735494844189895,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_monolingual_democrat_constant,table_b7,"coffman_monolingual_democrat, constant",0.782,0.782,3,1,0.7815699658703068,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_monolingual_democrat_constant_se,table_b7,"coffman_monolingual_democrat, constant_se",0.024,0.024,3,1,0.02417957605822441,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_monolingual_democrat_Z_ad,table_b7,"coffman_monolingual_democrat, Z_ad",-0.133,-0.133,3,1,-0.13263379565754124,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_monolingual_democrat_Z_ad_se,table_b7,"coffman_monolingual_democrat, Z_ad_se",0.037,0.037,3,1,0.03735494844189892,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_monolingual_democrat_constant,table_b7,"coffman_monolingual_democrat, constant",0.782,0.782,3,1,0.7815699658703076,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_monolingual_democrat_constant_se,table_b7,"coffman_monolingual_democrat, constant_se",0.024,0.024,3,1,0.02417957605822442,1,NA,NA,NA
 flores_coppock_2018,table_b7_coffman_monolingual_republican_N,table_b7,"coffman_monolingual_republican, N",490,490,0,1,490,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_monolingual_republican_Z_ad,table_b7,"coffman_monolingual_republican, Z_ad",-0.181,-0.181,3,1,-0.18142876416621695,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_monolingual_republican_Z_ad_se,table_b7,"coffman_monolingual_republican, Z_ad_se",0.037,0.037,3,1,0.03696151451232155,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_monolingual_republican_constant,table_b7,"coffman_monolingual_republican, constant",0.879,0.879,3,1,0.8786764705882357,1,NA,NA,NA
-flores_coppock_2018,table_b7_coffman_monolingual_republican_constant_se,table_b7,"coffman_monolingual_republican, constant_se",0.02,0.020,3,1,0.01983363748105797,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_monolingual_republican_Z_ad,table_b7,"coffman_monolingual_republican, Z_ad",-0.181,-0.181,3,1,-0.18142876416621728,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_monolingual_republican_Z_ad_se,table_b7,"coffman_monolingual_republican, Z_ad_se",0.037,0.037,3,1,0.03696151451232161,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_monolingual_republican_constant,table_b7,"coffman_monolingual_republican, constant",0.879,0.879,3,1,0.8786764705882366,1,NA,NA,NA
+flores_coppock_2018,table_b7_coffman_monolingual_republican_constant_se,table_b7,"coffman_monolingual_republican, constant_se",0.02,0.020,3,1,0.01983363748105803,1,NA,NA,NA
 flores_coppock_2018,table_b7_vela_bilingual_democrat_N,table_b7,"vela_bilingual_democrat, N",1029,1029,0,1,1029,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_bilingual_democrat_Z_ad,table_b7,"vela_bilingual_democrat, Z_ad",0.04,0.040,3,1,0.03961529740760355,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_bilingual_democrat_Z_ad_se,table_b7,"vela_bilingual_democrat, Z_ad_se",0.017,0.017,3,1,0.01734387846945334,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_bilingual_democrat_constant,table_b7,"vela_bilingual_democrat, constant",0.895,0.895,3,1,0.8950381679389348,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_bilingual_democrat_Z_ad,table_b7,"vela_bilingual_democrat, Z_ad",0.04,0.040,3,1,0.03961529740760351,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_bilingual_democrat_Z_ad_se,table_b7,"vela_bilingual_democrat, Z_ad_se",0.017,0.017,3,1,0.01734387846945338,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_bilingual_democrat_constant,table_b7,"vela_bilingual_democrat, constant",0.895,0.895,3,1,0.8950381679389326,1,NA,NA,NA
 flores_coppock_2018,table_b7_vela_bilingual_democrat_constant_se,table_b7,"vela_bilingual_democrat, constant_se",0.013,0.013,3,1,0.01340249440778727,1,NA,NA,NA
 flores_coppock_2018,table_b7_vela_bilingual_republican_N,table_b7,"vela_bilingual_republican, N",335,335,0,1,335,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_bilingual_republican_Z_ad,table_b7,"vela_bilingual_republican, Z_ad",-0.049,-0.049,3,1,-0.04925862560593114,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_bilingual_republican_Z_ad_se,table_b7,"vela_bilingual_republican, Z_ad_se",0.047,0.047,3,1,0.0474377947070532,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_bilingual_republican_constant,table_b7,"vela_bilingual_republican, constant",0.774,0.774,3,1,0.7738095238095248,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_bilingual_republican_constant_se,table_b7,"vela_bilingual_republican, constant_se",0.032,0.032,3,1,0.03237396979344423,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_bilingual_republican_Z_ad,table_b7,"vela_bilingual_republican, Z_ad",-0.049,-0.049,3,1,-0.04925862560593102,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_bilingual_republican_Z_ad_se,table_b7,"vela_bilingual_republican, Z_ad_se",0.047,0.047,3,1,0.04743779470705319,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_bilingual_republican_constant,table_b7,"vela_bilingual_republican, constant",0.774,0.774,3,1,0.7738095238095245,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_bilingual_republican_constant_se,table_b7,"vela_bilingual_republican, constant_se",0.032,0.032,3,1,0.03237396979344417,1,NA,NA,NA
 flores_coppock_2018,table_b7_vela_monolingual_democrat_N,table_b7,"vela_monolingual_democrat, N",576,576,0,1,576,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_monolingual_democrat_Z_ad,table_b7,"vela_monolingual_democrat, Z_ad",-0.113,-0.113,3,1,-0.1125640870981361,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_monolingual_democrat_Z_ad_se,table_b7,"vela_monolingual_democrat, Z_ad_se",0.032,0.032,3,1,0.03194584231917447,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_monolingual_democrat_constant,table_b7,"vela_monolingual_democrat, constant",0.872,0.872,3,1,0.8718861209964418,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_monolingual_democrat_constant_se,table_b7,"vela_monolingual_democrat, constant_se",0.02,0.020,3,1,0.0199732600717471,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_monolingual_democrat_Z_ad,table_b7,"vela_monolingual_democrat, Z_ad",-0.113,-0.113,3,1,-0.1125640870981362,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_monolingual_democrat_Z_ad_se,table_b7,"vela_monolingual_democrat, Z_ad_se",0.032,0.032,3,1,0.03194584231917442,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_monolingual_democrat_constant,table_b7,"vela_monolingual_democrat, constant",0.872,0.872,3,1,0.8718861209964435,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_monolingual_democrat_constant_se,table_b7,"vela_monolingual_democrat, constant_se",0.02,0.020,3,1,0.01997326007174711,1,NA,NA,NA
 flores_coppock_2018,table_b7_vela_monolingual_republican_N,table_b7,"vela_monolingual_republican, N",490,490,0,1,490,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_monolingual_republican_Z_ad,table_b7,"vela_monolingual_republican, Z_ad",-0.226,-0.226,3,1,-0.2256105698652072,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_monolingual_republican_Z_ad_se,table_b7,"vela_monolingual_republican, Z_ad_se",0.043,0.043,3,1,0.0433434701954012,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_monolingual_republican_constant,table_b7,"vela_monolingual_republican, constant",0.709,0.709,3,1,0.7086614173228346,1,NA,NA,NA
-flores_coppock_2018,table_b7_vela_monolingual_republican_constant_se,table_b7,"vela_monolingual_republican, constant_se",0.029,0.029,3,1,0.02856657247427776,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_monolingual_republican_Z_ad,table_b7,"vela_monolingual_republican, Z_ad",-0.226,-0.226,3,1,-0.22561056986520775,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_monolingual_republican_Z_ad_se,table_b7,"vela_monolingual_republican, Z_ad_se",0.043,0.043,3,1,0.04334347019540132,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_monolingual_republican_constant,table_b7,"vela_monolingual_republican, constant",0.709,0.709,3,1,0.7086614173228358,1,NA,NA,NA
+flores_coppock_2018,table_b7_vela_monolingual_republican_constant_se,table_b7,"vela_monolingual_republican, constant_se",0.029,0.029,3,1,0.02856657247427789,1,NA,NA,NA
 flores_coppock_2018,table_b8_coffman_bilingual_democrat_N,table_b8,"coffman_bilingual_democrat, N",1028,1028,0,1,1028,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_bilingual_democrat_Z_ad,table_b8,"coffman_bilingual_democrat, Z_ad",0.128,0.128,3,1,0.12843737559477597,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_bilingual_democrat_Z_ad_se,table_b8,"coffman_bilingual_democrat, Z_ad_se",0.052,0.052,3,1,0.0522354215905908,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_bilingual_democrat_constant,table_b8,"coffman_bilingual_democrat, constant",1.65,1.650,3,1,1.6504672897196255,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_bilingual_democrat_constant_se,table_b8,"coffman_bilingual_democrat, constant_se",0.036,0.036,3,1,0.03626075844136105,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_bilingual_democrat_Z_ad,table_b8,"coffman_bilingual_democrat, Z_ad",0.128,0.128,3,1,0.1284373755947756,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_bilingual_democrat_Z_ad_se,table_b8,"coffman_bilingual_democrat, Z_ad_se",0.052,0.052,3,1,0.05223542159059073,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_bilingual_democrat_constant,table_b8,"coffman_bilingual_democrat, constant",1.65,1.650,3,1,1.6504672897196284,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_bilingual_democrat_constant_se,table_b8,"coffman_bilingual_democrat, constant_se",0.036,0.036,3,1,0.03626075844136108,1,NA,NA,NA
 flores_coppock_2018,table_b8_coffman_bilingual_republican_N,table_b8,"coffman_bilingual_republican, N",335,335,0,1,335,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_bilingual_republican_Z_ad,table_b8,"coffman_bilingual_republican, Z_ad",-0.139,-0.139,3,1,-0.1391071428571427,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_bilingual_republican_Z_ad,table_b8,"coffman_bilingual_republican, Z_ad",-0.139,-0.139,3,1,-0.13910714285714262,1,NA,NA,NA
 flores_coppock_2018,table_b8_coffman_bilingual_republican_Z_ad_se,table_b8,"coffman_bilingual_republican, Z_ad_se",0.084,0.084,3,1,0.08356617982753022,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_bilingual_republican_constant,table_b8,"coffman_bilingual_republican, constant",2.183,2.183,3,1,2.182857142857144,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_bilingual_republican_constant_se,table_b8,"coffman_bilingual_republican, constant_se",0.051,0.051,3,1,0.05130435646929143,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_bilingual_republican_constant,table_b8,"coffman_bilingual_republican, constant",2.183,2.183,3,1,2.1828571428571437,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_bilingual_republican_constant_se,table_b8,"coffman_bilingual_republican, constant_se",0.051,0.051,3,1,0.05130435646929139,1,NA,NA,NA
 flores_coppock_2018,table_b8_coffman_monolingual_democrat_N,table_b8,"coffman_monolingual_democrat, N",577,577,0,1,577,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_monolingual_democrat_Z_ad,table_b8,"coffman_monolingual_democrat, Z_ad",-0.179,-0.179,3,1,-0.1786031974996997,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_monolingual_democrat_Z_ad_se,table_b8,"coffman_monolingual_democrat, Z_ad_se",0.067,0.067,3,1,0.06671197770806629,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_monolingual_democrat_constant,table_b8,"coffman_monolingual_democrat, constant",1.895,1.895,3,1,1.8949152542372865,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_monolingual_democrat_constant_se,table_b8,"coffman_monolingual_democrat, constant_se",0.047,0.047,3,1,0.04677324386125788,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_monolingual_democrat_Z_ad,table_b8,"coffman_monolingual_democrat, Z_ad",-0.179,-0.179,3,1,-0.17860319749970072,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_monolingual_democrat_Z_ad_se,table_b8,"coffman_monolingual_democrat, Z_ad_se",0.067,0.067,3,1,0.06671197770806635,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_monolingual_democrat_constant,table_b8,"coffman_monolingual_democrat, constant",1.895,1.895,3,1,1.8949152542372791,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_monolingual_democrat_constant_se,table_b8,"coffman_monolingual_democrat, constant_se",0.047,0.047,3,1,0.04677324386125765,1,NA,NA,NA
 flores_coppock_2018,table_b8_coffman_monolingual_republican_N,table_b8,"coffman_monolingual_republican, N",489,489,0,1,489,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_monolingual_republican_Z_ad,table_b8,"coffman_monolingual_republican, Z_ad",-0.491,-0.491,3,1,-0.4909697750067772,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_monolingual_republican_Z_ad_se,table_b8,"coffman_monolingual_republican, Z_ad_se",0.073,0.073,3,1,0.0726894066460423,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_monolingual_republican_constant,table_b8,"coffman_monolingual_republican, constant",2.099,2.099,3,1,2.099264705882355,1,NA,NA,NA
-flores_coppock_2018,table_b8_coffman_monolingual_republican_constant_se,table_b8,"coffman_monolingual_republican, constant_se",0.043,0.043,3,1,0.04331847526505065,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_monolingual_republican_Z_ad,table_b8,"coffman_monolingual_republican, Z_ad",-0.491,-0.491,3,1,-0.4909697750067756,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_monolingual_republican_Z_ad_se,table_b8,"coffman_monolingual_republican, Z_ad_se",0.073,0.073,3,1,0.07268940664604222,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_monolingual_republican_constant,table_b8,"coffman_monolingual_republican, constant",2.099,2.099,3,1,2.099264705882345,1,NA,NA,NA
+flores_coppock_2018,table_b8_coffman_monolingual_republican_constant_se,table_b8,"coffman_monolingual_republican, constant_se",0.043,0.043,3,1,0.04331847526505048,1,NA,NA,NA
 flores_coppock_2018,table_b8_vela_bilingual_democrat_N,table_b8,"vela_bilingual_democrat, N",1029,1029,0,1,1029,1,NA,NA,NA
 flores_coppock_2018,table_b8_vela_bilingual_democrat_Z_ad,table_b8,"vela_bilingual_democrat, Z_ad",0.11,0.110,3,1,0.10980273599879065,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_bilingual_democrat_Z_ad_se,table_b8,"vela_bilingual_democrat, Z_ad_se",0.042,0.042,3,1,0.0421808056156561,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_bilingual_democrat_constant,table_b8,"vela_bilingual_democrat, constant",2.076,2.076,3,1,2.0763358778625993,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_bilingual_democrat_constant_se,table_b8,"vela_bilingual_democrat, constant_se",0.029,0.029,3,1,0.0291549074656613,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_bilingual_democrat_Z_ad_se,table_b8,"vela_bilingual_democrat, Z_ad_se",0.042,0.042,3,1,0.04218080561565623,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_bilingual_democrat_constant,table_b8,"vela_bilingual_democrat, constant",2.076,2.076,3,1,2.0763358778625944,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_bilingual_democrat_constant_se,table_b8,"vela_bilingual_democrat, constant_se",0.029,0.029,3,1,0.02915490746566138,1,NA,NA,NA
 flores_coppock_2018,table_b8_vela_bilingual_republican_N,table_b8,"vela_bilingual_republican, N",335,335,0,1,335,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_bilingual_republican_Z_ad,table_b8,"vela_bilingual_republican, Z_ad",-0.073,-0.073,3,1,-0.07338893641288878,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_bilingual_republican_Z_ad_se,table_b8,"vela_bilingual_republican, Z_ad_se",0.096,0.096,3,1,0.09594883252691074,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_bilingual_republican_constant,table_b8,"vela_bilingual_republican, constant",1.744,1.744,3,1,1.7440476190476206,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_bilingual_republican_constant_se,table_b8,"vela_bilingual_republican, constant_se",0.071,0.071,3,1,0.07063857161188396,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_bilingual_republican_Z_ad,table_b8,"vela_bilingual_republican, Z_ad",-0.073,-0.073,3,1,-0.07338893641288853,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_bilingual_republican_Z_ad_se,table_b8,"vela_bilingual_republican, Z_ad_se",0.096,0.096,3,1,0.09594883252691064,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_bilingual_republican_constant,table_b8,"vela_bilingual_republican, constant",1.744,1.744,3,1,1.7440476190476195,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_bilingual_republican_constant_se,table_b8,"vela_bilingual_republican, constant_se",0.071,0.071,3,1,0.07063857161188383,1,NA,NA,NA
 flores_coppock_2018,table_b8_vela_monolingual_democrat_N,table_b8,"vela_monolingual_democrat, N",577,577,0,1,577,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_monolingual_democrat_Z_ad,table_b8,"vela_monolingual_democrat, Z_ad",-0.181,-0.181,3,1,-0.18067711839953857,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_monolingual_democrat_Z_ad_se,table_b8,"vela_monolingual_democrat, Z_ad_se",0.062,0.062,3,1,0.06248812578615172,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_monolingual_democrat_constant,table_b8,"vela_monolingual_democrat, constant",2.032,2.032,3,1,2.0320284697508875,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_monolingual_democrat_constant_se,table_b8,"vela_monolingual_democrat, constant_se",0.041,0.041,3,1,0.0413781008069299,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_monolingual_democrat_Z_ad,table_b8,"vela_monolingual_democrat, Z_ad",-0.181,-0.181,3,1,-0.18067711839953796,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_monolingual_democrat_Z_ad_se,table_b8,"vela_monolingual_democrat, Z_ad_se",0.062,0.062,3,1,0.0624881257861517,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_monolingual_democrat_constant,table_b8,"vela_monolingual_democrat, constant",2.032,2.032,3,1,2.0320284697508786,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_monolingual_democrat_constant_se,table_b8,"vela_monolingual_democrat, constant_se",0.041,0.041,3,1,0.04137810080692968,1,NA,NA,NA
 flores_coppock_2018,table_b8_vela_monolingual_republican_N,table_b8,"vela_monolingual_republican, N",490,490,0,1,490,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_monolingual_republican_Z_ad,table_b8,"vela_monolingual_republican, Z_ad",-0.192,-0.192,3,1,-0.1921793674095821,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_monolingual_republican_Z_ad_se,table_b8,"vela_monolingual_republican, Z_ad_se",0.079,0.079,3,1,0.07947848750243837,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_monolingual_republican_constant,table_b8,"vela_monolingual_republican, constant",1.48,1.480,3,1,1.4803149606299215,1,NA,NA,NA
-flores_coppock_2018,table_b8_vela_monolingual_republican_constant_se,table_b8,"vela_monolingual_republican, constant_se",0.052,0.052,3,1,0.05164523822100104,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_monolingual_republican_Z_ad,table_b8,"vela_monolingual_republican, Z_ad",-0.192,-0.192,3,1,-0.19217936740958252,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_monolingual_republican_Z_ad_se,table_b8,"vela_monolingual_republican, Z_ad_se",0.079,0.079,3,1,0.0794784875024386,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_monolingual_republican_constant,table_b8,"vela_monolingual_republican, constant",1.48,1.480,3,1,1.4803149606299233,1,NA,NA,NA
+flores_coppock_2018,table_b8_vela_monolingual_republican_constant_se,table_b8,"vela_monolingual_republican, constant_se",0.052,0.052,3,1,0.05164523822100132,1,NA,NA,NA
 flores_coppock_2018,table_c9_bush_bilingual_N,table_c9,"bush_bilingual, N",1849,1849,0,1,1849,1,NA,NA,NA
 flores_coppock_2018,table_c9_bush_bilingual_Z_ad,table_c9,"bush_bilingual, Z_ad",0.196,0.196,3,1,0.1964603813947812,1,NA,NA,NA
 flores_coppock_2018,table_c9_bush_bilingual_Z_ad_se,table_c9,"bush_bilingual, Z_ad_se",0.093,0.093,3,1,0.09326007542491084,1,NA,NA,NA
@@ -572,34 +572,34 @@ flores_coppock_2018,results_bilingual_party_direction,text,Bilingual Democrats r
 flores_coppock_2018,results_bilingual_cares_magnitude,text,Bilingual effects on candidate caring are on the order of 2 to 3 points,NA,NA,0,NA,NA,NA,NA,NA,"An approximate claim: the three bilingual effects run 1.8 to 3.7 points, which the sentence hedges"
 flores_coppock_2018,results_both_significant,text,Both bilingual advertisement effects are significant,NA,NA,0,NA,NA,NA,TRUE,NA,NA
 flores_coppock_2018,results_linked_fate_both_significant,text,Both linked fate estimates are significant,NA,NA,0,NA,NA,NA,TRUE,NA,NA
-flores_coppock_2018,discussion_effect_five_points,text,Bush and Vela bilinguals were about five points more likely to support,4.9,5,0,1,4.875843388833143,1,NA,NA,NA
-flores_coppock_2018,results_bush_ate,text,Bush bilingual advertisement effect,4.9,4.9,1,1,4.896649860286413,1,NA,NA,NA
-flores_coppock_2018,results_bush_ate_se,text,"Bush bilingual advertisement effect, standard error",2.3,2.3,1,1,2.322386529140922,1,NA,NA,NA
+flores_coppock_2018,discussion_effect_five_points,text,Bush and Vela bilinguals were about five points more likely to support,4.9,5,0,1,4.875843388833116,1,NA,NA,NA
+flores_coppock_2018,results_bush_ate,text,Bush bilingual advertisement effect,4.9,4.9,1,1,4.896649860286398,1,NA,NA,NA
+flores_coppock_2018,results_bush_ate_se,text,"Bush bilingual advertisement effect, standard error",2.3,2.3,1,1,2.322386529140891,1,NA,NA,NA
 flores_coppock_2018,intro_bush_recruited,text,Bush experiment: bilinguals recruited,NA,2866,0,NA,2866,1,NA,NA,NA
 flores_coppock_2018,intro_bush_passed,text,Bush experiment: bilinguals who passed the quiz,NA,1862,0,NA,1862,1,NA,NA,NA
 flores_coppock_2018,design_cares_low,text,Candidate cares is coded 0 for does not care,NA,0,0,NA,0,1,NA,NA,NA
 flores_coppock_2018,design_cares_high,text,Candidate cares is coded 1 for cares,NA,1,0,NA,1,1,NA,NA,NA
 flores_coppock_2018,design_general_low,text,Candidate preference is coded 0 otherwise,NA,0,0,NA,0,1,NA,NA,NA
 flores_coppock_2018,design_general_high,text,Candidate preference is coded 1 for the advertising candidate,NA,1,0,NA,1,1,NA,NA,NA
-flores_coppock_2018,results_coffman_dem_ate,text,Coffman monolingual Democrat advertisement effect,-14.099999999999998,-14.1,1,1,-14.051086178085445,1,NA,NA,NA
-flores_coppock_2018,results_coffman_dem_ate_se,text,"Coffman monolingual Democrat effect, standard error",3.3000000000000003,3.3,1,1,3.339650421153042,1,NA,NA,NA
-flores_coppock_2018,results_coffman_rep_ate,text,Coffman monolingual Republican advertisement effect,-16.8,-16.8,1,1,-16.77746441042175,1,NA,NA,NA
-flores_coppock_2018,results_coffman_rep_ate_se,text,"Coffman monolingual Republican effect, standard error",4,4.0,1,1,3.9992384581184024,1,NA,NA,NA
-flores_coppock_2018,results_coffman_mono_ate,text,Coffman monolingual advertisement effect,-18.7,-18.7,1,1,-18.72416171595141,1,NA,NA,NA
-flores_coppock_2018,results_coffman_mono_ate_se,text,"Coffman monolingual advertisement effect, standard error",2.6,2.6,1,1,2.645251048376894,1,NA,NA,NA
-flores_coppock_2018,results_coffman_mono_cares,text,Coffman monolingual effect on candidate caring,-15.5,-15.5,1,1,-15.519432692912265,1,NA,NA,NA
-flores_coppock_2018,results_coffman_mono_cares_se,text,"Coffman monolingual effect on candidate caring, standard error",2.4,2.4,1,1,2.388982213479516,1,NA,NA,NA
-flores_coppock_2018,results_coffman_control_support,text,Coffman's support in the monolingual control group,51.300000000000004,51,0,1,51.267605633802916,1,NA,NA,NA
+flores_coppock_2018,results_coffman_dem_ate,text,Coffman monolingual Democrat advertisement effect,-14.099999999999998,-14.1,1,1,-14.051086178085471,1,NA,NA,NA
+flores_coppock_2018,results_coffman_dem_ate_se,text,"Coffman monolingual Democrat effect, standard error",3.3000000000000003,3.3,1,1,3.339650421153047,1,NA,NA,NA
+flores_coppock_2018,results_coffman_rep_ate,text,Coffman monolingual Republican advertisement effect,-16.8,-16.8,1,1,-16.777464410421658,1,NA,NA,NA
+flores_coppock_2018,results_coffman_rep_ate_se,text,"Coffman monolingual Republican effect, standard error",4,4.0,1,1,3.9992384581183935,1,NA,NA,NA
+flores_coppock_2018,results_coffman_mono_ate,text,Coffman monolingual advertisement effect,-18.7,-18.7,1,1,-18.72416171595139,1,NA,NA,NA
+flores_coppock_2018,results_coffman_mono_ate_se,text,"Coffman monolingual advertisement effect, standard error",2.6,2.6,1,1,2.645251048376886,1,NA,NA,NA
+flores_coppock_2018,results_coffman_mono_cares,text,Coffman monolingual effect on candidate caring,-15.5,-15.5,1,1,-15.519432692912227,1,NA,NA,NA
+flores_coppock_2018,results_coffman_mono_cares_se,text,"Coffman monolingual effect on candidate caring, standard error",2.4,2.4,1,1,2.388982213479525,1,NA,NA,NA
+flores_coppock_2018,results_coffman_control_support,text,Coffman's support in the monolingual control group,51.300000000000004,51,0,1,51.267605633803115,1,NA,NA,NA
 flores_coppock_2018,design_confidence_min,text,Confidence is said to run from 1,NA,1,0,NA,0,0,NA,paper_internal,"The deposited confidence variable runs 0 to 3, and Table 8's control means are on that scale"
 flores_coppock_2018,design_confidence_max,text,Confidence is said to run to 4,NA,4,0,NA,3,0,NA,paper_internal,"The deposited confidence variable runs 0 to 3, and Table 8's control means are on that scale"
-flores_coppock_2018,results_linked_fate_bush,text,"Effect of the Spanish survey on linked fate, Bush experiment",0.243,0.24,2,1,0.24272228320526923,1,NA,NA,NA
-flores_coppock_2018,results_vela_survey_ate,text,Effect of the Spanish survey on support for Vela,7.3,7.3,1,1,7.295796961285888,1,NA,NA,NA
-flores_coppock_2018,results_vela_survey_ate_se,text,"Effect of the Spanish survey on support for Vela, standard error",2.4,2.4,1,1,2.390292897354181,1,NA,NA,NA
-flores_coppock_2018,results_bush_like_ate,text,Effect on liking Bush,0.167,0.167,3,1,0.16681094744208505,1,NA,NA,NA
-flores_coppock_2018,results_bush_like_ate_se,text,"Effect on liking Bush, standard error",0.075,0.075,3,1,0.07532993746018998,1,NA,NA,NA
-flores_coppock_2018,results_linked_fate_bush_se,text,"Effect on linked fate, Bush experiment, standard error",0.04,0.04,2,1,0.04030021104028934,1,NA,NA,NA
-flores_coppock_2018,results_linked_fate_vela_coffman,text,"Effect on linked fate, Vela and Coffman experiments",0.131,0.13,2,1,0.13110568289174684,1,NA,NA,NA
-flores_coppock_2018,results_linked_fate_vela_coffman_se,text,"Effect on linked fate, Vela and Coffman, standard error",0.041,0.04,2,1,0.04126566016011654,1,NA,NA,NA
+flores_coppock_2018,results_linked_fate_bush,text,"Effect of the Spanish survey on linked fate, Bush experiment",0.243,0.24,2,1,0.2427222832052696,1,NA,NA,NA
+flores_coppock_2018,results_vela_survey_ate,text,Effect of the Spanish survey on support for Vela,7.3,7.3,1,1,7.295796961285839,1,NA,NA,NA
+flores_coppock_2018,results_vela_survey_ate_se,text,"Effect of the Spanish survey on support for Vela, standard error",2.4,2.4,1,1,2.390292897354174,1,NA,NA,NA
+flores_coppock_2018,results_bush_like_ate,text,Effect on liking Bush,0.167,0.167,3,1,0.1668109474420808,1,NA,NA,NA
+flores_coppock_2018,results_bush_like_ate_se,text,"Effect on liking Bush, standard error",0.075,0.075,3,1,0.07532993746019008,1,NA,NA,NA
+flores_coppock_2018,results_linked_fate_bush_se,text,"Effect on linked fate, Bush experiment, standard error",0.04,0.04,2,1,0.04030021104028922,1,NA,NA,NA
+flores_coppock_2018,results_linked_fate_vela_coffman,text,"Effect on linked fate, Vela and Coffman experiments",0.131,0.13,2,1,0.1311056828917476,1,NA,NA,NA
+flores_coppock_2018,results_linked_fate_vela_coffman_se,text,"Effect on linked fate, Vela and Coffman, standard error",0.041,0.04,2,1,0.04126566016011627,1,NA,NA,NA
 flores_coppock_2018,design_exp1_bilinguals,text,Experiment 1's bilingual sample,NA,1862,0,NA,1862,1,NA,NA,NA
 flores_coppock_2018,design_exp23_bilinguals,text,Experiments 2 and 3: bilingual sample,NA,1681,0,NA,1681,1,NA,NA,NA
 flores_coppock_2018,design_exp23_monolinguals,text,Experiments 2 and 3: monolingual sample,NA,1344,0,NA,1344,1,NA,NA,NA
@@ -614,7 +614,7 @@ flores_coppock_2018,design_like_scale_min,text,Liking runs from 1,NA,1,0,NA,1,1,
 flores_coppock_2018,design_like_scale_max,text,Liking runs to 7,NA,7,0,NA,7,1,NA,NA,NA
 flores_coppock_2018,design_linked_fate_min,text,Linked fate is said to run from 1,NA,1,0,NA,0,0,NA,paper_internal,"The deposited linked fate variable runs 0 to 3, and Table 9's control means are on that scale"
 flores_coppock_2018,design_linked_fate_max,text,Linked fate is said to run to 4,NA,4,0,NA,3,0,NA,paper_internal,"The deposited linked fate variable runs 0 to 3, and Table 9's control means are on that scale"
-flores_coppock_2018,intro_preview_bush_effect,text,Preview: Spanish ad raises Bush support by about five points,4.9,5,0,1,4.896649860286413,1,NA,NA,NA
+flores_coppock_2018,intro_preview_bush_effect,text,Preview: Spanish ad raises Bush support by about five points,4.9,5,0,1,4.896649860286398,1,NA,NA,NA
 flores_coppock_2018,design_bush_passed,text,Sampling: Bush respondents who passed the language quiz,NA,1862,0,NA,1862,1,NA,NA,NA
 flores_coppock_2018,design_bush_recruited,text,Sampling: Latinos who responded to the Bush survey,NA,2866,0,NA,2866,1,NA,NA,NA
 flores_coppock_2018,design_vela_coffman_recruited,text,Sampling: bilinguals who responded to the Vela and Coffman survey,NA,2233,0,NA,2233,1,NA,NA,NA
@@ -623,7 +623,7 @@ flores_coppock_2018,design_bush_passed_restated,text,"Sampling: the same count, 
 flores_coppock_2018,design_mono_failed,text,Sampling: those who did not pass the language quiz,NA,1344,0,NA,1344,1,NA,NA,NA
 flores_coppock_2018,design_vela_coffman_passed,text,Sampling: those who passed the language quiz,NA,1681,0,NA,1681,1,NA,NA,NA
 flores_coppock_2018,intro_advertisements,text,Six advertisements in all,NA,6,0,NA,6,1,NA,NA,NA
-flores_coppock_2018,abstract_effect_five_points,text,Spanish ad raises bilingual support by five percentage points,4.9,5,0,1,4.875843388833143,1,NA,NA,NA
+flores_coppock_2018,abstract_effect_five_points,text,Spanish ad raises bilingual support by five percentage points,4.9,5,0,1,4.875843388833116,1,NA,NA,NA
 flores_coppock_2018,design_education_levels,text,Table 2 row label: Education(5 levels),NA,5,0,NA,5,1,NA,NA,NA
 flores_coppock_2018,design_income_7_levels,text,Table 2 row label: Income(7 levels),NA,7,0,NA,7,1,NA,NA,NA
 flores_coppock_2018,design_income_9_levels,text,Table 2 row label: Income(9 levels),NA,9,0,NA,9,1,NA,NA,NA
@@ -648,8 +648,8 @@ flores_coppock_2018,appendix_c_binary_outcomes,text,Two dependent variables are 
 flores_coppock_2018,abstract_two_of_three,text,Two of three experiments raise bilingual support by about five points,NA,NA,0,NA,NA,NA,TRUE,NA,NA
 flores_coppock_2018,intro_vela_coffman_recruited,text,Vela and Coffman experiments: bilinguals recruited,NA,2233,0,NA,2233,1,NA,NA,NA
 flores_coppock_2018,intro_vela_coffman_passed,text,Vela and Coffman experiments: bilinguals who passed the quiz,NA,1681,0,NA,1681,1,NA,NA,NA
-flores_coppock_2018,results_vela_ate,text,Vela bilingual advertisement effect,4.9,4.9,1,1,4.855036917379873,1,NA,NA,NA
-flores_coppock_2018,results_vela_ate_se,text,"Vela bilingual advertisement effect, standard error",2.4,2.4,1,1,2.39042736077789,1,NA,NA,NA
-flores_coppock_2018,results_vela_mono_ate,text,Vela monolingual advertisement effect,-2,-2,0,1,-2.011754269239282,1,NA,NA,NA
-flores_coppock_2018,results_vela_mono_cares,text,Vela monolingual effect on candidate caring,-15.2,-15.2,1,1,-15.201663872627613,1,NA,NA,NA
-flores_coppock_2018,results_vela_mono_cares_se,text,"Vela monolingual effect on candidate caring, standard error",2.5,2.5,1,1,2.465573417346855,1,NA,NA,NA
+flores_coppock_2018,results_vela_ate,text,Vela bilingual advertisement effect,4.9,4.9,1,1,4.855036917379834,1,NA,NA,NA
+flores_coppock_2018,results_vela_ate_se,text,"Vela bilingual advertisement effect, standard error",2.4,2.4,1,1,2.39042736077788,1,NA,NA,NA
+flores_coppock_2018,results_vela_mono_ate,text,Vela monolingual advertisement effect,-2,-2,0,1,-2.011754269239292,1,NA,NA,NA
+flores_coppock_2018,results_vela_mono_cares,text,Vela monolingual effect on candidate caring,-15.2,-15.2,1,1,-15.20166387262766,1,NA,NA,NA
+flores_coppock_2018,results_vela_mono_cares_se,text,"Vela monolingual effect on candidate caring, standard error",2.5,2.5,1,1,2.465573417346872,1,NA,NA,NA
