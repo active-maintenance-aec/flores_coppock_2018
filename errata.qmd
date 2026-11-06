@@ -93,8 +93,15 @@ logit_letter <- section_letter("Binary Choice Models")
 # to 13: a misspelling and a mangled reference-list entry are not extraction claims, so no
 # ground-truth row exists to name. Every id listed here is checked against the ground truth
 # by build_ground_truth.R.
+# corrected_values runs parallel to claim_ids, one value per id in the same order, on the
+# claim's scale, carrying the corrected quantity as a number rather than as a sentence. Each
+# value is computed once, here, and the corrected sentence below is glued from the same
+# object, so the two cannot be written apart; the gate after the spine re-checks that each
+# value sits inside the [[...]] span it belongs to. An entry of a class that changes no
+# quantity, a note-form entry, and an entry with no claim_ids carry NA.
+
 entries <- tribble(
-  ~entry, ~class, ~source, ~form, ~title, ~location, ~published, ~corrected, ~note, ~claim_ids,
+  ~entry, ~class, ~source, ~form, ~title, ~location, ~published, ~corrected, ~note, ~claim_ids, ~corrected_values,
 
   1, "definition", "pipeline", "full",
   "Two outcome scales are described as running from 1 to 4 and are analysed as running from 0 to 3",
@@ -130,6 +137,7 @@ entries <- tribble(
     "each question; they take the same correction."),
   str_c("design_confidence_min;design_confidence_max;design_confidence_top;",
         "design_linked_fate_min;design_linked_fate_max;design_linked_fate_top"),
+  NA_character_,
 
   2, "cross_reference", "pipeline", "full",
   "Three references to a lettered appendix section name the wrong section",
@@ -154,6 +162,7 @@ entries <- tribble(
     "correctly, as does the cross-reference from appendix section C to Tables 5 and 7."),
   str_c("design_appendix_quiz_reference;design_appendix_survey_reference;",
         "design_appendix_logit_reference"),
+  NA_character_,
 
   # Entries 3 to 13 were found by reading every word of the published article and its
   # appendix against the published PDF while preparing the remastered edition, which is a
@@ -168,6 +177,7 @@ entries <- tribble(
   "Binder and [[colleagues]] (2013)",
   "",
   "",
+  NA_character_,
 
   4, "spelling", "reading", "brief",
   "Figure 2's caption misspells advertisement",
@@ -176,6 +186,7 @@ entries <- tribble(
   "Heterogeneous effects of Spanish-language [[advertisement]] on four outcomes",
   "",
   "",
+  NA_character_,
 
   5, "spelling", "reading", "brief",
   "A misspelled word in note 4",
@@ -184,6 +195,7 @@ entries <- tribble(
   "The quiz was administered [[post-treatment]].",
   "",
   "",
+  NA_character_,
 
   6, "spelling", "reading", "brief",
   "A misspelled word in appendix section C",
@@ -192,6 +204,7 @@ entries <- tribble(
   "we include [[logistic]] regression tables for completeness",
   "",
   "",
+  NA_character_,
 
   7, "bibliographic", "crossref", "brief",
   "Both authors' names are mangled in the Soto and Merolla reference",
@@ -204,6 +217,7 @@ entries <- tribble(
         "second author's. The in-text citations follow the published surname and are ",
         "left as they stand."),
   "",
+  NA_character_,
 
   8, "bibliographic", "crossref", "brief",
   "The first author's surname is mangled in the Lavariega Monforti reference",
@@ -214,6 +228,7 @@ entries <- tribble(
         "Monforti. Lavariega is part of the surname and has been demoted to an initial. ",
         "The in-text citations follow the published surname and are left as they stand."),
   "",
+  NA_character_,
 
   9, "bibliographic", "crossref", "brief",
   "The Mackie and Cooper reference prints a first page in place of a page range",
@@ -222,6 +237,7 @@ entries <- tribble(
   "Journal of Personality and Social Psychology, 46(3), [[575-585]].",
   "doi:10.1037/0022-3514.46.3.575 gives the article's pages as 575 to 585.",
   "",
+  NA_character_,
 
   10, "bibliographic", "crossref", "brief",
   "The Rubin reference prints a first page in place of a page range",
@@ -230,6 +246,7 @@ entries <- tribble(
   "Journal of Educational Psychology, 66(5), [[688-701]].",
   "doi:10.1037/h0037350 gives the article's pages as 688 to 701.",
   "",
+  NA_character_,
 
   11, "bibliographic", "crossref", "brief",
   "The Jones-Correa reference prints an issue-level locator in place of the article's DOI",
@@ -239,6 +256,7 @@ entries <- tribble(
   str_c("The printed string is Wiley's identifier for the whole issue of Social Science ",
         "Quarterly and resolves to no article. The article's own DOI is given here."),
   "",
+  NA_character_,
 
   12, "bibliographic", "publisher record", "brief",
   "The Tajfel reference gives the wrong city and the wrong publisher",
@@ -249,6 +267,7 @@ entries <- tribble(
         "Press in Cambridge, England. CUP Archive is a digitisation imprint under which ",
         "the scan is catalogued, not the book's publisher."),
   "",
+  NA_character_,
 
   13, "bibliographic", "publisher record", "brief",
   "Both authors' names are mangled in the Valdés and Seoane reference",
@@ -259,10 +278,65 @@ entries <- tribble(
         "first author's second given initial was carried onto the second author's name, ",
         "the same defect as entry 7."),
   ""
-) |>
-  mutate(across(c(title, published, corrected, note, claim_ids), as.character))
+,
+  NA_character_) |>
+  mutate(across(c(title, published, corrected, note, claim_ids, corrected_values),
+                as.character))
 
 stopifnot(nrow(entries) == max(entries$entry), !anyDuplicated(entries$entry))
+
+# Gate: corrected_values agrees with the sentence it was glued into ----
+# The column and the sentence are written from one object, so they begin in agreement and
+# this gate exists for the edit that separates them: a value moved from one marked span to
+# another, a span reworded to carry a second number, a claim id appended without its value.
+# Each value has to be inside the span it belongs to, matched by position where the counts
+# line up, and inside SOME span where an entry marks a label as well as a number and its
+# spans outnumber its values. A count the sentence spells out is accepted in its spelled form.
+marked_spans <- function(x) str_match_all(x, "\\[\\[(.*?)\\]\\]")[[1]][, 2]
+
+in_span <- function(v, s) {
+  s <- str_remove_all(s, ",")
+  str_detect(s, fixed(v)) ||
+    (str_detect(v, "^[0-9]+$") && as.integer(v) %in% seq_len(25) &&
+       str_detect(s, fixed(as.character(as.integer(v)))))
+}
+
+quantified <- entries |>
+  filter(!is.na(corrected_values)) |>
+  mutate(ids = str_split(claim_ids, ";"), values = str_split(corrected_values, ";"),
+         spans = map(corrected, marked_spans))
+
+stopifnot(all(lengths(quantified$ids) == lengths(quantified$values)))
+
+value_placed <- pmap_lgl(quantified, function(...) {
+  e <- list(...)
+  if (length(e$values) == length(e$spans)) {
+    all(map2_lgl(e$values, e$spans, in_span))
+  } else {
+    all(map_lgl(e$values, \(v) any(map_lgl(e$spans, \(s) in_span(v, s)))))
+  }
+})
+
+if (!all(value_placed)) {
+  print(quantified |> filter(!value_placed) |> select(entry, title, corrected_values, corrected))
+  stop("An entry's corrected_values are not in the spans of its corrected sentence.")
+}
+
+# An entry that changes a quantity has to say which one, and an entry that changes none may
+# not carry a value. The class is the declaration and this is where it binds. A note-form
+# entry corrects nothing and carries NA even where its class is quantity, and an entry with
+# no claim_ids has no claim to carry a value for.
+has_ids <- !is.na(entries$claim_ids) & entries$claim_ids != ""
+# Entries whose claim id names something no corrected token states as a number carry NA by
+# name, and the list is the only exemption.
+no_numeric_claim <- integer(0)
+stopifnot(
+  all(!is.na(entries$corrected_values[entries$class == "quantity" & entries$form != "note" &
+                                        has_ids & !entries$entry %in% no_numeric_claim])),
+  all(is.na(entries$corrected_values[entries$class != "quantity"])),
+  all(is.na(entries$corrected_values[entries$form == "note"])),
+  all(is.na(entries$corrected_values) | has_ids)
+)
 
 # The spine's markup, resolved for this document. Another renderer resolves it differently.
 bold <- function(x) str_replace_all(x, "\\[\\[(.*?)\\]\\]", "**\\1**")
