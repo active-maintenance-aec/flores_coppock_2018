@@ -85,8 +85,11 @@ logit_letter <- section_letter("Binary Choice Models")
 # corrected carry one block per corrected sentence, separated by a blank line and paired
 # off in order.
 #
-# Numbering is the published note's and is APPEND-ONLY: an entry can already have been
-# cited, so a later finding is added at the end and never interleaved.
+# Numbering follows PROCEDURES.md Stage 4b: entries are ordered by severity block (quantity;
+# description, interpretation, definition; label, float, cross_reference; wording, spelling,
+# typography; bibliographic), discovery order inside a block, and a finding that lands in an
+# earlier block renumbers the entries after it. Renumbered 2026-11-07; the old-to-new map is
+# in that day's commit message.
 #
 # claim_ids names the ground-truth rows an entry corrects, semicolon-separated, so that
 # "is this finding published?" is a query rather than a judgment. It is empty for entries 3
@@ -105,7 +108,7 @@ entries <- tribble(
 
   1, "definition", "pipeline", "full",
   "Two outcome scales are described as running from 1 to 4 and are analysed as running from 0 to 3",
-  "published, Outcome Measures",
+  "Outcome Measures",
   str_c(
     "Confidence in Candidate: \"How confident are you in [Candidate]'s ability to make the right decisions about illegal immigration? Are you very confident, somewhat confident, not too confident, or not at all confident?\" [Scale from [[1 to 4]], where [[4]] indicates greater confidence]",
     "\n\n",
@@ -141,7 +144,7 @@ entries <- tribble(
 
   2, "cross_reference", "pipeline", "full",
   "Three references to a lettered appendix section name the wrong section",
-  "published, main text",
+  "main text",
   str_c(
     "In our first experiment (Bush), we collected responses from 2,866 self-identified Latinos, of which 1,862 passed a language quiz in both Spanish and English, the full text of which is presented in the supplemental Appendix [[D]].",
     "\n\n",
@@ -172,7 +175,7 @@ entries <- tribble(
 
   3, "spelling", "reading", "brief",
   "A misspelled word in the account of the randomized language-of-contact experiments",
-  "published, p. 614",
+  "p. 614",
   "Binder and [[colleages]] (2013)",
   "Binder and [[colleagues]] (2013)",
   "",
@@ -181,7 +184,7 @@ entries <- tribble(
 
   4, "spelling", "reading", "brief",
   "Figure 2's caption misspells advertisement",
-  "published, p. 628",
+  "p. 628",
   "Heterogeneous effects of Spanish-language [[advertisment]] on four outcomes",
   "Heterogeneous effects of Spanish-language [[advertisement]] on four outcomes",
   "",
@@ -190,7 +193,7 @@ entries <- tribble(
 
   5, "spelling", "reading", "brief",
   "A misspelled word in note 4",
-  "published, p. 631",
+  "p. 631",
   "The quiz was administered [[post-treatmeant]].",
   "The quiz was administered [[post-treatment]].",
   "",
@@ -199,16 +202,16 @@ entries <- tribble(
 
   6, "spelling", "reading", "brief",
   "A misspelled word in appendix section C",
-  "supplemental appendix, p. 5",
+  "app. p. 5",
   "we include [[logisitic]] regression tables for completeness",
   "we include [[logistic]] regression tables for completeness",
   "",
   "",
   NA_character_,
 
-  7, "bibliographic", "crossref", "brief",
+  7, "bibliographic", "reference_audit", "brief",
   "Both authors' names are mangled in the Soto and Merolla reference",
-  "published, p. 633",
+  "p. 633",
   "[[Soto, V. M., & Merolla, D. J. L.]] (2006).",
   "[[DeFrancesco Soto, V. M., & Merolla, J. L.]] (2006).",
   str_c("The authors of record for doi:10.1007/s11109-006-9012-7 are Victoria M. ",
@@ -219,9 +222,9 @@ entries <- tribble(
   "",
   NA_character_,
 
-  8, "bibliographic", "crossref", "brief",
+  8, "bibliographic", "reference_audit", "brief",
   "The first author's surname is mangled in the Lavariega Monforti reference",
-  "published, p. 633",
+  "p. 633",
   "[[Monforti, J. L.]], Michelson, M., & Franco, A. (2013).",
   "[[Lavariega Monforti, J.]], Michelson, M., & Franco, A. (2013).",
   str_c("The author of record for doi:10.1080/21565503.2013.842491 is Jessica Lavariega ",
@@ -230,27 +233,27 @@ entries <- tribble(
   "",
   NA_character_,
 
-  9, "bibliographic", "crossref", "brief",
+  9, "bibliographic", "reference_audit", "brief",
   "The Mackie and Cooper reference prints a first page in place of a page range",
-  "published, p. 632",
+  "p. 632",
   "Journal of Personality and Social Psychology, 46(3), [[575]].",
   "Journal of Personality and Social Psychology, 46(3), [[575-585]].",
   "doi:10.1037/0022-3514.46.3.575 gives the article's pages as 575 to 585.",
   "",
   NA_character_,
 
-  10, "bibliographic", "crossref", "brief",
+  10, "bibliographic", "reference_audit", "brief",
   "The Rubin reference prints a first page in place of a page range",
-  "published, p. 633",
+  "p. 633",
   "Journal of Educational Psychology, 66(5), [[688]].",
   "Journal of Educational Psychology, 66(5), [[688-701]].",
   "doi:10.1037/h0037350 gives the article's pages as 688 to 701.",
   "",
   NA_character_,
 
-  11, "bibliographic", "crossref", "brief",
+  11, "bibliographic", "reference_audit", "brief",
   "The Jones-Correa reference prints an issue-level locator in place of the article's DOI",
-  "published, p. 632",
+  "p. 632",
   "[[doi:10.1111/ssqu.2005.86.issue-3]]",
   "[[doi:10.1111/j.0038-4941.2005.00317.x]]",
   str_c("The printed string is Wiley's identifier for the whole issue of Social Science ",
@@ -258,9 +261,9 @@ entries <- tribble(
   "",
   NA_character_,
 
-  12, "bibliographic", "publisher record", "brief",
+  12, "bibliographic", "publisher_record", "brief",
   "The Tajfel reference gives the wrong city and the wrong publisher",
-  "published, p. 633",
+  "p. 633",
   "[[Cambridge, MA: CUP Archive.]]",
   "[[Cambridge, UK: Cambridge University Press.]]",
   str_c("Human Groups and Social Categories was published in 1981 by Cambridge University ",
@@ -269,9 +272,9 @@ entries <- tribble(
   "",
   NA_character_,
 
-  13, "bibliographic", "publisher record", "brief",
+  13, "bibliographic", "publisher_record", "brief",
   "Both authors' names are mangled in the Valdés and Seoane reference",
-  "published, p. 633",
+  "p. 633",
   "[[Valdés, M., & Seoane, I. M. H.]] (1995).",
   "[[Valdés, M. I., & Seoane, M. H.]] (1995).",
   str_c("The Hispanic Market Handbook is by M. Isabel Valdés and Marta H. Seoane. The ",
@@ -385,5 +388,12 @@ walk(entries$entry[entries$entry > 2], emit)
 # The machine-readable spine, written wherever this document is rendered. Anything else
 # that needs these entries reads it rather than keeping its own copy, so the two cannot
 # drift.
+# The spine's vocabularies are closed (cleanup of 2026-11-07): a value outside them is a
+# typo, and the edition builders read these columns to shape every entry.
+stopifnot(
+  all(entries$class %in% c("quantity", "description", "interpretation", "definition", "label", "float", "cross_reference", "wording", "spelling", "typography", "bibliographic")),
+  all(entries$form %in% c("full", "brief", "note")),
+  all(entries$source %in% c("pipeline", "reading", "reference_audit", "publisher_record", "authors_archive", "proof"))
+)
 write_csv(entries, here("errata_entries.csv"))
 ```
