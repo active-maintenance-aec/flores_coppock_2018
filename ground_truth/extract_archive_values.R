@@ -1,8 +1,9 @@
 # flores_coppock_2018/ground_truth/extract_archive_values.R
 # Output: ground_truth/archive_values.csv
 # Depends on: one console log per deposited script, produced by running the deposit in a
-#   scratch copy (see below). Not part of run_all.R, since it needs the deposited
-#   scripts' console output rather than anything this repository builds.
+#   scratch copy: run_archive.R writes them to <ARCHIVE_RUN_DIR>/as_shipped. Not part of
+#   run_all.R, since it needs the deposited scripts' console output rather than anything
+#   this repository builds.
 # Description: Recover every number the deposited scripts produce, so the archive side of
 #   the ground truth is read off the archive rather than transcribed. Where a script
 #   prints a LaTeX table, the numbers are parsed out of its console log. The two figure

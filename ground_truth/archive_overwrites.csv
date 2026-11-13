@@ -1,0 +1,7 @@
+pass,file,effect,matches_deposit
+as_shipped,Rplots.pdf,added,NA
+as_shipped,flores_coppock_figure_1.pdf,overwritten,FALSE
+as_shipped,flores_coppock_figure_2.pdf,overwritten,FALSE
+stripped,Rplots.pdf,added,NA
+stripped,flores_coppock_figure_1.pdf,rebuilt,FALSE
+stripped,flores_coppock_figure_2.pdf,rebuilt,FALSE

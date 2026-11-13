@@ -42,6 +42,16 @@ published_claims <- read_csv(
   col_types = cols(value_paper = col_character(), .default = col_guess()))
 float_coverage <- read_csv(here::here("ground_truth", "float_coverage.csv"),
                            show_col_types = FALSE)
+
+# A row belongs to a float when its location is that float's label, its caption, or the
+# float as the extraction places it; every other row is a sentence in the text. Table 2's
+# row labels are read as prose claims about the measures they name, as they always were.
+float_of <- function(location) {
+  float <- str_match(location,
+                     "^(?:Appendix )?((?:Table|Figure) (?:[A-C]\\.)?[0-9]+)(?:$| \\(| caption)")[, 2]
+  replace_na(float, "Text")
+}
+gt <- gt |> mutate(float = float_of(location))
 ```
 
 *Drafted by Claude Opus 5 under the supervision of Alex Coppock.*
@@ -78,8 +88,8 @@ n_archive_fail <- sum(gt$match == 0, na.rm = TRUE)
 n_rewrite_verifiable <- sum(!is.na(gt$match_rewrite))
 n_rewrite_match <- sum(gt$match_rewrite == 1, na.rm = TRUE)
 n_rewrite_fail <- sum(gt$match_rewrite == 0, na.rm = TRUE)
-n_table_2 <- sum(gt$table_figure == "table_2")
-n_table_2_lucid <- sum(gt$table_figure == "table_2" & str_starts(gt$claim, "lucid"))
+n_table_2 <- sum(gt$location == "Table 2")
+n_table_2_lucid <- sum(gt$location == "Table 2" & str_starts(gt$claim, "lucid"))
 n_table_2_national <- n_table_2 - n_table_2_lucid
 n_no_script <- sum(is.na(gt$match) & !is.na(gt$value_paper))
 n_holds <- sum(gt$holds, na.rm = TRUE)
@@ -87,8 +97,12 @@ n_holds_fail <- sum(!gt$holds, na.rm = TRUE)
 n_paper_internal <- sum(gt$defect_locus == "paper_internal", na.rm = TRUE)
 n_extraction <- nrow(published_claims)
 n_needs_block <- sum(published_claims$needs_block)
-n_float_published <- sum(float_coverage$published_numbers)
-n_float_covered <- sum(float_coverage$covered)
+# A figure prints no number on its face, so what it carries is the count of estimates it
+# plots, and those count here beside the tables' printed cells.
+n_float_published <- sum(float_coverage$published_numbers) +
+  sum(float_coverage$plotted, na.rm = TRUE)
+n_float_covered <- sum(float_coverage$covered) +
+  sum(float_coverage$plotted_reproduced, na.rm = TRUE)
 ```
 
 Two questions, answered before the detail.
@@ -204,6 +218,7 @@ No fixed checksum can be quoted for the overwritten files, because a PDF records
 
 ```{r gt_summary}
 gt |>
+  mutate(float = fct_relevel(fct_inorder(float), "Text", after = Inf)) |>
   summarize(
     claims = n(),
     printed_by_a_script = sum(!is.na(match)),
@@ -211,8 +226,9 @@ gt |>
     archive_fails = sum(match == 0, na.rm = TRUE),
     rewrite_matches = sum(match_rewrite == 1, na.rm = TRUE),
     rewrite_fails = sum(match_rewrite == 0, na.rm = TRUE),
-    .by = table_figure
+    .by = float
   ) |>
+  arrange(float) |>
   kable(
     booktabs = TRUE,
     col.names = c("Location", "Claims", "In archive output", "Archive matches",
@@ -236,8 +252,8 @@ Five published floats carry no number that can be compared against the article, 
 ```{r coverage_table}
 gt |>
   filter(is.na(value_paper), is.na(value_rewrite), !is.na(notes),
-         table_figure != "text") |>
-  select(table_figure, notes) |>
+         float != "Text") |>
+  select(location, notes) |>
   kable(
     booktabs = TRUE,
     col.names = c("Float", "Why there is nothing in it to compare"),
@@ -254,7 +270,7 @@ gt |>
                 \(x) if_else(is.na(x), "", sprintf("%.4g", x))),
          value_paper = replace_na(value_paper, ""),
          across(c(match, match_rewrite), \(x) replace_na(as.character(x), ""))) |>
-  select(table_figure, claim, value_paper, value_script, match,
+  select(location, claim, value_paper, value_script, match,
          value_rewrite, match_rewrite) |>
   kable(
     booktabs = TRUE,
@@ -280,7 +296,7 @@ read_csv(here::here("maintained", "output", "table_2_sample_comparison.csv"),
          show_col_types = FALSE) |>
   left_join(
     gt |>
-      filter(table_figure == "table_2", !str_detect(claim, "_se$")) |>
+      filter(location == "Table 2", !str_detect(claim, "_se$")) |>
       separate_wider_delim(claim, ", ", names = c("column", "quantity")) |>
       select(column, quantity, paper_mean = value_paper),
     by = c("column", "quantity")
@@ -408,7 +424,7 @@ The comparison above is float-shaped: it asks whether the numbers in the article
 
 **`ground_truth/published_claims.csv` is the extraction.** The article and the appendix were read line by line and every numeric token recorded with its location, its type and, where it has one, the string the page prints. It holds `r n_extraction` rows: `r n_type("pipeline")` `pipeline` claims (a quantity the analysis produces), `r n_type("descriptive")` `descriptive` claims (a statement about shape, sign or count with a truth value rather than a number), `r n_type("definitional")` `definitional` (scale endpoints, field dates, category counts), `r n_type("structural")` `structural` (counts of the paper's own sections, floats and cross-references) and `r n_type("transcribed")` `transcribed` (values quoted from other papers, which cannot drift). The coverage boundary is stated plainly: the extraction covers every numeric token in the article's prose, notes, captions, table titles and row labels, and in the appendix's prose and its contents page, together with one row per published float recording how many numbers that float carries. It does **not** repeat the cells of the typeset tables, which are transcribed one by one in `published_values.csv` and compared in the ground truth. Excluded, and named here so the exclusions are auditable: the journal's own front matter and correspondence address, citation years and page or footnote locators inside citations, the reference list, running heads and page numbers, the ORCID, footnote markers, and the digits inside YouTube identifiers.
 
-**`maintained/in_text_claims.R` is the second instrument.** It recomputes every quantity a sentence states, from `maintained/output/`, by a path of its own, and prints it beside the sentence. It never reads the ground truth, because agreeing with the comparison would prove nothing, and no published number is typed into it. Each line reads `CLAIM <id> = <value> || <label>`.
+**`maintained/in_text_claims.R` is the second instrument.** It recomputes every quantity a sentence states, from `maintained/output/`, by a path of its own, and prints it beside the sentence. It never reads the ground truth, because agreeing with the comparison would prove nothing, and no published number is typed into it. Each line reads `CLAIM <id> = <value> || [<verdict>] <label>`, scored by `excheckr` against the extraction and the errata spine, and a descriptive claim prints 1 where it holds and 0 where it does not.
 
 **The coverage gate is the last step of `build_ground_truth.R`.** It runs `in_text_claims.R` as a program in its own environment, captures what it prints, and requires that the `r n_needs_block` extraction rows needing a block are exactly the claims printed, in both directions; that the value each instrument reaches agrees with the other at the article's own precision; that every stored published value survives a round trip through its own recorded precision, checked before anything consumes it; and that the extraction and the ground truth, which are two hand transcriptions of the same pages, say the same thing. A block that errors, or prints nothing, fails the gate where a search for comment markers would pass it.
 
@@ -416,16 +432,19 @@ The comparison above is float-shaped: it asks whether the numbers in the article
 
 ```{r float_coverage_table}
 float_coverage |>
-  mutate(across(c(published_numbers, covered), as.integer)) |>
-  select(float, published_numbers, covered, reproduced_by_rewrite, basis) |>
+  mutate(across(c(plotted, plotted_reproduced), \(x) replace_na(as.character(x), "")),
+         note = replace_na(note, "")) |>
+  select(float, published_numbers, covered, reproduced_by_rewrite, plotted,
+         plotted_reproduced, note) |>
   kable(
     booktabs = TRUE,
-    col.names = c("Float", "Numbers it carries", "Covered", "Reproduce", "Basis"),
+    col.names = c("Float", "Numbers it prints", "Covered", "Reproduce", "Plotted",
+                  "Plotted, reproduced", "Note"),
     caption = "Coverage per published float."
   ) |>
   latex_only(\(k) k |>
     kable_styling(latex_options = c("hold_position"), font_size = 7) |>
-    column_spec(5, width = "6cm"))
+    column_spec(7, width = "6cm"))
 ```
 
 `r n_float_covered` of the `r n_float_published` numbers the article's floats carry are covered. The `r n_float_published - n_float_covered` that are not fall into two groups: Table 1's eight language indicators, which are notation, and Table 4's nine advertisement running times and election years, which the deposit does not record. Table 4 carries no estimate at all: it is the six advertisements' titles, running times, links and full transcripts in English and Spanish, which `ground_truth/extract_published_table_4.R` parses word by word out of the published table into `published_table_4_transcripts.csv`, so the one float in the article whose content is text rather than numbers is recorded rather than merely counted. Figures 1 and 2 print no estimate on their faces, so what each asserts is the number of estimates it plots, counted off the published page and recomputed from the figure's own CSV.
@@ -453,7 +472,7 @@ One descriptive claim sits close to the line and is recorded as holding. The art
 ## In-text claims
 
 ```{r text_setup, include=FALSE}
-prose <- gt |> filter(table_figure == "text")
+prose <- gt |> filter(float == "Text")
 n_text_stated <- sum(!is.na(prose$value_paper))
 n_text_descriptive <- sum(is.na(prose$value_paper))
 

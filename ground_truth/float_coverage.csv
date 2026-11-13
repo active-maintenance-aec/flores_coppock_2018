@@ -1,23 +1,23 @@
-float,published_numbers,basis,covered,reproduced_by_rewrite,reproduced_by_archive
-table_1,8,no comparable number,0,0,0
-table_2,47,published cells,47,47,0
-table_3,16,published cells,16,16,16
-table_4,9,no comparable number,0,0,0
-table_5,31,published cells,31,31,31
-table_6,31,published cells,31,31,31
-table_7,31,published cells,31,31,31
-table_8,31,published cells,31,31,31
-table_9,10,published cells,10,10,10
-figure_1,20,"plotted estimates, compared against the deposit",20,20,20
-figure_2,32,"plotted estimates, compared against the deposit",32,32,32
-figure_3,0,no comparable number,0,0,0
-table_a1,27,published cells,27,27,27
-table_a2,27,published cells,27,27,27
-table_a3,27,published cells,27,27,27
-table_a4,27,published cells,27,27,27
-table_b5,40,published cells,40,40,40
-table_b6,40,published cells,40,40,40
-table_b7,40,published cells,40,40,40
-table_b8,40,published cells,40,40,40
-table_c9,41,published cells,41,41,41
-table_c10,41,published cells,41,41,41
+float,published_numbers,covered,reproduced_by_rewrite,reproduced_by_archive,plotted,plotted_reproduced,note
+Table 1,8,0,0,0,NA,NA,"Notation rather than results: its eight numbers are the two language indicators for each of its four subject types, so none is a comparable number."
+Table 2,47,47,47,0,NA,NA,"No deposited script computes any part of Table 2, so no cell has an archive value."
+Table 3,16,16,16,16,NA,NA,NA
+Table 4,9,0,0,0,NA,NA,"Its nine numbers are six advertisement running times and three election years, none of which the deposit records."
+Table 5,31,31,31,31,NA,NA,NA
+Table 6,31,31,31,31,NA,NA,NA
+Table 7,31,31,31,31,NA,NA,NA
+Table 8,31,31,31,31,NA,NA,NA
+Table 9,10,10,10,10,NA,NA,NA
+Figure 1,0,0,0,0,20,20,"Prints no numbers on its face. Every plotted estimate is compared against the deposit's own models on estimate, standard error, and both confidence limits."
+Figure 2,0,0,0,0,32,32,As Figure 1.
+Figure 3,0,0,0,0,NA,NA,"A continuous raster of a calibration surface whose cells cannot be counted from the page, so no plotted count exists to compare. The rewrite commits 121 points of the surface to figure_3_simulation.csv."
+Table A.1,27,27,27,27,NA,NA,NA
+Table A.2,27,27,27,27,NA,NA,NA
+Table A.3,27,27,27,27,NA,NA,NA
+Table A.4,27,27,27,27,NA,NA,NA
+Table B.5,40,40,40,40,NA,NA,NA
+Table B.6,40,40,40,40,NA,NA,NA
+Table B.7,40,40,40,40,NA,NA,NA
+Table B.8,40,40,40,40,NA,NA,NA
+Table C.9,41,41,41,41,NA,NA,NA
+Table C.10,41,41,41,41,NA,NA,NA
